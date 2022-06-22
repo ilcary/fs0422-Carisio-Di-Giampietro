@@ -1,0 +1,129 @@
+/* IMPOSTAZIONI GENERALI */
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 17px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: rgba(84, 172, 255, 0.918);
+    text-shadow: 1px 1px 0.5px black;
+
+}
+
+a {
+    color: red;
+}
+
+/* HEADER */
+
+/*
+body #namer{
+    background-color: rgba(32, 119, 250, 0.774);
+    text-align: center;
+}
+*/
+
+header {
+    background: rgba(84, 172, 255, 0.3);
+    padding: 0.2rem;
+    margin: -8px;
+    text-align: center;
+
+}
+
+#nome-span {
+    color: rgba(84, 172, 255, 0.918);
+    background-color: rgb(255, 255, 255);
+    display: block;
+    margin-top: 25px;
+}
+
+hr {
+    margin-top: 35px;
+    margin-inline: -20px;
+
+}
+
+/* MAIN */
+
+
+figure {
+    text-align: center;
+}
+
+figure>img {
+    border-radius: 25px 50px;
+    border: 3px solid rgb(84, 172, 255);
+    padding: 8px;
+    width: 240px;
+    height: 140px;
+}
+
+figure>figcaption {
+    margin-top: 10px;
+}
+
+
+
+
+
+blockquote>p {
+    border-radius: 25px;
+    border: 3px solid rgb(84, 172, 255);
+    padding: 8px;
+    background-color: rgb(228, 228, 228);
+    text-align: center;
+}
+
+
+/* ELEMENTI NEL MAIN */
+
+strong {
+    color: rgb(84, 172, 255);
+    ;
+}
+
+mark{
+    color: white;
+    background-color: rgb(84, 172, 255) ;
+}
+
+#chiude{
+    background-color: rgb(84, 172, 255) ;
+    height: 3px;
+}
+
+
+
+
+
+
+/* FOOTER */
+
+
+
+footer{
+    background: rgba(56, 56, 56, 0.979);
+    padding: 0.2rem;
+    margin: -8px;
+    text-align: center;
+}
+p > kbd{
+    color: yellow;
+}
+
+#curriculum{
+    color: rgb(255, 60, 0);
+}
+
+footer > p{
+    color: white;
+}
+
+footer > p > small{
+    color: rgb(173, 173, 173);
+}
