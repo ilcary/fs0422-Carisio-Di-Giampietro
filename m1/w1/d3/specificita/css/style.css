@@ -1,0 +1,36 @@
+#main-header .list-item a{/* peso: 111 */
+    text-decoration:none;
+    color: #000;
+}
+#main-header a{/* peso: 101 */
+    text-decoration:none;
+    color: red;
+}
+
+a{/* peso: 1 */
+    color: blue;
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: aqua;
+}
+
+/*
+tag: peso 1
+classi: peso 10
+id: peso 100
+*/
+
+
+/* altri modi per selezionare */
+
+div.sfondo-blue{/*funziona solo se la classe è applicata ad un div*/
+    background-color:red;
+}
+div.sfondo-blue.testo-grassetto{/*funziona solo se entrambe le classi sono applicate contemporaneamente allo stesso div*/
+    font-weight: bold;
+}
+
+.sfondo-blue, .testo-grassetto{/* tutti gli elementi che hanno classe sfondo-blue, e tutti gli elementi che hanno classe testo-grassetto*/
+    height: 50px;
+}

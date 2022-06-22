@@ -1,0 +1,39 @@
+blockquote + p {
+    color: red;
+}
+
+span ~ b{
+    color: blue;
+}
+
+button{
+    background-color: rgba(110, 110, 110, 0.822);
+    transition: background-color 1s;
+}
+
+button:hover{
+    background-color: rgba(95, 92, 92, 0.329);
+    border: none;
+   
+}
+
+ul li:last-child{
+    color: purple;
+}
+
+ul li:nth-last-of-type(3){
+    background-color: blueviolet;
+}
+
+table tr:nth-last-of-type(even){
+    background-color: gray;
+}
+
+/*pseudoelementi*/
+
+table tr td::before{/*elemento che viene inserito prima del contenuto*/
+    content: "@"
+}
+table tr td::after{/*elemento che viene inserito dopo il contenuto*/
+    content: "@"/*content è obbligatorio(anche con virgolette vuote va bene)*/
+}
