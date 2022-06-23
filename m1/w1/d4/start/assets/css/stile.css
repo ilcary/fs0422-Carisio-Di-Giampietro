@@ -11,7 +11,7 @@ body {
 
 }
 
-a {
+li>a {
     color: white;
     text-transform: none;
     text-decoration: none;
@@ -250,6 +250,18 @@ input{
 
 /* ELEMENTI NELL' ASIDE */
 
+aside{
+    padding-bottom: 1rem;
+}
+
+.correlati{
+    background-color: lightgray;
+    margin: 2rem;
+    text-align: left;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+}
+
 
 
 /* FOOTER */
@@ -260,14 +272,32 @@ footer{
     margin: 3%;
     font-size: 1.3rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
 }
 
 .aint{
     text-align: center;
+    padding-bottom: 2rem;
 
 }
 
 .mail{
     color: violet;
+}
+
+
+
+.data{
+    text-align: right;
+    padding-right: 1rem;
+}
+
+a{
+    color: #045faa;
+}
+.line{
+    padding-bottom: 1rem;
+    padding-top: 1rem;
 }
