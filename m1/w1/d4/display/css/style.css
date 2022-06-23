@@ -1,0 +1,22 @@
+.container{
+    margin: 0 auto;
+    width: 90%;
+}
+.colonna{
+    background-color: yellow;
+    width: calc(100% / 2);
+    height: 200px;
+    display: inline-block;
+    margin-left:-4px;
+}
+
+.colonna:nth-of-type(4){
+    opacity: 0;
+}
+.colonna:nth-of-type(8){
+    display: none
+}
+
+:target{
+    background-color:red;
+}
