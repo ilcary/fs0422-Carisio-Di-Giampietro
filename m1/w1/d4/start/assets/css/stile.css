@@ -1,18 +1,273 @@
 /* IMPOSTAZIONI GENERALI */
-html{
-    font-family:;
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    background-image: url(../img/sfondo.png);
+    background-position: center;
+    letter-spacing: -1px;
+    word-spacing: 5px;
+    line-height: 2.4rem;
+
+
 }
+
+a {
+    color: white;
+    text-transform: none;
+    text-decoration: none;
+}
+
+hr {
+    display: none;
+}
+
+
 
 /* HEADER */
 
+.logo {
+    padding-top: 5%;
+    color: aliceblue;
+    text-transform: uppercase;
+}
+
+
+header {
+    text-align: center;
+    background: rgb(10, 44, 255);
+    background: radial-gradient(circle, rgba(10, 44, 255, 1) 0%, rgba(149, 148, 233, 1) 100%);
+    margin: 3%;
+    font-size: 1.3rem;
+    font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+.content {
+    padding: 3%;
+}
+
+.lista {
+    padding-bottom: 3%;
+    list-style: none;
+
+}
+
+
+
 /* MAIN */
+
+.questione {
+    text-align: center;
+    background: rgb(255, 255, 255);
+    margin: 3%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+article>h1 {
+    font-size: 2.7rem;
+    padding-top: 7%;
+    padding-left: 5%;
+    padding-bottom: 5%;
+    text-align: left;
+}
+
+.opacity {
+    color: rgb(201, 199, 199);
+    text-align: left;
+    padding-bottom: 5%;
+    padding-left: 5%;
+}
+
+/*
+article>p{
+    text-align: left;
+    padding-bottom: 5%;
+    padding-left: 5%;
+}
+
+*/
 
 /* ELEMENTI NEL MAIN - ARTICLE */
 
+strong {
+    color: blueviolet;
+    font-weight: 550;
+}
+
+.small-body {
+    text-align: left;
+    padding: 5%;
+}
+
+.liste {
+    padding-top: 4%;
+    padding-bottom: 4%;
+    padding-left: 10%;
+}
+
+.intestazione-lista {
+    padding-top: 4%;
+}
+
+code {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.041) 0px 18px 36px -18px inset;
+    border-radius: 5px;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 1px;
+
+}
+
 /* TABELLE */
+
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-bottom: solid #045faa;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 8px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+
+th {
+    background-color: #045faa;
+    color: white;
+}
+
+table>caption {
+    font-style: italic;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+
+/*
+
+
+table{
+    text-align: center;
+    margin: auto;
+    margin-top: 2rem ;
+    margin-bottom:2rem ;
+}
+
+
+
+}
+
+thead{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    line-height: 1.8rem;
+    background-color: mediumaquamarine;
+
+}
+
+tr{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+tr>th{
+   
+    
+}
+
+tbody:nth-child()
+
+*/
+
+#yt {
+    height: 200px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 25px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.foot{
+    color: #045faa;
+    text-decoration: underline;
+}
+
 
 /* FORM */
 
+section>h2{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+}
+
+section{
+    background-color: lightgrey;
+}
+
+.padding{
+    padding:1rem;
+}
+
+form{
+    text-align: center;
+    padding-bottom: 1rem;
+
+}
+
+button{
+    background-color: #045faa;
+    color: #f2f2f2;
+    font-size: 1.2rem;
+    border: none;
+    padding: 0.3rem;
+}
+
+input{
+    border: none;
+    border-bottom: dashed #045faa;
+    font-size: 1.2rem;
+
+    padding: 0.2rem;
+
+}
+
 /* ELEMENTI NELL' ASIDE */
 
+
+
 /* FOOTER */
+
+footer{
+    background: rgb(0, 34, 255);
+    background: radial-gradient(circle, rgb(25, 45, 175) 0%, rgb(43, 40, 230) 100%);
+    margin: 3%;
+    font-size: 1.3rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+.aint{
+    text-align: center;
+
+}
+
+.mail{
+    color: violet;
+}
