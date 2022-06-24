@@ -45,7 +45,7 @@ nav{
     margin-bottom: 2rem;
 }
 
-section .subtitle{
+section .subtitle:nth-of-type(2){
     margin-top: 2rem;
 }
 
@@ -84,6 +84,7 @@ button #butt>a {
 /*===============================MAIN=============================*/
 
 #rotondo{
+    margin-top: 2rem;
     text-align: center;
 }
 
@@ -92,6 +93,7 @@ figure #first-one{
     width: 20rem;
     height: 20rem;
     padding: 3rem;
+
 }
 .paragraph{
     text-align: center;
@@ -101,6 +103,7 @@ figure #first-one{
 
 article img{
     max-width: 100%;
+    border-radius: 0.3rem;
 }
 
 article{
@@ -156,7 +159,7 @@ article{
     font-weight: normal;
 }
 
-/*========FOOTER=========*/
+/*==================================FOOTER=============================*/
 
 footer{
     height: 350px;
