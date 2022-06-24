@@ -1,0 +1,177 @@
+
+/* IMPOSTAZIONI GENERALI */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    background-position: center;
+    line-height: 1.65;
+}
+
+.subtitle{
+    font-family: 'Montserrat';
+    font-weight: bold;
+    line-height: 1.5;
+    color: #25a2c3;
+    padding: 0.8rem;
+    text-align: center;
+    
+}
+
+
+
+/*==============HEADER==================*/
+
+#logo{
+    background-color: black;
+    text-align: center;
+}
+
+figure>img{
+    padding: 2.2rem;
+    height: 3.5rem;
+}
+
+nav{
+    text-align: center;
+    background: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-image: url(../images/banner.jpg);
+    background-size: 100%;
+}
+
+#prima-sezione{
+    padding: 3rem;
+}
+
+nav p{
+    padding-top: 1rem;
+    padding-bottom: 1.2rem;
+}
+
+header h1{
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    font-size: 2.4rem;
+    margin-left: 7rem;
+    margin-right: 7rem;
+
+}
+
+button{
+    background-color: #f04c2f;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: none;
+    padding: 0.3rem;
+}
+
+button #butt>a {
+    color: white;
+    text-decoration: none;
+    padding: 1.8rem;
+    text-transform: uppercase;
+    
+
+}
+/*img max larghezza 100%*/
+
+/*===============================MAIN=============================*/
+
+#rotondo{
+    text-align: center;
+}
+
+figure #first-one{
+    border-radius: 20rem;
+    width: 20rem;
+    height: 20rem;
+}
+.paragraph{
+    text-align: center;
+    margin-left:2rem ;
+    margin-right:2rem ;
+}
+
+article img{
+    max-width: 100%;
+}
+
+article{
+    text-align: center;
+    margin: 3rem;
+    background: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/*====ho fatto un back ground con un gradient e un border radius perchè mi sembrava più carino ma volendo usare quello originale lascio il codice qui
+
+#intermezzo{
+    background-color: #e22d0e;
+    margin: 3rem;
+    color: white;
+
+}
+
+===*/
+
+#intermezzo{
+    background-color: #e22d0e;
+    background-image: linear-gradient(200deg, #fbc47e 0%, #e22d0e 100%);
+    border-radius: 0.3rem;
+    margin: 3rem;
+    color: white;
+
+}
+
+#intermezzo p{
+    padding: 1.5rem;
+}
+
+.whiteone{
+    padding-bottom: 1rem;
+    font-size: 2.4rem;
+    font-weight: bold;
+    font-family: 'Montserrat'
+}
+
+#intermezzo blockquote{
+    padding: 1.2rem;
+    font-style: italic;
+}
+
+#intermezzo div{
+    font-weight: bold;
+}
+
+#intermezzo span{
+    display: block;
+    font-weight: normal;
+}
+
+/*========FOOTER=========*/
+
+footer{
+    height: 350px;
+    background-color: #25a2c3;
+    background-image: linear-gradient(200deg, #bae2f5 0%, #25a2c3 100%);
+    border-radius: 0.2rem;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+address a{
+    letter-spacing: 0.1rem;
+    display: block;
+    color: white;
+}
+address a:nth-of-type(3){
+    text-decoration: none;
+}
+
+
