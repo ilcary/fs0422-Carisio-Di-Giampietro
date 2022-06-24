@@ -42,6 +42,11 @@ nav{
 
 #prima-sezione{
     padding: 3rem;
+    margin-bottom: 2rem;
+}
+
+section .subtitle{
+    margin-top: 2rem;
 }
 
 nav p{
