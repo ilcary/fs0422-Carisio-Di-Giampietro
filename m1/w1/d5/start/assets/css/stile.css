@@ -1,4 +1,4 @@
-/* IMPOSTAZIONI GENERALI */
+/*=========== IMPOSTAZIONI GENERALI ===========*/
 
 body {
     font-family: 'Open Sans', sans-serif;
@@ -20,9 +20,7 @@ body {
 
 }
 
-
-
-/*==============HEADER==================*/
+/*==============HEADER================*/
 
 #logo {
     background-color: black;
@@ -83,7 +81,8 @@ button #butt>a {
 
 /*img max larghezza 100%*/
 
-/*===============================MAIN=============================*/
+/*===============================MAIN=============================ù
+                      ARTICOLI CON PARAGRAFI ED IMMAGINI                */
 
 #rotondo {
     text-align: center;
@@ -116,8 +115,16 @@ article {
     padding: 2rem;
 }
 
-/*====ho fatto un back ground con un gradient e un border radius perchè mi sembrava più carino ma volendo usare quello originale lascio il codice qui
+/*====================INTERMEZZO====================*/
 
+/*====ho fatto un back ground con un gradient e un border radius
+ perchè mi sembrava più carino ma volendo usare quello 
+ originale lascio il codice qui
+
+      ||  ||  ||  ||
+      ||  ||  ||  ||
+      \/  \/  \/  \/
+             
 #intermezzo{
     background-color: #e22d0e;
     margin: 3rem;
@@ -161,7 +168,8 @@ article {
     font-weight: normal;
 }
 
-/*==================================FOOTER=============================*/
+/*==================================FOOTER=============================
+                           FLEXBOX PER GESTIRE INDIRIZZI                */
 
 footer {
     height: 350px;
@@ -176,6 +184,8 @@ footer {
     justify-content: space-around;
 
 }
+
+/*============= INDIRIZZI HREF==============*/
 
 address a {
     letter-spacing: 0.1rem;
