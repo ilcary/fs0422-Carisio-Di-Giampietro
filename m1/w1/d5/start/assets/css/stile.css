@@ -91,6 +91,7 @@ figure #first-one{
     border-radius: 20rem;
     width: 20rem;
     height: 20rem;
+    padding: 3rem;
 }
 .paragraph{
     text-align: center;
@@ -107,6 +108,7 @@ article{
     margin: 3rem;
     background: rgb(255, 255, 255);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 2rem;
 }
 
 /*====ho fatto un back ground con un gradient e un border radius perchè mi sembrava più carino ma volendo usare quello originale lascio il codice qui
