@@ -1,0 +1,38 @@
+.col{
+    background-color: red;
+    height: 300px;
+    margin-bottom: 15px;
+}
+
+
+/*SE la finestra e' piu grande di 480px*/
+/* screen and mette la funzione in relazione SOLO sugli schermi, USARE SEMPRE*/
+/*con la condizione screen se tipo stampo la pagina da uno schermo >480px la stampa viene fatta sulla condizione base quindi come se lo schermo fosse <480px*/
+/*width>480px lavoro sui tablet*/
+@media screen and (min-width: 480px){ 
+    .col{
+        background-color: yellow;
+        width: calc(100% / 2 - 8px) ;
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+}
+
+/*min-width > 768px lavoro sui laptop*/
+@media screen and (min-width: 768px){ 
+    .col{
+        background-color: green;
+        width: calc(100% / 3 - 8px) ;
+        /*display: inline-block; <--questo lo posso omettere perche essendo gia sopra i 480 px pesca l'azione da quello sopra*/
+        margin-bottom: 10px; /*<-- idem questo */
+    }
+}
+
+
+@media screen and (min-width: 1440px){
+    .col{
+        background-color: blue;
+        width: calc(100% / 4 - 8px) ;
+        
+    }
+}
