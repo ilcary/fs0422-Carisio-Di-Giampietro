@@ -36,9 +36,8 @@ hr {
     flex-direction: column;
     align-items: flex-start;
     position: fixed;
-    top: 50%;
-    bottom: 50%;
-    right: 2.2rem;
+    top: 60%;
+    right: 2rem;
 
 }
 
