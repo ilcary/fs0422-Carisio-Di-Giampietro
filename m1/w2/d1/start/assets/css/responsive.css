@@ -1,0 +1,106 @@
+@media screen and (min-width: 768px) {
+
+    /*MODIFICHE MAIN COLONNE*/
+
+    #colonne {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+        margin: 3rem;
+
+
+    }
+
+    table {
+        margin: 6rem;
+    }
+
+    /*MODIFICHE IFRAME YT*/
+
+    #iframeyt {
+        text-align: center;
+    }
+
+    #iframeyt p {
+        border-top: 2px solid #3f6bca;
+        padding-top: 2rem;
+    }
+
+    iframe {
+        width: 550px;
+        height: 309px;
+
+    }
+
+    aside {
+        text-align: center;
+    }
+
+
+    aside div {
+        width: calc(100% / 3 - 4px);
+        margin: 0 auto;
+        display: inline-block;
+    }
+
+    .news{
+        max-width: 33%;
+        margin: 0 auto 2em;
+    }
+
+}
+
+@media screen and (min-width: 1000px) {
+
+    iframe {
+        width: 768px;
+        height: 432px;
+
+    }
+
+    body{
+        font-size: 2rem;
+    }
+
+}
+
+@media print{
+    
+    html{
+        font-size: 0.95rem;
+    }
+
+
+    header{
+        display: none;
+    }
+
+    iframe{
+        display: none;
+    }
+
+    .news{
+        display: none;
+    }
+
+    aside{
+        display: none;
+    }
+
+    footer{
+        display: none;
+    }
+
+    .social{
+        display: none;
+    }
+
+    .toTop{
+        display: none;
+    }
+
+    main, footer{
+        box-shadow: none;
+    }
+}
