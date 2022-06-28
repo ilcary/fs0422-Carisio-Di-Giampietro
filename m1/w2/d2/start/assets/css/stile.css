@@ -36,6 +36,7 @@ header {
     padding: 2em 1.5em;
     position: sticky;
     top: 0;
+    z-index: 1;
 }
 
 nav li{
@@ -234,6 +235,23 @@ footer {
 
 footer a {
     color: fuchsia;
+}
+
+.news{
+    position: relative;
+    padding-top: 3rem;
+}
+
+.news h2{
+    position: absolute;
+    top: -18px;
+    background-color: grey;
+    color: white;
+    text-shadow: 2px 2px 1px black;
+    width: 12rem;
+    height: 4rem;
+    line-height: 4rem;
+    box-shadow: 2px 2px 1px rgb(68, 68, 68);
 }
 
 /* BOTTONI STICK*/
