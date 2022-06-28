@@ -44,9 +44,11 @@ nav li{
 }
 
 #logo {
+    padding: 0.2rem;
     float: left;
     margin-right: 2rem;
     border: #006eff solid 0.4rem;
+    outline: #ff009d solid 0.4rem;
 }
 
 header div img {
