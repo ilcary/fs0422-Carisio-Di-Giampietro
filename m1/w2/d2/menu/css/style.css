@@ -1,0 +1,67 @@
+#main-header {
+    background-color: green;
+    height: 50px;
+    text-align: center;
+}
+
+
+#menu>li,
+#menu,
+#main-header nav {
+    height: 100%;
+
+}
+
+#menu>li {
+    display: inline-block;
+
+}
+
+#menu li {
+
+    line-height: 50px;
+    transition: all 0.3s;
+
+}
+
+#menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 10px;
+    /* le due linee sotto
+    servono a dare agli a
+    un area cliccabile alta come
+    la barra verde dell'header
+     */
+    line-height: 50px;
+    display: block;
+
+}
+
+#main-header li:hover {
+    background-color: white;
+
+}
+
+#main-header li:hover>a {
+    color: green;
+
+}
+
+/* sottomenu chi siamo */
+
+#menu>li>ul>li a {
+    width: 100px;
+}
+
+#menu li>ul {
+    display: none;
+    position: absolute;
+    background-color: green;
+
+}
+
+#menu li:hover>ul {
+    display: block;
+
+}
