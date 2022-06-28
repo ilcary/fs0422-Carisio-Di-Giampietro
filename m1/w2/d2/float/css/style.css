@@ -1,0 +1,35 @@
+.img-fl-left {
+    float: left;
+    padding-right: 15px ;
+}
+
+.blog article{
+    width: 30%;
+    height: 300px;
+    background-color: red;
+    float: left;
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+}
+.blog{
+    background-color: blue;
+}
+
+.blog article:last-child{
+    clear: both;
+}
+
+.blog.article-right article{
+    float: right;
+}
+
+#foto{
+    background-image: url(https://picsum.photos/1000/300);
+    height: 300px;
+}
+
+.clearfix{
+    clear: both;
+    visibility: none;
+}
