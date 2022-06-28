@@ -55,13 +55,16 @@
 }
 
 #menu li>ul {
-    display: none;
+    height: 0;
     position: absolute;
     background-color: green;
+    width: 200px;
+    transition: 0.3s;
 
 }
 
 #menu li:hover>ul {
     display: block;
+    height: 150px;
 
 }
