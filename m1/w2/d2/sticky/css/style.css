@@ -1,0 +1,12 @@
+#main-header{
+    background-color: blueviolet;
+    height: 70px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
+
+#top-bar{
+    height: 50px;
+    background-color: red
+}

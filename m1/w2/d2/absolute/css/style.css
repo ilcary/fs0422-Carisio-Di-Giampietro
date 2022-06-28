@@ -46,3 +46,58 @@
     right: 10px;
     bottom: 10px;
 }
+
+/*======Z-INDEX============*/
+
+.conteiner{
+    width: 1000px ;
+    margin: 0 auto;
+    position: relative;
+}
+
+.blocco-colorato{
+    width: 200px;
+    height: 200px;
+    border: 1px dashed black;
+    position: absolute;
+    
+}
+
+.blocco-colorato:nth-of-type(1){
+    z-index: 3;
+    background-color: red;
+}
+.blocco-colorato:nth-of-type(2){
+    z-index: 4;
+    top: 100px;
+    left: 100px;
+    background-color: yellow;
+}
+
+.blocco-colorato:nth-of-type(3){
+    z-index: 2;
+    top: 200px;
+    left: 200px;
+    background-color: rgb(0, 26, 255);
+}
+
+.blocco-colorato:nth-of-type(4){
+    z-index: 2;
+    top: 300px;
+    left: 300px;
+    background-color: rgb(255, 0, 191);
+}
+.blocco-colorato:nth-of-type(5){
+    z-index: 2;
+    top: 400px;
+    left: 400px;
+    background-color: rgb(255, 0, 128);
+}
+
+.blocco-colorato:nth-of-type(6){
+    z-index: 2;
+    top: 500px;
+    left: 500px;
+    background-color: rgb(253, 153, 203);
+}
+
