@@ -95,7 +95,7 @@ hr {
 .toTop a,
 .social a {
     color: #c77ea2;
-    font-size: 4rem;
+    font-size: 2.5rem;
     display: block;
 }
 
@@ -149,8 +149,6 @@ header>div {
         display: inline-flex;
 
     }
-
-
 
 }
 
