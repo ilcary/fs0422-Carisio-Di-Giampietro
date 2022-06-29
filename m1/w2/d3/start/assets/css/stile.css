@@ -15,6 +15,16 @@ body {
         body {
             line-height: 1.8;
         }
+        .box-aside div{
+            display: block;
+            margin-left: 5px;
+        }
+
+        .box-aside { 
+            display: flex;
+            justify-content: space-evenly ;
+            width: 100%;
+        }
     }
 
     @media screen and (min-width:700px) {
