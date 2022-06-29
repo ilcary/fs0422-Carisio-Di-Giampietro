@@ -1,3 +1,6 @@
+
+/* grid con query per essere un po più responsive*/
+
 @media screen and (min-width:522px) {
 
 
@@ -26,17 +29,17 @@
         grid-column-start: 5;
         grid-column-end: 6;
         grid-row-start: 3;
-        grid-row-end: 7;
+        grid-row-end: 8;
         padding: 1rem;
         margin-left: 1rem;
         border: 1px solid #c3c3c3;
         border-radius: 1.5rem;
         position: sticky;
-        top: 25rem;
+        top: 26rem;
 
     }
 
-
+/*piccole correzioni per table responsive*/
 
 }
 
@@ -88,12 +91,15 @@ header {
     z-index: 10;
 }
 
+
 header div img {
     margin-bottom: 20px;
 }
 
 header nav ul {
     margin: 0;
+    display: inline-flex;
+    
 }
 
 header nav li {
@@ -274,4 +280,27 @@ footer {
 
 footer a {
     color: fuchsia;
+}
+/* BUTTON FIXED */
+.toTop {
+    position: fixed;
+    bottom: 10px;
+    right: 1.4rem;
+}
+.social {
+    position: fixed;
+    bottom: 20vh;
+    right: 1.4rem;
+}
+.toTop a, .social a {
+    color: #c77ea2;
+    font-size: 4rem;
+    display: block;
+}
+    .social a {
+        color: rgb(45, 101, 185);
+    }
+.toTop .far, .social .far {
+    background: rgb(255, 255, 255);
+    border-radius: 0.5rem;
 }
