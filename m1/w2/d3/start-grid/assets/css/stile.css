@@ -1,53 +1,59 @@
+@media screen and (min-width:522px) {
 
-@media screen  and (min-width:522px){
 
-    
 
-.container{
-    display: grid;
+    .container {
+        display: grid;
+    }
+
+    .container article {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 10;
+    }
+
+    .container aside {
+        grid-column-start: 5;
+        grid-column-end: 6;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        margin-left: 1rem;
+
+    }
+
+    .container .newss {
+        grid-column-start: 5;
+        grid-column-end: 6;
+        grid-row-start: 3;
+        grid-row-end: 7;
+        padding: 1rem;
+        margin-left: 1rem;
+        border: 1px solid #c3c3c3;
+        border-radius: 1.5rem;
+        position: sticky;
+        top: 25rem;
+
+    }
+
+
+
 }
 
-.container article{
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 10;
+@media screen and (min-width:800px) {
+
+    table {
+        margin-left: 5.5rem;
+    }
 }
-
-.container aside{
-    grid-column-start: 5;
-    grid-column-end: 6;
-    grid-row-start: 1;
-    grid-row-end: 3;
-    margin-left: 1rem;
-    
-}
-
-.container .newss{
-    grid-column-start: 5;
-    grid-column-end: 6;
-    grid-row-start: 3;
-    grid-row-end: 7;
-    padding: 1rem;
-    margin-left: 1rem;
-    border: 1px solid #c3c3c3;
-    border-radius: 1.5rem;
-    position: sticky;
-    top: 25rem;
-
-}
-
-
-
-}
-
-
-
 
 
 /* IMPOSTAZIONI GENERALI */
-html {font-size: 62.5%;}
-body { 
+html {
+    font-size: 62.5%;
+}
+
+body {
     font-family: Poppins, 'Helvetica Neue', sans-serif;
     font-size: 1.4rem;
     line-height: 1.5;
@@ -55,13 +61,21 @@ body {
     background-image: url('../img/sfondo.png');
     background-position: center center;
 }
-* {box-sizing: border-box;}
-hr {display: none;} /* rimuove l'elemento */
+
+* {
+    box-sizing: border-box;
+}
+
+hr {
+    display: none;
+}
+
+/* rimuove l'elemento */
 
 /* HEADER */
 header {
     background: rgba(0, 158, 198, 0.9);
-    background: linear-gradient(180deg, rgba(0,160,198,0.9) 0%, rgba(3,109,134,0.9) 68%);
+    background: linear-gradient(180deg, rgba(0, 160, 198, 0.9) 0%, rgba(3, 109, 134, 0.9) 68%);
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
@@ -73,22 +87,28 @@ header {
     top: 0;
     z-index: 10;
 }
+
 header div img {
     margin-bottom: 20px;
 }
+
 header nav ul {
     margin: 0;
 }
+
 header nav li {
     list-style: none;
 }
+
 header nav li a {
     color: white;
     text-decoration: none;
 }
+
 header nav li a:hover {
     color: red;
 }
+
 header nav li a::before {
     content: "\22c6\0020";
 }
@@ -98,13 +118,15 @@ main {
     background-color: #fff;
     box-shadow: 0 3px 3px #444;
     padding: 2em 1em;
-    margin-bottom:1.5em ;
+    margin-bottom: 1.5em;
 }
-section { 
+
+section {
     background-color: #e3e3e3;
     padding: 1em;
     margin-bottom: 2em;
 }
+
 section h2 {
     text-align: center;
     color: #333;
@@ -121,28 +143,41 @@ h1 {
     letter-spacing: -0.03em;
     margin-bottom: 0.7em;
 }
-p, address, ul, ol, dl, blockquote {
+
+p,
+address,
+ul,
+ol,
+dl,
+blockquote {
     margin-bottom: 1.2em;
 }
-h1 + p {
+
+h1+p {
     color: #a0a0a0;
 }
-ul, ol {
+
+ul,
+ol {
     margin-left: 2em;
 }
+
 a {
     color: #00A0C6;
     font-weight: bold;
 }
+
 strong {
     color: #a02571;
     font-weight: bold;
 }
+
 code {
     background-color: #e3e3e3;
     border: 1px solid #969494;
     border-radius: 5px;
 }
+
 iframe {
     width: 100%;
     height: auto;
@@ -153,20 +188,27 @@ iframe {
 /* TABELLE */
 table {
     margin-bottom: 2em;
+    margin-left: 2rem;
+
 }
+
 caption {
     font-weight: bold;
     font-style: italic;
 }
+
 thead tr {
     background-color: #3f6bca;
     color: #ffffff;
 }
-th, td {
+
+th,
+td {
     padding: 12px 15px;
     vertical-align: bottom;
     text-align: center;
 }
+
 tbody tr {
     border-bottom: 1px solid #dddddd;
 }
@@ -185,6 +227,7 @@ input {
     border: 0;
     border-bottom: 1px dashed #333;
 }
+
 button {
     padding: 4px 7px;
     background-color: #3f6bca;
@@ -202,6 +245,7 @@ aside h2 {
     text-transform: uppercase;
     margin-bottom: 1em;
 }
+
 aside div {
     background-color: #e3e3e3;
     border: 1px solid #c3c3c3;
@@ -209,6 +253,7 @@ aside div {
     padding: 1em;
     border-radius: 1.5rem;
 }
+
 aside div p:last-child {
     margin-bottom: 0;
     font-size: 0.8em;
@@ -218,14 +263,15 @@ aside div p:last-child {
 
 /* FOOTER */
 footer {
-    background: rgb(53,53,53);
-    background: linear-gradient(0deg, rgba(53,53,53,1) 0%, rgba(5,85,103,1) 68%);
+    background: rgb(53, 53, 53);
+    background: linear-gradient(0deg, rgba(53, 53, 53, 1) 0%, rgba(5, 85, 103, 1) 68%);
     box-shadow: 0 3px 3px #444;
     color: #f0f0f0;
     padding: 1em;
     text-align: center;
     font-size: 1.2rem;
 }
+
 footer a {
     color: fuchsia;
 }
