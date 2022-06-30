@@ -51,19 +51,19 @@ body {
 
 .gialli {
     background: rgb(114, 140, 0);
-    background: linear-gradient(0deg, rgb(97, 117, 8) 0%, rgb(147, 156, 9) 10%, rgba(255, 252, 0, 1) 100%);
+    background: linear-gradient(0deg,  #C2C1A2 0%, #FAFAC8 100%);
     transform: rotate(-4deg);
 }
 
 .verdi {
     background: rgb(21, 111, 92);
-    background: linear-gradient(0deg, rgba(21, 111, 92, 1) 0%, rgba(37, 149, 110, 1) 10%, rgba(0, 255, 93, 1) 100%);
+    background: linear-gradient(0deg, #9EB6A0 0%,  #C9F8CA 100%);
     transform: rotate(4deg);
 }
 
 .blu {
     background: rgb(26, 21, 111);
-    background: linear-gradient(0deg, rgb(43, 39, 117) 0%, rgb(34, 34, 175) 10%, rgba(0, 212, 255, 1) 100%);
+    background: linear-gradient(0deg, #8A8B9D 0%, #C5C4EE 100%);
     transform: rotate(-6deg);
 }
 
