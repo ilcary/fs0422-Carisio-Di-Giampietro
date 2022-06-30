@@ -1,148 +1,154 @@
-body{
+body {
     font-family: Gloria Hallelujah;
 }
 
-#lavagna{
+#lavagna {
     background-color: rgb(138, 138, 138);
     height: auto;
     width: 100%;
     margin-top: 1.5rem;
-    
-    
+
+
 }
-.task{
+
+.task {
     display: flex;
     align-content: flex-end;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    
+
 }
 
 
 
-.post-it{
-    
+.post-it {
     max-width: calc(70% /4);
     min-height: calc(320px / 2);
     margin: 2rem 1rem;
     text-align: center;
     padding: 0.5rem;
     padding-top: 0.5rem;
-    transition: all 0.2s ease-in-out ;
+    transition: all 0.2s ease-in-out;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; 
-    word-break: break-all;
-    hyphens: auto;
+    justify-content: flex-start;
 }
 
-.post-it span{
+.post-it span {
     font-weight: 600;
     font-size: 2rem;
     padding-bottom: 0.5rem;
-  
+
 }
-.post-it:hover{
+
+.post-it:hover {
     transform: scale(1.2);
     border: 2px solid rgb(70, 70, 70);
 }
 
-.gialli{
-    background: rgb(114,140,0);
-background: linear-gradient(0deg, rgba(114,140,0,1) 0%, rgba(134,176,39,1) 10%, rgba(255,252,0,1) 100%);
+.gialli {
+    background: rgb(114, 140, 0);
+    background: linear-gradient(0deg, rgba(114, 140, 0, 1) 0%, rgba(134, 176, 39, 1) 10%, rgba(255, 252, 0, 1) 100%);
     transform: rotate(-4deg);
 }
 
-.verdi{
-    background: rgb(21,111,92);
-background: linear-gradient(0deg, rgba(21,111,92,1) 0%, rgba(37,149,110,1) 10%, rgba(0,255,93,1) 100%);
+.verdi {
+    background: rgb(21, 111, 92);
+    background: linear-gradient(0deg, rgba(21, 111, 92, 1) 0%, rgba(37, 149, 110, 1) 10%, rgba(0, 255, 93, 1) 100%);
     transform: rotate(4deg);
 }
 
-.blu{
-    background: rgb(26,21,111);
-background: linear-gradient(0deg, rgba(26,21,111,1) 0%, rgba(37,37,149,1) 10%, rgba(0,212,255,1) 100%);
+.blu {
+    background: rgb(26, 21, 111);
+    background: linear-gradient(0deg, rgba(26, 21, 111, 1) 0%, rgba(37, 37, 149, 1) 10%, rgba(0, 212, 255, 1) 100%);
     transform: rotate(-6deg);
 }
 
-.scomparelle{
-   position: absolute;
-   top: 3rem;
-   opacity: 0;
+.scomparelle {
+    position: absolute;
+    top: 3rem;
+    opacity: 0;
 }
 
 /*================ANIMATION=================*/
 
-#single{
+#single {
     animation-name: single;
     animation-duration: 20s;
     animation-iteration-count: infinite;
 }
 
-@keyframes single{
-    0%{
+@keyframes single {
+    0% {
         opacity: 0.1;
     }
-    16%{
+
+    16% {
         opacity: 1;
-        top: 8rem;
+        top: 8.5rem;
     }
-    32%{
+
+    32% {
         opacity: 0;
-        top: 15rem;
-    }    
-    100%{
+        top: 11rem;
+    }
+
+    100% {
         opacity: 0;
     }
 }
 
-#pagee{
-    animation-name: pagee;
+#interfacce {
+    animation-name: interfacce;
     animation-duration: 20s;
     animation-iteration-count: infinite;
 }
 
-@keyframes pagee{
-    33%{
+@keyframes interfacce {
+    33% {
         opacity: 0.1;
         top: 3rem;
     }
-    48%{
+
+    48% {
         opacity: 1;
-        top: 8rem;
+        top: 8.5rem;
     }
-    64%{
+
+    64% {
         opacity: 0;
-        top: 15rem;
-    }    
-    100%{
+        top: 11rem;
+    }
+
+    100% {
         opacity: 0;
     }
 }
 
-#app{
+#app {
     animation-name: app;
     animation-duration: 20s;
     animation-iteration-count: infinite;
 }
 
-@keyframes app{
-    66%{
+@keyframes app {
+    66% {
         opacity: 0.1;
         top: 3rem;
     }
-    82%{
+
+    82% {
         opacity: 1;
-        top: 8rem;
+        top: 8.5rem;
     }
-    96%{
+
+    96% {
         opacity: 0;
-        top: 15rem;
-    }    
-    100%{
+        top: 11rem;
+    }
+
+    100% {
         opacity: 0;
     }
 }
-
-
