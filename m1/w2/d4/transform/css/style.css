@@ -1,0 +1,32 @@
+.transform-area{
+    perspective: 400px;
+    background-color: black;
+    height: 100vh;
+}
+
+
+.quadrato{
+    height: 100px;
+    width: 100px;
+    margin-left: 100px ;
+    background-color: red;
+    color: #fff;
+    font-size: 3rem;
+}
+
+#n1{
+    transform: rotate(30deg); /*è come scrivere rotatez*/
+}
+#n2{
+    transform: rotatex(100deg);
+}
+#n3{
+    transform: rotatey(45deg);
+}
+
+#n4{
+ transform: scale(0.5) rotate(30deg);
+}
+#n5{
+    transform: skewy(45deg);
+}
