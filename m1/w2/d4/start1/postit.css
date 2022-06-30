@@ -33,6 +33,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    box-shadow: 1px 1px 10px black;
 }
 
 .post-it span {
@@ -45,11 +46,12 @@ body {
 .post-it:hover {
     transform: scale(1.2);
     border: 2px solid rgb(70, 70, 70);
+    box-shadow: 1px 5px 10px black;
 }
 
 .gialli {
     background: rgb(114, 140, 0);
-    background: linear-gradient(0deg, rgba(114, 140, 0, 1) 0%, rgba(134, 176, 39, 1) 10%, rgba(255, 252, 0, 1) 100%);
+    background: linear-gradient(0deg, rgb(97, 117, 8) 0%, rgb(147, 156, 9) 10%, rgba(255, 252, 0, 1) 100%);
     transform: rotate(-4deg);
 }
 
@@ -61,7 +63,7 @@ body {
 
 .blu {
     background: rgb(26, 21, 111);
-    background: linear-gradient(0deg, rgba(26, 21, 111, 1) 0%, rgba(37, 37, 149, 1) 10%, rgba(0, 212, 255, 1) 100%);
+    background: linear-gradient(0deg, rgb(43, 39, 117) 0%, rgb(34, 34, 175) 10%, rgba(0, 212, 255, 1) 100%);
     transform: rotate(-6deg);
 }
 
@@ -152,3 +154,19 @@ body {
         opacity: 0;
     }
 }
+
+/*=============PROVE=============
+caruccie le lascio*/
+
+.blu>.scomparelle {
+    color: yellow;
+}
+
+.gialli>.scomparelle {
+    color: rgb(4, 0, 255);
+}
+
+.verdi>.scomparelle {
+    color: azure;
+}
+
