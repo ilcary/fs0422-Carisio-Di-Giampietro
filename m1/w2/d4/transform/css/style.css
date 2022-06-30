@@ -30,3 +30,12 @@
 #n5{
     transform: skewy(45deg);
 }
+#n6{
+    transition: transform 0.5s, background-color 1s;
+    transition-delay: 0.5s, 1s;
+}
+#n6:hover{
+    transform: skewy(45deg) scale(0.5) rotatex(100deg);
+    background-color: lightblue;
+}
+
