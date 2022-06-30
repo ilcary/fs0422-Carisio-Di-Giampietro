@@ -1,70 +1,81 @@
-#main-header {
-    background-color: green;
+#main-header{
+    background-color:darkgreen;
     height: 50px;
-    text-align: center;
+    text-align:center;
 }
 
-
-#menu>li,
-#menu,
-#main-header nav {
-    height: 100%;
-
-}
-
-#menu>li {
+#menu > li{
     display: inline-block;
-
-}
-
-#menu li {
-
-    line-height: 50px;
     transition: all 0.3s;
-
 }
 
-#menu a {
+#menu li:hover{
+    background-color:#fff;
+}
+#menu li:hover > a{
+    color:darkgreen;
+}
+
+#menu > li, #menu, #main-header nav{
+    height: 100%;
+}
+
+#main-header a{
     color: #fff;
     text-decoration: none;
     padding: 0 10px;
-    /* le due linee sotto
-    servono a dare agli a
-    un area cliccabile alta come
-    la barra verde dell'header
-     */
     line-height: 50px;
-    display: block;
-
+    display: block
 }
 
-#main-header li:hover {
-    background-color: white;
+/*sotto-menu*/
 
-}
 
-#main-header li:hover>a {
-    color: green;
-
-}
-
-/* sottomenu chi siamo */
-
-#menu>li>ul>li a {
-    width: 100px;
-}
-
-#menu li>ul {
+#menu li > ul{
     height: 0;
+    overflow: hidden;
     position: absolute;
-    background-color: green;
+    background-color: darkgreen;
     width: 200px;
-    transition: 0.3s;
+    transition: height 0.3s;
+}
+#menu li:hover > ul{
+   height: 150px;
+}
+
+@media screen and (max-width:768px){
+
+    #main-header{
+        height: auto;
+    }
+
+    #menu{
+        height: 0;
+        transition: all 0.3s;
+        overflow: hidden;
+    }
+
+    label[for="toggle"]{
+        cursor: pointer;/*appare la manina*/
+    }
+
+    input[type="checkbox"]{
+        display: none;/*nascondo la checkbox*/
+    }
+    input[type="checkbox"]:checked + #menu{
+        height: 150px;
+    }
+
+    #menu > li{
+        height: 50px;
+    }
+
+    #menu li{
+        display: block;
+    }
+    #menu li > ul{
+        display: none;
+    }
 
 }
 
-#menu li:hover>ul {
-    display: block;
-    height: 150px;
-
-}
