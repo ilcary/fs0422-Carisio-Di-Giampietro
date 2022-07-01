@@ -299,10 +299,19 @@ footer {
 
 /*================CHI SIAMO.HTML=================*/
 
+#bodychisiamo{
+    margin:  1rem;
+}
+
 .chisiamo img{
    max-width: 100%;
    border-radius: 1rem;
    box-shadow: rgb(122, 122, 122) 1px 1px 10px;
+}
+
+.table-mobile{
+    margin: 2rem auto;
+    font-size: 1.2rem;
 }
 
 .table-blue-bg{
