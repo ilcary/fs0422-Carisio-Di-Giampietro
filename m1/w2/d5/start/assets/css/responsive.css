@@ -48,11 +48,16 @@
     #table-tabdsk{
         display: none;
     }
+    #maps{
+        display: none;
+    }
+    
 }
 @media screen and (max-width: 767px){
     #titolo-contattimb{
         display: none;
     } 
+    
 }
 /*=================TABLET==================================*/
 @media screen and (min-width: 768px){

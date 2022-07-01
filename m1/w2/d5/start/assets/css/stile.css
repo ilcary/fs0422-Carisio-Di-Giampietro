@@ -350,3 +350,14 @@ footer {
     font-size: 1.2rem;
     line-height: 1.8rem;
 }
+.refs{
+    color: tomato;
+    
+}
+.refs:hover{
+    text-shadow: #4e4e4e6c 1px 1px 10px;
+    transition: ease-out 0.5s;
+}
+
+/**/
+
