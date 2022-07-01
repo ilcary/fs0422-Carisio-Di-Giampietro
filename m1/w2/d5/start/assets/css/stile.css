@@ -173,7 +173,7 @@ i {
     background-image: url(../images/banner.jpg);
     background-position: center;
     background-size: cover;
-    min-height: 500px;
+    min-height: 400px;
     box-shadow: 1px 1px 3px #d3d3d3;
 
 }
@@ -211,9 +211,10 @@ i {
 }
 
 #fotoicon {
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     border-radius: 1rem;
     box-shadow: lightgray 1px 1px 10px;
+    max-width: 100%;
 }
 
 .articoli .inline-icon {
@@ -276,12 +277,14 @@ footer {
     margin: 0;
     width: 400px;
     border-radius: 0;
+    max-width: 80%;
 
 }
 
 .articoli-footer input {
     width: 400px;
     height: 50px;
+    max-width: 80%;
 }
 
 .articoli-footer>h3 {
@@ -334,12 +337,13 @@ footer {
     align-items: center;
 }
 .form-contatti input{
-    margin: 0.5rem;
-    padding: 0.5rem;
+    margin: 0.8rem;
+    padding: 0.8rem;
     width: 280px;
 }
 .form-contatti input:nth-of-type(3){
    padding-bottom: 3rem;
+   margin-top: 0.8rem;
 }
 
 .articoli-contatti p, address{

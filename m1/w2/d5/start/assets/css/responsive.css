@@ -48,12 +48,13 @@
     #table-tabdsk{
         display: none;
     }
+}
+@media screen and (max-width: 767px){
     #titolo-contattimb{
         display: none;
-    }
+    } 
 }
-
-/*===================================================*/
+/*=================TABLET==================================*/
 @media screen and (min-width: 768px){
   .sottosezione{
     display: flex;
@@ -82,6 +83,10 @@ footer h3{
     font-size: 1.4rem;
 }
 
+.sezione-chisiamo{
+    display: flex;
+}
+
 .table-mobile{
     display: none;
 }
@@ -106,6 +111,12 @@ footer h3{
     margin:4rem;
 
 }
+
+
+.form-contatti{
+    margin-top: 2rem;
+}
+
 #titolo-contattimb{
     text-align: center;
     margin-top: 2rem;
@@ -113,9 +124,37 @@ footer h3{
 #titolo-contatti{
     display: none;
 }
+#container-contatti{
+    max-width: 768px;
+    margin: 0 auto;
+}
 
+}
 
+/*===============DESKTOP==================*/
+@media screen and (min-width: 920px){
+    .primasezione>div{
+        max-width: 920px;
+        margin: auto auto;
 
+    }
+    .secondasezione>.articoli{
+        max-width: 50%;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+    .terzasezione{
+        max-width: 920px;
+        margin: 0 auto;
+    }
+    #fotoicon{
+     max-width: 320px;
+     margin-right: 1rem;
+    }
+    #container-contatti{
+        max-width: 928px;
+        margin: 0 auto;
+    }
 
 
 }
