@@ -112,7 +112,7 @@ footer h3{
 
 #table-tabdsk{
     padding: 0.5rem;
-    margin: 0.5rem;
+    margin: 0 auto;
 }
 
 #table-tabdsk tr>th{
