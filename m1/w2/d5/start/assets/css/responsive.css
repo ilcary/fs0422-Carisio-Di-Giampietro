@@ -45,11 +45,25 @@
     .menu>li:not(:last-child) {
         border-bottom: 1px solid #444;
     }
+    .top-nav{
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
     #table-tabdsk{
         display: none;
     }
     #maps{
         display: none;
+    }
+    .primasezione{
+        margin-top: 3rem;
+    }
+    #bodychisiamo>.articoli{
+        margin-top: 4.5rem;
+    }
+    #container-contatti{
+        margin-top: 4.5rem;
     }
     
 }
