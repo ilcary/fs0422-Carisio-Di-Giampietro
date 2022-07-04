@@ -13,5 +13,4 @@ console.log(_pet);
 var _pet2 = 'pantera';
 document.write(_pet2);
 
-//var 12 = 'numero';
 
