@@ -1,0 +1,192 @@
+#transform-area {
+    background-color: #000;
+    height: 100vh;
+    perspective: 200px;
+    transform-style: preserve-3d;
+    overflow: hidden;
+    will-change: transform;
+}
+
+.quadrato {
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    margin-bottom: 20px
+}
+
+#n1 {
+    animation-name: animazione1;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+@keyframes animazione1 {
+    from {
+        background-color: red
+    }
+
+    to {
+        background-color: yellow
+    }
+}
+
+#n2 {
+    animation-name: animazione2;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animazione2 {
+    from {
+        background-color: red
+    }
+
+    50% {
+        background-color: yellow
+    }
+
+    to {
+        background-color: red
+    }
+}
+
+#n3 {
+    animation-name: animazione3;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    transform: translateZ(0)
+}
+
+#n4 {
+    animation-name: animazione3;
+    animation-duration: 3.3s;
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
+}
+
+@keyframes animazione3 {
+    0% {
+        transform: translate(0%, 0%) rotateY(0);
+        background-color: red;
+    }
+
+    25% {
+        transform: translate(20%, 10%) rotateY(30deg);
+        background-color: blue;
+    }
+
+    75% {
+        transform: translate(80%, 50%) rotateY(300deg);
+        background-color: white;
+    }
+
+    100% {
+        transform: translate(0%, 0%) rotateY(0);
+        background-color: red;
+    }
+}
+
+#n5 {
+    animation-name: animazione4;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+}
+@keyframes animazione4{
+    0%{ margin-left: 0; }
+    50%{ margin-left: 90%; }
+    100%{ margin-left: 0; }
+}
+
+#n6 {
+    animation-name: animazione5;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+}
+@keyframes animazione5{
+    0%{ transform: translateZ(0)}
+    50%{ transform: translateZ(-700px)}
+    100%{ transform: translateZ(0)}
+}
+
+#n7{
+    position: absolute;
+    left: 100px;
+    top: 200px;
+    background-color: yellow;
+    transform: translateZ(0px) rotateY(30deg)
+}
+#n8{
+    position: absolute;
+    top: 200px;
+    transform: translateZ(0px) rotateY(-30deg)
+}
+
+/*cubo*/
+
+#area-trasformazione{
+    perspective:1000px;
+    transform-style: preserve-3d;
+    height: 100vh;
+}
+
+#cubo{
+    transform-style: preserve-3d;
+    position: relative;
+    margin-left: 200px;
+    margin-top: 200px;
+    height: 200px;
+    width: 200px;
+    animation-name: cubo;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes cubo{
+    0%{ transform: rotateZ(0deg) rotateY(0deg) rotateX(0deg); }
+    50%{ transform: rotateZ(360deg) rotateY(360deg) rotateX(360deg); }
+    100%{ transform: rotateZ(0deg) rotateY(0deg) rotateX(0deg); }
+}
+
+.faccia{
+    background-color:#ccc;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    border: 1px solid #000;
+}
+
+#sx{
+    left: -200px;
+    transform: rotateY(90deg);
+    transform-origin: right;
+    background-image: url(https://picsum.photos/200/300);
+}
+#dx{
+    right: -200px;
+    transform: rotateY(-90deg);
+    transform-origin: left;
+    background-image: url(https://picsum.photos/200/300);
+}
+#top{
+    top: -200px;
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+    background-image: url(https://picsum.photos/200/300);
+}
+#bottom{
+    bottom: -200px;
+    transform: rotateX(90deg);
+    transform-origin: top;
+    background-image: url(https://picsum.photos/200/300);
+}
+#rear{
+    background-color:#777;
+    background-image: url(https://picsum.photos/200/300);
+}
+#front{
+    transform: translateZ(200px);
+    z-index: 1;
+    background-image: url(https://picsum.photos/200/300);
+}
