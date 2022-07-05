@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let eta = prompt('quanti anni hai?');
+        console.log(eta);
+
+        //if(eta != '' && eta != null){
+        if (eta) {
+
+            if (eta >= 18 && eta <= 120) {
+                document.write('sei maggiorenne')
+            } else if (eta > 120) {
+                document.write('sei antico')
+            } else {
+                document.write('sei minorenne')
+                location.href = 'http://it.peppapig.com//' //redirect
+            }
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

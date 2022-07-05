@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button onclick="cambiaSfondo(this)" data-color="red">rosso</button>
+    <button onclick="cambiaSfondo(this)" data-color="blue">blu</button>
+    <button onclick="cambiaSfondo(this)" data-color="yellow">giallo</button>
+    <button onclick="cambiaSfondo(this)" data-color="green">verde</button>
+
+    <script>
+
+        let body = document.querySelector('body');
+        function cambiaSfondo(elemento) {
+            let colore = elemento.getAttribute('data-color');
+            body.style.backgroundColor = colore;
+        }
+
+
+    </script>
+
+</body>
+
+</html>

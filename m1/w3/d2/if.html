@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
 
 
@@ -39,40 +41,53 @@
         console.log(!(n <= 10))//l'operatore not inverte il valore di un dato booleano
 
 
-        console.log(n>10 || n==10);// true se una delle due condizioni è vera
+        console.log(n > 10 || n == 10);// true se una delle due condizioni è vera
 
-        console.log(n > 10 && n == 10 );// true se tutte le condizioni sono vere
+        console.log(n > 10 && n == 10);// true se tutte le condizioni sono vere
 
         /*
         if
         */
 
         let condizione = false;
-        if(!condizione){
+        if (!condizione) {
             console.log('vero')
-        }else{
-                consoel.log('false')
-            }
+        } else {
+            consoel.log('false')
+        }
 
-            let numero = 30;
+        let numero = 30;
 
-            //la prima condizione risultante come vera blocca l'esecuzione dell'if
+        //la prima condizione risultante come vera blocca l'esecuzione dell'if
 
-            if(numero > 30){
-                console.log('superiore')
-            }else if(numero == 30){
-                console.log('uguale')
-            }else{
-                console.log('inferiore')
-            }
-        
-            let h = 'Ciao'
-            let l = 'Ciao'
-            if(l=h){
-                console.log('vero')
-                console.log(h,1)
-            }
+        if (numero > 30) {
+            console.log('superiore')
+        } else if (numero == 30) {
+            console.log('uguale')
+        } else {
+            console.log('inferiore')
+        }
 
+        /*
+        trabocchetto dell'assegnamento
+        */
+
+        let h = 'Ciao'
+        let l = 'Ciao1'
+        if (h = l) {
+            console.log('vero')
+            console.log(h, l)
+        }
+
+        let str = '';
+        if (str) { // bstringa vuota mappa a false
+            console.log('test');
+        }
+
+        let num = 0;
+        if (num) {
+            console.log('test');
+        }
 
 
 
@@ -85,6 +100,7 @@
 
 
     </script>
-    
+
 </body>
+
 </html>

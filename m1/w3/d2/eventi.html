@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button onclick="alert('ciao')">Scatena un alert</button>
+    <hr>
+
+    <input value="0" type="text" id="display">
+    <button onclick="aggiungiNumero(this)">1</button>
+    <button onclick="aggiungiNumero(this)">2</button>
+    <button onclick="aggiungiNumero(this)">3</button>
+    <button onclick="aggiungiNumero(this)">4</button>
+    <button onclick="aggiungiNumero(this)">5</button>
+    <button onclick="aggiungiNumero(this)">6</button>
+    <button onclick="aggiungiNumero(this)">7</button>
+    <button onclick="aggiungiNumero(this)">8</button>
+    <button onclick="aggiungiNumero(this)">9</button>
+    <button onclick="aggiungiNumero(this)">0</button>
+    <button onclick="aggiungiNumero(this)">+</button>
+    <button onclick="aggiungiNumero(this)">-</button>
+    <button onclick="aggiungiNumero(this)">*</button>
+    <button onclick="aggiungiNumero(this)">/</button>
+
+    <button onclick="reset()">Reset</button>
+
+    <script>
+
+        function aggiungiNumero(bottone) {
+            let display = document.getElementById('display')
+            console.log(display.value)
+            if (display.value[0] != 0) {
+                display.value += bottone.innerHTML
+            } else {
+                display.value = bottone.innerHTML
+            }
+        }
+
+        function reset() {
+            display.value = 0;
+        }
+
+    </script>
+</body>
+
+</html>
