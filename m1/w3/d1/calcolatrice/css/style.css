@@ -1,0 +1,100 @@
+body {
+    font-family: 'Arima', cursive;
+    font-family: 'Fira Sans', sans-serif;
+    background-image: url(../assets/images/pexels-suzy-hazelwood-1629236.jpg);
+}
+
+.container {
+    max-width: 400px;
+    
+    margin: 0.2rem auto 0.2rem auto;
+    background-color: #a8dadc;
+    transform:
+        perspective(75em) rotateX(18deg);
+    box-shadow:
+        2px 2px 0 1px #f9f9fb,
+        -1px 0 28px 0 rgba(34, 33, 81, 0.01),
+        54px 54px 28px -10px rgba(34, 33, 81, 0.15);
+    border-radius: 10px;
+    border: 1px solid;
+    border-color:
+        rgb(213, 220, 226) rgb(213, 220, 226) rgb(184, 194, 204);
+}
+
+#display {
+    text-align: right;
+    height: 70px;
+    line-height: 70px;
+    padding: 16px 8px;
+    font-size: 40px;
+
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.buttons>div {
+    transform:
+        rotateX(2deg) rotateZ(2deg);
+
+}
+
+.button {
+    border: 0.5px solid #006d77;
+    line-height: 72px;
+    text-align: center;
+    font-size: 35px;
+    margin: 0.4rem;
+    transform-style: preserve-3d;
+    border-radius: 32px;
+    box-shadow:
+        1px 1px 0 1px #f9f9fb,
+        -1px 0 28px 0 rgba(34, 33, 81, 0.01),
+        28px 28px 28px 0 rgba(34, 33, 81, 0.25);
+    transition:
+        .4s ease-in-out transform,
+        .4s ease-in-out box-shadow;
+    border: 1px solid gray;
+    background-color: #1d3557;
+    color: white;
+}
+
+#equal {
+    background-color: #e63946;
+    color: white;
+}
+
+.button:hover {
+    background-color: #457b9d;
+    color: white;
+    transition: 0.2s ease-in-out;
+    transform:
+        translate3d(0px, 4px, 0px) rotateX(-2deg) rotateZ(-2deg);
+    box-shadow:
+        1px 1px 0 1px #f9f9fb,
+        -1px 0 28px 0 rgba(34, 33, 81, 0.01),
+        54px 54px 28px -10px rgba(34, 33, 81, 0.15);
+}
+
+section {
+   
+}
+
+.buttons>.op {
+    background-color: aliceblue;
+    color: #1d3557;
+}
+
+.buttons>.op:hover {
+    background-color: #457b9d;
+    color: white;
+    transition: 0.5s ease-in-out;
+}
+
+#equal:hover {
+    background-color: #ff8b95;
+    color: white;
+    transition: 0.5s ease-in-out;
+}

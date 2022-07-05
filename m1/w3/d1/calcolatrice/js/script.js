@@ -11,7 +11,7 @@ buttons.forEach( button => {
 
             case '=':
                 try{
-                    display.innerText = parseint(display.innerText);
+                    display.innerText = eval(display.innerText);
                 } catch {
                     display.innerText = "Error"
                 }
