@@ -95,12 +95,26 @@ console.log('averaggino ' +  ((c + d) /2))
 */
 
 /* WRITE YOUR ANSWER HERE */
+let string = 'by the way'
+
+
+console.log('string length ' + string.length)
+
+
 
 /*EX 7
  Write a piece of code for checking if a given value is a integer or not.
 */
 
 /* WRITE YOUR ANSWER HERE */
+
+
+console.log(Number.isInteger(-123))
+console.log(Number.isInteger(123))
+console.log(Number.isInteger('123'))
+
+
+
 
 /*EX 8
  Write a piece of code for calculating a certain percentage of a given number.
@@ -109,8 +123,22 @@ console.log('averaggino ' +  ((c + d) /2))
 
 /* WRITE YOUR ANSWER HERE */
 
+let h =400
+
+console.log((400/10)*2)
+
+
+
 /*EX 9
  Write a piece of code for checking if a given number is even or odd.
 */
 
 /* WRITE YOUR ANSWER HERE */
+
+let k =23
+
+if (k % 2 == 0) {
+    console.log('the number is even')
+}else{
+    console.log('the number is odd')
+}
