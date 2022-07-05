@@ -1,0 +1,9 @@
+div, p{
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+}
+input{
+    min-width: 400px;
+    margin: 0.5rem;
+}

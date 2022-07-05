@@ -59,3 +59,42 @@ console.log('string con \n\ righe \n\ multiple');
 console.log(`string con 
 righe 
 multiple`);
+
+
+
+// RickRolling ->
+
+const VERSO = prompt('che animale hai?');
+console.log(VERSO);
+
+if (VERSO) {
+
+    if (VERSO == 'cane') {
+        document.write('bau')
+    } else if (VERSO == 'gatto') {
+        document.write('miao')
+    } else if (VERSO == 'never') {
+        location.href = 'https://youtu.be/dQw4w9WgXcQ'
+    } else {
+        let tuoVerso = prompt('che verso fa?')
+        document.write(tuoVerso);
+    }
+}
+
+var separatore = '=========================================='
+console.log(separatore);
+
+// pezzi di pizza
+
+
+function pezziTotali() {
+    var pezziPizza = document.getElementById('pezziPizza').value;
+    console.log(pezziPizza);
+    var persone = document.getElementById('persone').value;
+    console.log(persone);
+    var pezziTotali = (pezziPizza * persone);
+    var result = document.getElementById('result');
+    result.innerHTML = pezziTotali
+
+}
+
