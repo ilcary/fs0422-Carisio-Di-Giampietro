@@ -26,18 +26,18 @@ console.log('EX 2')
 let a = 85
 let b = 16
 
- 
-    if (a == 8) {
-        console.log('a is egual 8')
-    } else if (b == 8) {
-        console.log('b is egual 8')
-    } else if ((a + b) == 8) {
-        console.log('a+b is egual 8')
-    } else if ((a - b) == 8){
-        console.log('a-b is egual 8')
-    } else{
-        console.log('none of those numbers given give by their addition or subtraction the number 8 and also neither is 8')
-    }
+
+if (a === 8) {
+    console.log('a is egual 8')
+} else if (b === 8) {
+    console.log('b is egual 8')
+} else if ((a + b) === 8) {
+    console.log('a+b is egual 8')
+} else if ((a - b) === 8) {
+    console.log('a-b is egual 8')
+} else {
+    console.log('none of those numbers given give by their addition or subtraction the number 8 and also neither is 8')
+}
 
 
 
@@ -67,11 +67,28 @@ let y = 180
 let z = 85
 let t = 1
 
+let numbers = [x, y, z, t]
+
+let sortnumber = numbers.sort((a, b) => a - b)
+
+console.log(sortnumber)
+
+
+
+
 /*EX 5
  Write a piece of code for finding the average of two given integers.
 */
 
 /* WRITE YOUR ANSWER HERE */
+
+console.log('EX 5')
+
+let c = 56
+let d = 5
+
+console.log('averaggino ' +  ((c + d) /2))
+
 
 /*EX 6
  Write a piece of code for finding the longest of two given strings.
