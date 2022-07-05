@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <ul id="prova">
+        <li>item</li>
+    </ul>
+
+    <script>
+
+        var stringa = 'prova';
+        var stringa2 = "prova";
+        var html = "<div class='test'></div>";
+        var html2 = "<div class=\"test\"></div>";
+        var html3 = "<div class='test'>" + stringa + "</div>";
+
+        console.log(html3);
+        document.write(html3)
+
+        /*
+    interpolazione di stringhe
+        */
+        var html4 = `<div class='test'>${stringa}</div>`;
+        console.log(html4);
+
+        var separatore = '============================================='
+        console.log(separatore);
+
+        //ovunque sia richiesto l'inserimento di una stringa o un numero
+        //possiamo inserire invece una variabile contenente il valore richiesto
+        //var id = '#blocco-rosso';
+        //document.querySelector(id);
+
+        // let =================
+        let a = 5;
+        //var a ; l'identificatore a è un let e non posso riutilizzarlo per una var
+        console.log(a);
+
+        {
+            console.log(a);
+        }
+
+        {
+            let b = 4;
+            console.log(b);
+        }
+
+        // console.log(b); errore b non esiste all'esterno del blocco 
+
+        {
+            var c = 3;// posso riutilizzare l'identificatore b, perchè la let b create precedentemente nasce e muore all'interno di un blocco
+
+        }
+        console.log(c); // c è una var e quindi ignora il blocco
+
+       /* const =================================
+         */            
+        
+         // const b; l'identificatore b è già stato utilizzato dalle var della riga 50 non posso riutilizzarlo per una const
+         
+         const C = 2;
+         console.log(C);
+          // c = 1 errore: non posso riassegnare il valore di una constatnte
+
+          const OBJ = {
+            nome: '',
+            cognome: 'Barone'
+          }
+
+          OBJ.nome = 'Fabiola';
+
+          console.log(OBJ);
+
+
+
+          /*
+          operatori
+          */
+
+          var x = 10;
+          x = 11;
+
+          x += 1;
+          console.log(x);
+          x -= 1;
+          console.log(x);
+          x ++; // incremento di 1
+          console.log(x);
+          x --; // decremento di 1
+          console.log(x);
+
+          // + è operatore matematico per la somma , ma anche operatore di concatenamento stringhe
+
+          var saluto = 'ciao'
+          saluto += ' '
+          saluto += 'Mario'
+          console.log(saluto);
+
+          let prova = document.querySelector('#prova')
+          prova.innerHTML += '<li>item</li>'
+          prova.innerHTML += '<li>item</li>'
+          prova.innerHTML += '<li>item</li>'
+          prova.innerHTML += '<li>item</li>'
+          prova.innerHTML += '<li>item</li>'
+          console.log(prova);
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
