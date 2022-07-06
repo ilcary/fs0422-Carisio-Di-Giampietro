@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        
+        let obj = {}
+        let pizzaMargherita = {
+            tipo: 'Napoletana',
+            gusto: 'Margherita',
+            prezzo: 5
+        }
+        let pizzaDiavola = {
+            tipo: 'Napoletana',
+            gusto: 'Diavola',
+            prezzo: 1
+        }
+        
+        console.log(pizzaMargherita);
+        console.log(pizzaMargherita);
+
+
+        function Pizza(_tipo,_prezzo,_gusto) {
+            this.tipo = _tipo;
+            this.prezzo = _prezzo;
+            this.gusto = _gusto;
+        }
+
+        let margherita = new Pizza('Napoletana', 5,'Margherita')
+        let diavola = new Pizza('Napoletana', 1,'Diavola')
+        let mimosa = new Pizza('Napoletana', 8,'Mimosa')
+        console.log(margherita, diavola, mimosa)
+        
+        Pizza.prototype.disponibilita = true
+        
+        console.log(diavola.disponibilita)
+        
+        
+    </script>
+</body>
+</html>

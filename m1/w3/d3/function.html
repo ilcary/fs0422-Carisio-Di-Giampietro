@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="prova()">Click</button>
+    
+    <script>
+
+        function prova(){
+            return 'prova';
+            console.log('prova')
+        }
+
+        //console.log(x);
+        let x = prova();
+        console.log(x, prova());
+
+
+        //usare return per bloccare la funzione
+
+        function checkAge(eta){
+            if(eta >= 18){
+                return 'accesso consentito';
+            }
+            return 'Accesso negato';
+
+        }
+
+        document.write( checkAge(17) );
+
+        //UTILIZZO DI VARIABILI GLOBALI
+
+        let contatore = 0;
+
+        function incrementa(){
+            contatore++;
+        }
+
+        incrementa();
+        incrementa();
+        incrementa();
+        incrementa();
+        console.log(contatore)
+
+        //utilizzo di parametri
+
+        function somma(a,b,c){
+            
+            return  a + b + c;
+        }
+
+        console.log(somma(1,2,3));
+        
+        //funzione con valori di default
+        function somma2(a,b,c = 0,d = 0,e = 0,f = 0){
+            //se per i parametri c,d,e,f non verrà inserito un valore, verrà utilizzato quello di default
+            return a + b + c + d + e + f;
+        }
+        
+        console.log(somma2(1,2,3)); 
+        
+        function somma3(a,b,c,d,e){
+
+            //posso procedere senza inserire valori di default, e verificando o valorizzando in maniera condizionale i parametri mancanti
+            //opzione if
+            if(!c){
+                c = 0
+            }
+
+            //opzione coalescenza
+            d = d || 0
+
+            //opzione ternario
+            e = e ? e : 0 
+            
+            return a + b + c + d + e;
+        }
+        
+        console.log(somma2(1,2,3,4,5));
+
+
+        function azione(tipoAzione = 1){
+
+            if(tipoAzione == 1){
+                //esegui questo set di azioni
+            }else if(tipoAzione == 2){
+                //esegui questo set di azioni
+            }else if(tipoAzione == 3){
+                //esegui questo set di azioni
+            }else{
+                //esegui questo set di azioni
+            }
+
+        }
+
+        let funzione = function(){
+            console.log('ciao')
+        }
+
+        console.log( funzione(), funzione );
+
+
+        (function(){
+            console.log('eseguita')
+        })()
+
+        let dato = (function(){
+            return 'eseguita';
+        })()
+
+        console.log(dato)
+
+        
+    </script>
+</body>
+</html>
