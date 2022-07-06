@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        function miaFunzione(){
+          console.log('funzione classica')
+        }
+
+        let funzioneFreccia = () => {
+          console.log('funzione freccia')
+        }
+
+
+        // in assenza di graffe, siamo obbligati a risolvere la funzione in una sola riga, e a non inserire la parola chiave return (poichè è già presente in maniera implicita)
+        let fn1 = () => 'ciao';
+
+        console.log( fn1() )
+
+
+        let fn2 = () => (2+2) * 4;
+        
+        console.log( fn2() )
+        
+        let fn3 = a => a+a;
+        
+        console.log( fn3(2) )   
+        
+        let fn4 = (a,b) => a+b;
+        
+        console.log( fn4(2,6) )
+// con la necessità di una funzione a più righe , dobbiamo usare la sintassi con parentesi graffe , dove la parola return non è più sottointesa
+        let fn5 = (a,b) => {
+            a++;
+            b++;
+            return a+b
+        }
+        console.log( fn5(9,6) )
+
+        // la parola chiave this all'interno di una funzione freccia, ha un  funzionamento anomalo, poichè le funzioni freccia in realtà sono tutte funziooni anonime
+
+
+        let fn6 = () => this
+        console.log(fn6())
+
+
+    </script>
+</body>
+</html>
