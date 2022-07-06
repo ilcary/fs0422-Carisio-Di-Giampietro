@@ -56,21 +56,21 @@ function scegliTorta(mela, arancia) {
 
 console.log(scegliTorta(3, 5));
 
-const calcolaSpesa = function(conto) {
+const calcolaSpesa = function (conto) {
     return conto >= 50 && conto <= 300 ? conto * 0.15 : conto * 0.2;
 }
 
 console.log(calcolaSpesa(320));
 
 // calcolatore range di anni 
-function rangeAnni(anni){
-    if(20<anni<30){
-    console.log('a ' + anni + ' anni ' + ' sei ' + ' giovane')
-}else if (0<anni<19){
-    console.log('a ' + anni + ' anni ' + ' sei ' + ' molto ' + ' giovane')
-}else{
-    console.log( 'a ' + anni + ' anni ' + ' sei ' + ' molto ' + ' vecchio')
-}
+function rangeAnni(anni) {
+    if (20 < anni < 30) {
+        console.log('a ' + anni + ' anni ' + ' sei ' + ' giovane')
+    } else if (0 < anni < 19) {
+        console.log('a ' + anni + ' anni ' + ' sei ' + ' molto ' + ' giovane')
+    } else {
+        console.log('a ' + anni + ' anni ' + ' sei ' + ' molto ' + ' vecchio')
+    }
 }
 
 rangeAnni(anni)
@@ -78,7 +78,23 @@ rangeAnni(anni)
 //funzione freccia
 
 let frecciaRossa = () => ('Reggio Calabria' + ' - ' + 'Reggio Mediopadana');
-        
-console.log( frecciaRossa() )
 
-// funzione con dentro una funzione
+console.log(frecciaRossa())
+
+// funzione con dentro una funzione + closure
+
+function displayCounter() {
+    let count = 0;
+
+    increment = function () {
+        return ++count;
+    };
+
+    return increment;
+}
+
+counter = displayCounter()
+
+console.log(counter());
+console.log(counter());
+console.log(counter());
