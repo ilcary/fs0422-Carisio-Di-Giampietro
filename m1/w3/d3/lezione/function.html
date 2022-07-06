@@ -116,7 +116,37 @@
 
         console.log(dato)
 
-        
+        /*
+        Closure
+        */
+
+        function primaFn(){
+            let dato = 10;
+            function secondaFn(){
+                console.log(dato);
+               return dato + dato;
+            }
+            
+            let datoUltimo = secondaFn() * 2;
+            return datoUltimo
+
+        }
+
+        console.log( primaFn() );
+
+
+        function fnAnnidata(a){
+            return function(b){
+                return function(c){
+                    return  a + b + c;
+                }
+            }
+        }
+
+        console.log( fnAnnidata(5)(4)(7) )
+
+
+
     </script>
 </body>
 </html>

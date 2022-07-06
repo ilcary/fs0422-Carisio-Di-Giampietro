@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    
 
     <header id="main-header">
         <nav>
@@ -24,20 +25,27 @@
     </header>
 
     <script>
-
-        function toggleMenu() {
+        
+        function toggleMenu(){
+            
             let menu = document.querySelector('#menu');
             menu.classList.toggle('open')
 
-            /*if (!menu.classList.contains('open')) {
-                menu.classList.remove('open')
-            } else {
-                menu.classList.add('open')
+            /*
+            if(!menu.classList.contains('open')){
+                menu.classList.add('open');
+            }else{
+                menu.classList.remove('open');
+            }*/
+            
+            /*if(menu.style.height != 'auto'){
+                menu.style.height = 'auto';
+            }else{
+                menu.style.height = '';
             }*/
         }
 
     </script>
 
 </body>
-
 </html>

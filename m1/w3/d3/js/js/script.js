@@ -18,7 +18,7 @@ let succoArance = scegliFrutto(4);
 console.log(succoArance);
 
 function calcolaAnni(compleanno) {
-    return 2050 - compleanno;
+    return 2022 - compleanno;
 }
 
 alert(calcolaAnni(1991));
@@ -26,13 +26,13 @@ alert(calcolaAnni(1991));
 const anni = calcolaAnni(1997);
 console.log(anni);
 
-const calcolaAnni2 = compleanno => 2040 - compleanno;
+const calcolaAnni2 = compleanno => 2022 - compleanno;
 
 let anni2 = calcolaAnni2(1980);
 console.log(anni2);
 
 const pensionamento = (compleanno, nome) => {
-    const eta = 2037 - compleanno;
+    const eta = 2022 - compleanno;
     const anniPensione = 65 - eta;
     //return anniPensione;
     return `${nome} va in pensione tra ${anniPensione} anni`;
@@ -61,3 +61,24 @@ const calcolaSpesa = function(conto) {
 }
 
 console.log(calcolaSpesa(320));
+
+// calcolatore range di anni 
+function rangeAnni(anni){
+    if(20<anni<30){
+    console.log('a ' + anni + ' anni ' + ' sei ' + ' giovane')
+}else if (0<anni<19){
+    console.log('a ' + anni + ' anni ' + ' sei ' + ' molto ' + ' giovane')
+}else{
+    console.log( 'a ' + anni + ' anni ' + ' sei ' + ' molto ' + ' vecchio')
+}
+}
+
+rangeAnni(anni)
+
+//funzione freccia
+
+let frecciaRossa = () => ('Reggio Calabria' + ' - ' + 'Reggio Mediopadana');
+        
+console.log( frecciaRossa() )
+
+// funzione con dentro una funzione
