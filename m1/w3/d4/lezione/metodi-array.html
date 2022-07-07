@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let fiori = ['rosa','geranio','tulipano']
+
+        fiori.push('Margherita')//aggiunge alla fine dell'array
+
+        console.log(fiori)
+        
+        let fioreEliminato = fiori.pop()//rimuove l'ultimo valore alla fine dell'array
+        console.log(fiori, fioreEliminato)
+        
+        
+        //splice
+        
+        fiori = ['rosa','geranio','tulipano']
+        
+        //eliminare usando splice
+        let dadoveInizioAdEliminare = 0;
+        let quantiNeVoglioEliminare = 1;
+        fiori.splice(dadoveInizioAdEliminare,quantiNeVoglioEliminare)
+        console.log(fiori)
+        
+        //sostituire usando splice
+        fiori = ['rosa','geranio','tulipano']
+        
+        fiori.splice(2,1,'margherita')
+        console.log(fiori)
+
+
+        //concat
+
+        fiori = ['rosa','geranio','tulipano']//i due array che verranno concatenati non subiranno modifiche
+        let fiori2 = ['margherita','dente di leone']//i due array che verranno concatenati non subiranno modifiche
+
+        //viene generato un terzo array che sarà il risultato della concatenazione
+        console.log( fiori.concat(fiori2), fiori, fiori2 )
+        </script>
+</body>
+</html>

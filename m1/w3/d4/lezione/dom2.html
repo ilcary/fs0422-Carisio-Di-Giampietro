@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="cambiatesto(this)" data-start="Save" data-end="Delete">Salva</button>
+
+    <script>
+
+        function cambiatesto(el){
+            let start = el.getAttribute('data-start');
+            let end = el.getAttribute('data-end');
+            
+            if(el.innerText == start){
+                el.innerText = end;
+            }else{
+                el.innerText = start;
+            }
+        }
+
+    </script>
+
+</body>
+</html>

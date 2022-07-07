@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        console.log( Math.round(10.3) );//arrotondamento per vicinanza all'intero
+        console.log( Math.round(10.8) );
+
+        console.log( Math.ceil(10.3) );//arrotondamento per eccesso
+        console.log( Math.floor(10.8) );//arrotondamento per difetto
+        
+        console.log( Math.trunc(10.8) );//elimina il decimale
+
+
+        //math random
+
+        console.log( Math.floor(Math.random() * 3) );
+
+        let parole = ['Grazie','Grazie Mille','Tante grazie']
+        let smyle = ['',':)',':D']
+        let punteggiatura = ['','!','!!']
+
+        let rand = Math.floor(Math.random() * 3)
+        let rand2 = Math.floor(Math.random() * 3)
+        let rand3 = Math.floor(Math.random() * 3)
+
+        console.log(`Ecco la frase generata randomicamente: ${parole[rand]} ${smyle[rand2]} ${punteggiatura[rand3]}`);
+
+        console.log(`"numero1":${Math.random()}, numero:${rand} `)
+
+
+
+
+
+
+    </script>
+</body>
+</html>
