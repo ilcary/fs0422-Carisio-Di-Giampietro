@@ -1,3 +1,4 @@
+/*
 body {
     font-family: 'Arima', cursive;
     font-family: 'Fira Sans', sans-serif;
@@ -83,30 +84,232 @@ body {
         54px 54px 28px -10px rgba(34, 33, 81, 0.15);
 
 }
+*/
 
 
-.buttons>.op {
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arima', cursive;
+    font-family: 'Fira Sans', sans-serif;
+    max-height: 40rem;
+    background: linear-gradient(to right, #2193b0, #6dd5ed);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+
+}
+
+.calculator {
+    width: 20rem;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: right;
+    background-color: #a8dadc;
+
+
+    border-radius: 10px;
+    border: 1px solid;
+    border-color:
+        rgb(213, 220, 226) rgb(213, 220, 226) rgb(184, 194, 204);
+}
+
+.setted3d {
+    transform:
+        perspective(75em) rotateX(18deg) rotateZ(5deg);
+    box-shadow:
+        2px 2px 0 1px #f9f9fb,
+        -1px 0 28px 0 rgba(34, 33, 81, 0.01),
+        54px 54px 28px -10px rgba(34, 33, 81, 0.15);
+
+}
+
+.display {
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 20vh;
+    box-shadow: rgba(34, 33, 81, 0.15) 2px 2px 20px 10px;
+    background: rgb(59, 56, 123);
+    background: linear-gradient(0deg, #a4d8da 0%, #1d3557 100%);
+    color: white;
+    margin-bottom: 0.6rem;
+
+}
+
+
+
+
+.input {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+button {
+    border: none;
+    line-height: 60px;
+    text-align: center;
+    font-size: 25px;
+    margin: 0.2rem;
+    transform-style: preserve-3d;
+    border-radius: 32px;
+    background-color: #1d3557;
+    color: white;
+}
+
+button:active {
+    transform:
+        translate3d(0px, 4px, 0px) rotateX(-4deg) rotateZ(-4deg);
+    box-shadow:
+        1px 1px 0 1px #f9f9fb,
+        -1px 0 28px 0 rgba(34, 33, 81, 0.01),
+        54px 54px 28px -10px rgba(34, 33, 81, 0.15);
+
+}
+
+
+
+
+
+.setted3dbutton {
+    border: 0.5px solid #5fcfda;
+    box-shadow:
+        1px 1px 0 1px #f9f9fb,
+        -1px 0 28px 0 rgba(34, 33, 81, 0.01),
+        28px 28px 28px 0 rgba(34, 33, 81, 0.25);
+    transition:
+        .4s ease-in-out transform,
+        .4s ease-in-out box-shadow;
+    border: 1px solid gray;
+}
+
+.op {
     background-color: aliceblue;
     color: #1d3557;
 }
 
-.buttons>.op:hover {
+.op:hover {
     background-color: #457b9d;
     color: white;
     transition: 0.5s ease-in-out;
 }
 
-.buttons>.op:active {
+.op:active {
     transform:
-    translate3d(0px, 4px, 0px) rotateX(-2deg) rotateZ(-2deg);
-box-shadow:
-    1px 1px 0 1px #f9f9fb,
-    -1px 0 28px 0 rgba(34, 33, 81, 0.01),
-    54px 54px 28px -10px rgba(34, 33, 81, 0.15);
+        translate3d(0px, 4px, 0px) rotateX(-2deg) rotateZ(-2deg);
+    box-shadow:
+        1px 1px 0 1px #f9f9fb,
+        -1px 0 28px 0 rgba(34, 33, 81, 0.01),
+        54px 54px 28px -10px rgba(34, 33, 81, 0.15);
+}
+
+
+button:hover {
+    font-weight: bold;
+    background-color: #457b9d;
+    color: white;
+    transition: 0.2s ease-in-out;
 }
 
 #equal:hover {
     background-color: #ff8b95;
     color: white;
     transition: 0.5s ease-in-out;
+}
+
+
+.output {
+    font-size: 30px;
+    padding: 18px;
+}
+
+.result {
+    font-size: 18px;
+    padding: 18px;
+}
+
+@keyframes big {
+    0% {
+        font-size: 18px;
+    }
+
+    100% {
+        font-size: 30px;
+    }
+}
+
+@keyframes small {
+    0% {
+        font-size: 28px;
+    }
+
+    100% {
+        font-size: 18px;
+    }
+}
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-right: 3rem;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #a8dadc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: tomato;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px tomato;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
 }
