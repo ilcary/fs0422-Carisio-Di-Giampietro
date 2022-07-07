@@ -139,6 +139,14 @@ body {
     background: linear-gradient(0deg, #a4d8da 0%, #1d3557 100%);
     color: white;
     margin-bottom: 0.6rem;
+    
+
+}
+
+.unknown{
+    background-image: url(..//assets/images/rick-roll-rickrolled.gif);
+    background-size: cover;
+    background-position: center center;
 
 }
 

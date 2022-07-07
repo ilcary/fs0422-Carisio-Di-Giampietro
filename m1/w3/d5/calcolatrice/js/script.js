@@ -54,9 +54,11 @@ $('#make3d').change(function(){
     if($(this).is(":checked")) {
         $('.calculator').addClass("setted3d");
         $('button').addClass('setted3dbutton');
+        $('.display').addClass('unknown');
     } else {
         $('.calculator').removeClass("setted3d");
         $('button').removeClass('setted3dbutton');
+        $('.display').removeClass('unknown');
     }
 });
 
