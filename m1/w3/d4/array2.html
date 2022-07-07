@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+    <script>
+        
+     let lettere = ['b','g','a','c','d','f','h','i','e']
+        lettere.sort();//riordino l'array, modificandolo direttamente
+
+        console.log(lettere)
+
+
+        let frase = 'ciao, come stai?';
+        console.log( frase.indexOf('comee') );
+
+        if(frase.indexOf('Come') != -1){
+            console.log('parola trovata')
+        }else{
+            console.log('parola non trovata')
+        }
+
+        //ricerca case unsensitive
+
+        let frase2 = 'Ciao Mario, come stai?';
+        let parolaCercata = 'ciao';
+
+        console.log(frase2.toLowerCase())
+
+        if(frase.toLowerCase().indexOf(parolaCercata.toLowerCase()) != -1 ){
+            console.log('parola 2 trovata')
+        }else{
+            console.log('parola 2 non trovata')
+        }
+
+    </script>
+</body>
+
+</html>
