@@ -5,8 +5,9 @@ body {
 }
 
 .container {
-    max-width: 400px;
-    
+    max-width: 300px;
+    max-height: 500px;
+
     margin: 0.2rem auto 0.2rem auto;
     background-color: #a8dadc;
     transform:
@@ -26,7 +27,7 @@ body {
     height: 70px;
     line-height: 70px;
     padding: 16px 8px;
-    font-size: 40px;
+    font-size: 35px;
 
 }
 
@@ -43,10 +44,10 @@ body {
 
 .button {
     border: 0.5px solid #006d77;
-    line-height: 72px;
+    line-height: 60px;
     text-align: center;
     font-size: 35px;
-    margin: 0.4rem;
+    margin: 0.2rem;
     transform-style: preserve-3d;
     border-radius: 32px;
     box-shadow:
@@ -70,17 +71,19 @@ body {
     background-color: #457b9d;
     color: white;
     transition: 0.2s ease-in-out;
+
+}
+
+.button:active {
     transform:
         translate3d(0px, 4px, 0px) rotateX(-2deg) rotateZ(-2deg);
     box-shadow:
         1px 1px 0 1px #f9f9fb,
         -1px 0 28px 0 rgba(34, 33, 81, 0.01),
         54px 54px 28px -10px rgba(34, 33, 81, 0.15);
+
 }
 
-section {
-   
-}
 
 .buttons>.op {
     background-color: aliceblue;
@@ -91,6 +94,15 @@ section {
     background-color: #457b9d;
     color: white;
     transition: 0.5s ease-in-out;
+}
+
+.buttons>.op:active {
+    transform:
+    translate3d(0px, 4px, 0px) rotateX(-2deg) rotateZ(-2deg);
+box-shadow:
+    1px 1px 0 1px #f9f9fb,
+    -1px 0 28px 0 rgba(34, 33, 81, 0.01),
+    54px 54px 28px -10px rgba(34, 33, 81, 0.15);
 }
 
 #equal:hover {

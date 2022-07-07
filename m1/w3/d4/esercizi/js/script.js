@@ -9,9 +9,9 @@ function acronimo(text) {
   
   console.log(acronimo('Mario Rossi'));
 
+let x = 'Domenico';
 
-
-let persone = ['Silvio', 'Alessio', 'Mirko', 'Alessandro']
+let persone = ['Silvio', 'Alessio', 'Mirko', 'Alessandro',x]
 
 console.log(persone)   
 console.log(persone[2])
