@@ -151,6 +151,23 @@ body {
 }
 
 
+.dmaker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(211, 211, 211, 0.568);
+    text-align: center;
+    margin: 2rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+.dmaker p{
+    color: #f9f9fb;
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 0.5rem;
+}
 
 
 .input {
@@ -264,10 +281,9 @@ button:hover {
 
 .switch {
     position: relative;
-    display: inline-block;
     width: 60px;
     height: 34px;
-    margin-right: 3rem;
+
 }
 
 .switch input {
@@ -283,7 +299,7 @@ button:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #a8dadc;
+    background-color: rgb(43, 124, 245);
     -webkit-transition: .4s;
     transition: .4s;
 }

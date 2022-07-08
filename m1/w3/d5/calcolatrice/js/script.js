@@ -23,7 +23,7 @@ function calculate() {
     }
 
     if (buttonText === "DEL") {
-        output.textContent = output.textContent.substr(0, output.textContent.length - 1);
+        output.textContent = output.textContent.toString().slice(0, -1);
         return;
     }
 
@@ -48,7 +48,7 @@ function calculate() {
 
 }
 
-
+//jquery per le classi 3d
 
 $('#make3d').change(function(){
     if($(this).is(":checked")) {
