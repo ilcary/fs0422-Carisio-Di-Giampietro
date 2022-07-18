@@ -1,0 +1,22 @@
+:root{
+    --sfondo: #355070;
+    --titolo: #e56b6f;
+    --testo: #eaac8b;
+}
+
+body{
+    background-color: var(--sfondo);
+}
+
+h1{
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 2rem;
+    color: var(--titolo);
+}
+
+div{
+    margin: 1rem;
+    font-size: 1.25rem;
+    color: var(--testo);
+}
