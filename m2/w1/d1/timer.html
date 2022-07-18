@@ -1,54 +1,46 @@
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
 <body>
-
-    <button id="timerBtn">avvia timer</button>
+    
+    <button id="timerBtn">Avvia timer</button>
     <div id="display"></div>
-
 
     <script>
 
+        /*
+       Mostra un timer che mostra il tempo trascorso a partire dal click su un bottone
+       */
 
-        //mostra un timer che conta i secondi a partire dal click su un bottone
+        let timerBtn = document.getElementById("timerBtn")
+        let display = document.getElementById("display")
 
-        let timerBtn = document.getElementById("timerBtn");
-        let display = document.getElementById("display");
+        if(timerBtn){
 
-        timerBtn.addEventListener("click", function () {
-            let time = new Date();
-
-            time.setHours(0);
-            time.setMinutes(0);
-            time.setSeconds(0);
             
-
-
-            setInterval(function () {
-
-                time.setSeconds(time.getSeconds() + 1)
-                display.innerHTML = time.toLocaleDateString()
-
-
-            },1000)
-        })
-
-
-
-
-
-
-
+            timerBtn.addEventListener("click",function(){
+                
+                let time = new Date();
+                
+                time.setHours(0)
+                time.setMinutes(0)
+                time.setSeconds(0)
+                
+                setInterval(function(){
+                    time.setSeconds(time.getSeconds() + 1)
+                    display.innerHTML = time.toLocaleTimeString()
+                },1000)
+                
+                
+            })
+            
+        }
 
 
     </script>
-
 </body>
-
 </html>

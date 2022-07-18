@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Ecco l'ora attuale:</h1>
+    <div id="clock"></div>
+
+    <script>
+
+        let now = new Date();
+        console.log(now)
+        console.log(now.getDate())//numero del giorno del mese
+        console.log(now.getMonth())//numero del mese(partendo da zero)
+        console.log(now.getFullYear())//numero dell'anno
+        /*
+        timestamp è il numero di millisecondi trascorsi dal 1 gennatio 1970 ad oggi
+        */
+        let millisecondi = now.getTime()
+        console.log(millisecondi, new Date(millisecondi))
+
+        /*metodi set*/
+
+        now.setFullYear(2021)
+        console.log(now)
+
+ 
+        /*
+        esercizio
+        mostra un orologio che si aggiorni con un intervallo di 1 secondo
+        */
+       let future = new Date();
+       future.setMonth(future.getMonth() + 1);
+
+       setInterval(function(){
+           
+            let time = new Date();
+
+            let clock = document.getElementById('clock')
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            clock.innerHTML = time.toLocaleTimeString('it-IT',options)
+            
+       }, 1000);
+
+       
+    </script>
+</body>
+</html>

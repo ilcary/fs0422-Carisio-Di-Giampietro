@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="html"></div>
+    <div id="html2"></div>
+    
+    <script>
+
+        
+        
+        let html = document.querySelector('#html')
+        //html.innerHTML = '<h1>Titolo</h1>'
+        
+        let h1 = document.createElement('h1')//<h1></h1>
+        h1.innerHTML = 'Titolo'
+        h1.style.color = 'red'        
+        html.prepend(h1)
+        
+        
+        
+        let dom = [
+            {
+                tag:'h1',
+                html:'Titolo',
+                class: 'classe1 classe2'
+            },
+            {
+                tag:'h2',
+                html:'Titolo2',
+                class: 'classe1'
+            }
+        ]
+
+        dom.forEach(function(el){
+            let element = document.createElement(el.tag)//<h1></h1>
+            element.innerHTML = el.html   
+            element.className = el.class         
+            html2.append(element)
+        })
+
+    </script>
+</body>
+</html>
