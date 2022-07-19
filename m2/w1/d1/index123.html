@@ -1,0 +1,67 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <section id="container">
+    <button onclick="facose()">genera ss numero</button>
+
+
+    <script>
+        var previousRandomNumber = 0;
+
+       
+
+        function facose() {
+
+
+            var drawNum = Math.floor(Math.random() * emoji.length);
+
+            do {
+                drawNum = Math.floor(Math.random() * emoji.length);
+                if (drawNum != previousRandomNumber) {
+                    console.log(drawNum);
+                }
+            } while (drawNum == previousRandomNumber)
+
+
+            previousRandomNumber = drawNum;
+
+        }
+
+        let emoji = ['😀','🤣','😃','😎','😴',
+'🤑','👽','😀','🤣','😃','😎','😴','🤑','👽'];
+
+let container = document.querySelector('#container');
+
+// emoji.forEach(element => {
+//     let card = document.createElement('div');
+//     card.classList.add('card');
+
+//     let numRand = Math.floor(Math.random() * 7);
+//     console.log(numRand);
+//     card.innerText = emoji[numRand]
+//     container.appendChild(card);
+// });
+
+// let numRand = Math.floor(Math.random() * (position.length - 1));
+// console.log(position);
+// console.log(numRand);
+
+// console.log(position.splice(numRand, 1), position);
+
+
+
+
+        
+
+    </script>
+</body>
+
+</html>
