@@ -1,0 +1,215 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        //forEach
+        let pizze = ['Margherita','Diavola','Capricciosa'];
+
+        pizze.forEach((pizza,indice) => {
+
+            document.write(indice + ' ' + pizza + '<br>')
+
+        })
+
+        //map
+        let pizzeBold = pizze.map(pizza => `<b>${pizza}</b>`)
+
+        pizzeBold.forEach((pizza,indice) => {
+
+            document.write(indice + ' ' + pizza + '<br>')
+
+        })
+
+
+
+        
+        
+        let numeri = [12,34,56,78,90];
+        
+        let numeriMoltiplicati = numeri.map(numero => {
+            return numero * 2//se la funzione freccia ha le graffe, siamo obbligato ad inserire il return
+         })
+
+        document.write('Risultato della moltiplicazione di tutti i numeri:<br>'+numeriMoltiplicati+'<br>')
+        
+        
+        /*==============================
+        Filter e Find
+        */
+
+        numeri = [12,34,56,78,90];
+
+        let numeriFiltrati = numeri.filter(numero => numero > 34)//[56,78,90]
+
+        document.write('Risultato del filtro: '+numeriFiltrati+' <br>')
+
+
+        let numeroTrovato = numeri.find(numero => numero > 34)//restituisce la prima voce che corrisponde alla ricerca
+
+        document.write(numeroTrovato)
+
+
+
+        //esempio con oggetti
+        let menu = [
+                {
+                    gusto:'Margherita',
+                    tipo:'Napoletana',
+                    prezzo:5
+                },
+                {
+                    gusto:'Diavola',
+                    tipo:'Napoletana',
+                    prezzo:1
+                }, 
+                {
+                    gusto:'Cacio e pepe',
+                    tipo:'Romana',
+                    prezzo:8
+                }
+            ]
+
+        let pizzaEconomica = menu.find(pizza => pizza.prezzo == 1)
+        console.log(pizzaEconomica)
+        
+        let pizzeNapoletane = menu.filter(pizza => pizza.tipo == 'Napoletana')
+        console.log(pizzeNapoletane)
+
+        
+         /*==============================
+        Reduce
+        */
+
+        numeri = [12,34,56,78,90,11,20];
+
+        let sommaNumeri = numeri.reduce((p,c) => p + c)
+        console.log(sommaNumeri);
+
+        let numeriPiccoli = numeri.reduce((p,c) => {
+
+            return p < c ? p : c
+            
+        })
+
+        console.log(numeriPiccoli);
+
+        function somma(a,b,c=0,d=0,e=0){
+            return a + b + c + d + e;
+        }
+        
+        document.write( somma(2,2,3) )
+
+        function sommaPro(...numbers){//operatore di spread unisce tutti i partametri che inserirò in un unico array
+            return numbers.reduce((p,c) => p + c)
+        }
+
+        console.log(sommaPro(2,45,6,7,3,56,789));
+
+
+        //esercizio
+
+        menu = [
+                {
+                    gusto:'Margherita',
+                    tipo:'Napoletana',
+                    prezzo:5
+                },
+                {
+                    gusto:'Diavola',
+                    tipo:'Napoletana',
+                    prezzo:1
+                }, 
+                {
+                    gusto:'Cacio e pepe',
+                    tipo:'Romana',
+                    prezzo:8
+                }
+            ]
+        
+        menu = menu.reduce((p,c) => {
+            if(p[c.tipo]){//se all'interno dell'oggetto p esiste la propretà pari al valore della proprietà tipo dell'oggetto c
+                p[c.tipo].push(c)
+            }else{
+                p[c.tipo] = [c];
+            }
+            return p
+        },{})
+
+        /*
+        {
+            napoletana : [
+                {
+                    gusto:'Margherita',
+                    tipo:'Napoletana',
+                    prezzo:5
+                },
+                {
+                    gusto:'Diavola',
+                    tipo:'Napoletana',
+                    prezzo:1
+                }
+            ],
+            romana:[
+                {
+                    gusto:'Cacio e pepe',
+                    tipo:'Romana',
+                    prezzo:8
+                }
+            ]
+        }
+        */
+        
+        console.log(menu);
+
+
+        /* 
+        ricerca indici
+        degli array dato un valore da cercare
+        */
+       let margherita =  {
+                   gusto:'Margherita',
+                   tipo:'Napoletana',
+                   prezzo:5
+               }
+        menu = [
+                {
+                    gusto:'Margherita',
+                    tipo:'Napoletana',
+                    prezzo:5
+                },
+                {
+                    gusto:'Diavola',
+                    tipo:'Napoletana',
+                    prezzo:1
+                }, 
+                {
+                    gusto:'Cacio e pepe',
+                    tipo:'Romana',
+                    prezzo:8
+                }
+        ]
+        
+
+        let indice = menu.indexOf(margherita)
+
+        let veroIndice = menu.findIndex(pizza => pizza.gusto == margherita.gusto )
+
+        console.log(indice, veroIndice);
+        
+        
+        //eliminare l'elemento trovato
+        
+        menu.splice(veroIndice,1)
+        console.log(menu);
+        
+
+        </script>
+</body>
+</html>

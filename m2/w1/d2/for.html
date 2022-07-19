@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        for(let i = 0; i < 10; i++){
+
+            document.write(i)
+
+        }
+
+        document.write('<hr>');
+
+        let numeri = [23,45,67,89];
+        let somma = 0;
+
+        for(let i = 0; i < numeri.length; i++){
+
+            if(i != numeri.length - 1){
+                document.write(numeri[i] + '+');
+            }else{
+                document.write(numeri[i]);
+            }
+
+            somma += numeri[i];
+        }
+
+        document.write(' = ' + somma);
+
+    </script>
+</body>
+</html>

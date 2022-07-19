@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+            /*===================================
+            for of
+            */
+
+            let nome = 'Mario';
+            for(let lettera of nome){
+                document.write(lettera+'<br>')
+            }
+
+            let pizze = ['Margherita','Diavola','Capricciosa'];
+            for(let pizza of pizze){
+                document.write(pizza+'<br>')
+            }
+
+            /*====================================
+            for in
+            */
+            document.write('<hr>')
+            let margherita = {
+                gusto:'Margherita',
+                tipo:'Napoletana',
+                prezzo:5
+            }
+
+            for( let prop in margherita ){
+                document.write(prop + ':' + margherita[prop] + '<br>');
+            }
+
+
+    </script>
+</body>
+</html>
