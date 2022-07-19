@@ -1,0 +1,18 @@
+.listItemStyle, #budgetStart, #budgetSet, #manualBudget,
+#spesaManuale, #spendiManuale{
+    margin: 1rem;
+}
+
+.listItemWarning{
+    color: rgb(255, 200, 0);
+}
+.listItemAlert{
+    color: crimson;
+}
+
+.listItemAuguri{
+    font-weight: 600;
+    background-color: black;
+    color: crimson;
+    text-align: center;
+}
