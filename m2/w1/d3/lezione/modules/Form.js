@@ -1,4 +1,4 @@
-export default class Form{
+export class Form{
     static generaInput(type,placeholder){
         let input = document.createElement("input");
         input.type = type;

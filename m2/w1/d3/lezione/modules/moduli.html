@@ -7,9 +7,20 @@
     <title>Document</title>
 </head>
 <body>
+
+    <form id="myForm"></form>
     
-    <script src="./Form.js">
-        import {Form} from './modules/form.js';
+    <script type="module">
+
+        import { Form } from './form.js';
+
+        let form = document.querySelector("#myForm");
+
+    let nome = Form.generaInput('text', 'inserisci il tuo nome');
+    let password = Form.generaInput('password', 'inserisci la tua password');
+
+    form.append(nome, password)
+
     </script>
 </body>
 </html>

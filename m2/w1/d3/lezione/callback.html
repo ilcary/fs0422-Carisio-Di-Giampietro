@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<div id="target"></div>
+
+    <script>
+
+        function scrivi(testo,callback){
+            let target = document.getElementById("target");
+            target.innerHTML += callback(testo);
+        }
+
+        function grassetto(testo){
+            return '<b>'+testo+'</b>'
+        } 
+        
+        function corsivo(testo){
+            return '<i>'+testo+'</i>'
+        }
+
+        scrivi('ciao',grassetto)
+        scrivi('<br> come va?',corsivo)
+        scrivi('<br> come va?',(testo)=> '<h1>'+testo+'</h1>')
+
+
+
+    </script>
+</body>
+</html>
