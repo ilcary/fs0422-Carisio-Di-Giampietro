@@ -1,0 +1,66 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        class User {
+
+            constructor(n, e, p, r) {
+                this.nome = n;
+                this.email = e;
+                this.password = p;
+                this.ruolo = r;
+            }
+            presentazione() {
+                console.log(`Ciao mi chiamo ${this.nome} e sono iscritto con il ruolo di ${this.ruolo}`);
+            }
+
+        }
+
+        class Admin extends User {
+
+            constructor(n, e, p, v) {
+                super(n, e, p, 'admin')
+
+            }
+
+        }
+
+        let mario = new Admin('Mario', 'mario@gmail.com', 'password');
+        mario.presentazione()
+
+       console.log(mario)
+
+        class Customer extends User {
+
+            constructor(n, e, p, v) {
+                super(n, e, p, 'customer')
+                this.via = v;
+
+            }
+
+        }
+
+        console.log(mario)
+
+        let susanna = new Customer('Sunanna', 'sunanna@gmail.com', 'password', 'via roma')
+
+        console.log(susanna)
+        susanna.presentazione()
+ 
+
+
+    </script>
+
+</body>
+
+</html>

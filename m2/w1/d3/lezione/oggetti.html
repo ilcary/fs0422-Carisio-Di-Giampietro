@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <script>
+        let obj ={}
+
+        let pizza ={
+            gusto: 'Margherita',
+            tipo:'Napoletana',
+            prezzo:5,
+            mostraPrezzo : function(){
+                console.log(`il prezzo della pizza ${this.gusto} di tipo ${this.tipo} è di ${this.prezzo} euro`)
+            },
+            mostraThis: function(){console.log(this)}
+        }
+
+        pizza.mostraPrezzo();
+        pizza.mostraThis();
+
+        //interagire con le proprietà
+
+        console.log(pizza.gusto)//leggere il valore di una prorpietà
+        pizza.gusto = 'Diavola'// modificare il valore di una proprietà
+        console.log(pizza)
+
+        //aggiungere proprietà ad un oggetto
+        pizza['disponibilità']= true
+        console.log(pizza)  
+        
+        //definire proprietà con nome 'anomalo', cioè che inizia con sintassi normalmente non accettate
+        pizza['0'] = 'Test'
+        
+        //nel caso le proprietà abbiano un nome contenete sintassi non accettate è possibile leggerle utilizzando le sintassi delle parentesi quadre (come negli array ma non sono degli array! )
+        console.log(pizza['0'])
+
+
+    </script>
+    
+</body>
+</html>

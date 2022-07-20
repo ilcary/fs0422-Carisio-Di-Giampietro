@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+    <form id="myForm"></form>
+
+
+<Script>
+
+    class Form{
+        static generaInput(type,placeholder){
+            let input = document.createElement("input");
+            input.type = type;
+            input.placeholder = placeholder;
+            return input;
+        }
+    }
+
+    
+    let form = document.querySelector("#myForm");
+
+    let nome = Form.generaInput('text', 'inserisci il tuo nome');
+    let password = Form.generaInput('password', 'inserisci la tua password');
+
+    form.append(nome, password)
+    
+
+
+
+
+
+
+
+
+
+
+
+</Script>
+
+</body>
+</html>
