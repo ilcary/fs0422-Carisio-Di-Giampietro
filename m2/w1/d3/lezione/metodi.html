@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+function prova(){
+    console.log('funzione');
+}
+let obj ={
+    prova: function(){
+        console.log('metodo obj');
+    }
+}
+let obj2 = {
+    prova: function(){
+        console.log('metodo obj2');
+    }
+}
+
+prova2();//lancio la funzione prova
+
+obj.prova();//lancio la funzione prova appartenente all'oggetto obj
+obj2.prova();//lancio la funzione prova appartenente all'oggetto obj2
+
+
+
+
+
+    </script>
+
+</body>
+</html>
