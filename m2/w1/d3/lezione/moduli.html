@@ -10,16 +10,9 @@
     
     <form id="myForm"></form>
 
-<script>
+    <script type="module">
 
-        class Form{
-            static generaInput(type,placeholder){
-                let input = document.createElement("input");
-                input.type = type;
-                input.placeholder = placeholder;
-                return input
-            }
-        }
+        import { Form } from './Modules/Form.js'
 
         let form = document.querySelector('#myForm');
 
@@ -29,5 +22,9 @@
         form.append(nome,password);
 
     </script>
+
+    <!--come fare se lo script dove voglio usare import è esterno-->
+    <script src="scriptFinto.js" type="module"></script>
+
 </body>
 </html>

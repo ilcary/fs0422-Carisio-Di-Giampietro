@@ -3,6 +3,6 @@ export class Form{
         let input = document.createElement("input");
         input.type = type;
         input.placeholder = placeholder;
-        return input;
+        return input
     }
 }

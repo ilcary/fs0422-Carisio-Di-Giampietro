@@ -1,86 +1,74 @@
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
 <body>
-
-
+    
 
     <script>
 
-  /* let pizza = {
-            gusto: 'Margherita',
-            tipo: 'Napoletana',
+let pizza = {
+            gusto:'Margherita',
+            tipo:'Napoletana',
             prezzo: 5,
-        }*/
+            mostraPrezzo : function(){ 
+                console.log(`Il prezzo della pizza ${this.gusto} di tipo ${this.tipo} è di ${this.prezzo}€`);
+            },
+            mostraThis: function(){ console.log(this) }
+        }
 
-     
+        console.log(pizza)
 
-        function Pizza() {
-            this.gusto = 'Margherita'
-            this.tipo = 'Napoletana'
-            this.prezzo = 5
-            this. mostraPrezzo = function(){
-                console.log(`il prezzo della pizza ${this.gusto} di tipo ${this.tipo} è di ${this.prezzo} euro`)
+        function Pizza(){
+            this.gusto = 'Margherita';
+            this.tipo = 'Napoletana';
+            this.prezzo = 5; 
+            this.mostraPrezzo = function(){ 
+                console.log(`Il prezzo della pizza ${this.gusto} di tipo ${this.tipo} è di ${this.prezzo}€`);
             }
-            this.mostraThis= function(){console.log(this)}
-
+            this.mostraThis =  function(){ console.log(this) }
         }
 
         let margherita = new Pizza();
         let diavola = new Pizza();
         diavola.gusto = 'Diavola';
-        diavola.prezzo = 8;
-       
-
-        console.log(margherita)
+        diavola.prezzo = 1;
+        
+        console.log(margherita, diavola)
         diavola.mostraThis()
 
-        diavola.mostraPrezzo()
+
+        diavola.mostraPrezzo();
         margherita.mostraPrezzo()
 
-
-
-
-//costruttore dell'oggetto con parametri
-
-        function PizzaPRO(_gusto,_tipo,_prezzo) {
+        //costruttore dell'oggetto con parametri
+        function PizzaPRO(_gusto, _tipo, _prezzo){
             this.gusto = _gusto;
             this.tipo = _tipo;
-            this.prezzo = _prezzo;
-            this. mostraPrezzo = function(){
-                console.log(`il prezzo della pizza ${this.gusto} di tipo ${this.tipo} è di ${this.prezzo} euro`)
+            this.prezzo = _prezzo; 
+            this.mostraPrezzo = function(){ 
+                console.log(`Il prezzo della pizza ${this.gusto} di tipo ${this.tipo} è di ${this.prezzo}€`);
             }
-            this.mostraThis= function(){console.log(this)}
-
+            this.mostraThis =  function(){ console.log(this) }
         }
 
-        let margheritaPRO = new PizzaPRO('Margherita','Napoletana','5')
-        let diavolaPRO = new PizzaPRO('Diavola','Napoletana','7')
-        let capricciosaPRO = new PizzaPRO('Capricciosa','Romana','8')
+        let margheritaPRO = new PizzaPRO('Margherita','Napoletana',5);
+        let diavolaPRO = new PizzaPRO('Diavola','Napoletana',1);
+        let capricciosa = new PizzaPRO('Capricciosa','Romana',7);
+        console.log(margheritaPRO);
 
         margheritaPRO.mostraPrezzo();
         diavolaPRO.mostraPrezzo();
-        capricciosaPRO.mostraPrezzo();
-
+        capricciosa.mostraPrezzo();
 
         PizzaPRO.prototype.disponibilita = true
 
-        console.log(margheritaPRO, diavolaPRO , capricciosaPRO)
-        console.log(capricciosaPRO.disponibilita)
-
-
-
-
-
-
+        console.log(margheritaPRO, diavolaPRO, capricciosa);
+        console.log(capricciosa.disponibilita);
 
     </script>
 </body>
-
 </html>

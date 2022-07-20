@@ -9,31 +9,46 @@
 <body>
     
 
-<script>
+    <script>
 
-    function timer(){
-        return new Promise(function(seccess, error){
+        function timer(){
+            return new Promise(function(success, error){
+                
+                let password = 'password';
+                if(password == 'passwor'){
+                    success('successo')
+                }else{
+                    error('errore')
+                }
 
-            let password = 'password'
-            if(password == 'password'){
-                success('successo')
-            }else{
-                error('errore')
+            })
+        }
+
+        timer()
+        .then(
+            function(data){
+                console.log(data)
+            },
+            function(dataError){
+                console.log(dataError)
             }
-        })
+        )
         
-    }
-    timer()
-    .then(
-        function(data){
-        console.log(data)
-    },
-    function(dataError){
-        console.log(dataError)
-    })
+        
+        /*versione ridotta*/
+        function timer2(){
+            return new Promise(function(success){
+                success('successo')
+            })
+        }
 
+        console.log('1')
+        timer2()
+        .then(data => {
+            console.log(data)
+        })
+        console.log('2')
 
-</script>
-    
+    </script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,29 +7,27 @@
     <title>Document</title>
 </head>
 <body>
-    
-<div id="target"></div>
 
+    <div id="target"></div>
+    
     <script>
 
         function scrivi(testo,callback){
             let target = document.getElementById("target");
-            target.innerHTML += callback(testo);
+            target.innerHTML += callback(testo)
         }
 
         function grassetto(testo){
             return '<b>'+testo+'</b>'
-        } 
-        
+        }
         function corsivo(testo){
             return '<i>'+testo+'</i>'
         }
 
-        scrivi('ciao',grassetto)
-        scrivi('<br> come va?',corsivo)
-        scrivi('<br> come va?',(testo)=> '<h1>'+testo+'</h1>')
+        scrivi('ciao',corsivo)
+        scrivi('<br>Come va?',grassetto)
 
-
+        scrivi('<br>Come va?',(testo) => '<h1>'+testo+'</h1>')
 
     </script>
 </body>

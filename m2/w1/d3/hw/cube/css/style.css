@@ -34,6 +34,7 @@ body {
     width: 300px;
     transform-style: preserve-3d;
     position: relative;
+    transform: rotateX(90deg);
     
     
     
@@ -48,6 +49,7 @@ body {
 .cubo img {
     
     transform: translateZ(0);
+    
 }
 
 .front {

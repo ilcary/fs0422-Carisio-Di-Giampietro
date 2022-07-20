@@ -7,34 +7,28 @@
 </head>
 <body>
     
-
-
     <script>
 
-function prova(){
-    console.log('funzione');
-}
-let obj ={
-    prova: function(){
-        console.log('metodo obj');
-    }
-}
-let obj2 = {
-    prova: function(){
-        console.log('metodo obj2');
-    }
-}
+        function prova(){
+            console.log('funzione')
+        }
 
-prova2();//lancio la funzione prova
+        let obj = {
+            prova: function(){
+                console.log('metodo obj')
+            }
+        }
+        let obj2 = {
+            prova: function(){
+                console.log('metodo obj2')
+            }
+        }
 
-obj.prova();//lancio la funzione prova appartenente all'oggetto obj
-obj2.prova();//lancio la funzione prova appartenente all'oggetto obj2
+        prova()//lancio la funzione prova
 
-
-
-
+        obj.prova()//lancio il metodo prova appartenente all'oggetto obj
+        obj2.prova()//lancio il metodo prova appartenente all'oggetto obj2
 
     </script>
-
 </body>
 </html>
