@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ciao Mondo!</title>
+		
+	</head>
+	<body>
+		
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+		<script type="text/javascript">
+            
+            if( leggiCookie('mostra_popup') != 'no' ){
+                
+                Swal.fire({
+                  title: 'Do you want to save the changes?',
+                  showDenyButton: true,
+                  confirmButtonText: `Salva`,
+                  denyButtonText: `Annulla`,
+                }).then((result) => {
+                  if (result.isConfirmed) {
+
+                    scriviCookie();
+
+                  } else if (result.isDenied) {
+
+                    Swal.fire('Changes are not saved', '', 'info')
+
+                  }
+                })
+                
+            }
+            //I cookies sono composti da 3 coppie chiave/valore
+            
+            document.cookie = "cookie_sessione=test;";
+            document.cookie = "nome=Michele;";
+            
+            function scriviCookie() {
+               var now = new Date();//Date crea un oggetto data contenente data ed ora attuali
+               //now.getMonth()//il mese attuale
+               now.setMonth(  now.getMonth() + 1 );//Alla data attuale aggiungo un mese
+                
+               var scadenza = "expires=" + now.toUTCString();//converto la data nel formato utc, richiesto per il corretto funzionamento del cookie. esempio: Wed, 14 Jun 2017 07:00:00 GMT
+
+               document.cookie = "mostra_popup=no;" + scadenza + ";";
+                //"mostra_popup=no; expires=Wed, 14 Jun 2050 07:00:00 GMT;'
+            }
+
+            //versione parametrizzata
+            // function scriviCookieDinamici(nome,valore,mesi) {
+            //    var now = new Date();//Date crea un oggetto data contenente data ed ora attuali
+            //    //now.getMonth()//il mese attuale
+            //    now.setMonth(  now.getMonth() + mesi );//Alla data attuale aggiungo un mese
+                
+            //    var scadenza = "expires=" + now.toUTCString();//converto la data nel formato utc, richiesto per il corretto funzionamento del cookie. esempio: Wed, 14 Jun 2017 07:00:00 GMT
+
+            //    document.cookie = nome+"=" + valore + ';' + scadenza + ';';
+            //     //"mostra_popup=no; expires=Wed, 14 Jun 2050 07:00:00 GMT;'
+            // }
+            // scriviCookieDinamici('mostra_popup','no',2)
+            // scriviCookieDinamici('saluto','ciao',0)
+            
+            
+            function leggiCookie(cookieDaLeggere) {
+               var allCookies = document.cookie;
+               console.log(allCookies);//"cookie_sessione=test; nome=Michele; mostra_popup=no"
+                
+               // Dividiamo i cookies in un array di elementi chiave/valore
+               var arr = allCookies.split('; ');//["cookie_sessione=test", "nome=Michele", "mostra_popup=no"]
+               
+                
+               var res = '';
+               for(var i = 0; i < arr.length; i++) {
+
+                  chiave = arr[i].split('=')[0];//"mostra_popup"
+                  valore = arr[i].split('=')[1];//"no"
+                   if(cookieDaLeggere == chiave){
+                      res = valore;
+                    }
+
+                   console.log(chiave + ' - ' + valore);
+
+               }
+            return res;
+            }
+            
+            console.log( leggiCookie('nome') );
+            
+            
+           /* 
+            localStorage.setItem('test','ciao');
+            
+            var scadenzaStorage = new Date();
+            scadenzaStorage.setMonth( scadenzaStorage.getMonth() + 1 );
+            localStorage.setItem('scadenza',scadenzaStorage);
+            var scadenza = localStorage.getItem('scadenza');
+            console.log('La scadenza è '+scadenza);       */    
+		</script>
+	</body>
+</html>

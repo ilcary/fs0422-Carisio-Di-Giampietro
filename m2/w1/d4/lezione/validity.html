@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form>
+
+        <input type="text" pattern="[A-Z]{0,10}" required id="prova">
+        <button>click</button>
+
+    </form>
+
+    <script>
+        let btn = document.querySelector('button')
+
+        btn.addEventListener('click',(e) => {
+            e.preventDefault();
+
+            let input = document.querySelector('input')
+            if(input.checkValidity()){
+                console.log('valido')
+            }else{
+                console.log(input.validationMessage)
+            }
+        })
+
+    </script>
+</body>
+</html>

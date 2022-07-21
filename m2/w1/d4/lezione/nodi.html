@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <ul>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+    </ul>
+    
+    <script>
+
+        let ul = document.querySelector('ul');
+
+        console.log(ul.firstElementChild)//seleziono il primo elemento li dentro l'ul
+        console.log(ul.firstChild)//seleziono il primo nodo figlio(quindi il textnode relativo al primo li)
+
+        console.log(ul.firstElementChild.nextElementSibling)//partendo dal primo li presente nell'ul seleziona il li successivo
+        console.log(ul.lastElementChild.previousElementSibling)//partendo dall'ultimo li presente nell'ul seleziona il li precedente
+
+        ul.firstElementChild.nextElementSibling.style.color = 'red'
+        ul.firstElementChild.nextElementSibling.nextElementSibling.style.color = 'red'
+        ul.lastElementChild.previousElementSibling.style.color = 'red'
+
+    </script>
+</body>
+</html>

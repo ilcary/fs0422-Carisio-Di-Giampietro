@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let pizza ='{"gusto":"margherita","prezzo":5}'
+        let pizzaOggetto = JSON.parse(pizza)//trasformo la stringa in oggetto
+        console.log(pizzaOggetto)
+
+        let pizzaStringa = JSON.stringify(pizzaOggetto)//trasformo oggetto in stringa
+        localStorage.setItem('pizza',pizzaStringa)//salvo la stringa in formato json
+
+    </script>
+</body>
+</html>

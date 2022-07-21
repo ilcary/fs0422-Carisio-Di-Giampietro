@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        
+
+        function call(){
+            let xhr = new XMLHttpRequest();
+            xhr.open('GET', 'https://jsonplaceholder.typicode.com/users')//imposto metodo e indirizzo da visitare
+            xhr.onload = function(res){//decido cosa fare con la risposta
+                console.log(res)//info sulla chiamata
+
+                //xhr.responseText è il contenuto della pagina che abbiamo richiesto in formato stringa
+                console.log(xhr.responseText)
+                console.log(typeof xhr.responseText)
+                let data = JSON.parse(xhr.responseText)
+                console.log(data);//la stringa trasformata in oggetto
+            }
+            xhr.send();//invio la chiamata
+        }
+
+        call()
+
+
+        /*consigliato usare fetch, fa la stessa cosa ma è più semplice e più moderno*/
+
+        fetch('https://jsonplaceholder.typicode.com/users')
+        .then(res => res.json())
+        .then(res => console.log(res))
+    </script>
+</body>
+</html>

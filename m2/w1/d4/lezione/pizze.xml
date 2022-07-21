@@ -1,0 +1,10 @@
+<menu>
+    <pizza>
+        <gusto>Margherita</gusto>
+        <prezzo>5</prezzo>
+    </pizza>
+    <pizza>
+        <gusto>Diavola</gusto>
+        <prezzo>1</prezzo>
+    </pizza>
+</menu>
