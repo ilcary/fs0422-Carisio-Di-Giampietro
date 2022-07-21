@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/stile.css">
+    <link rel="stylesheet" href="./responsive/responsive.css">
+
+    <title>STARTER js</title>
+</head>
+
+<body>
+    <!-- DROP DOWN MENU -->
+    <nav>
+
+        <label for="touch"><span>menu</span></label>
+        <input type="checkbox" id="touch">
+
+        <ul class="slide">
+            <li data-formato="font-style: italic">Corsivo</li>
+            <li data-formato="font-weight: bold">Grassetto</li>
+            <li data-formato="text-transform: uppercase">CAPSLOCK</li>
+            <li data-formato="text-decoration: underline">Undereline</li>
+        </ul>
+    </nav>
+
+    <!-- TO DO LIST -->
+
+    <div class="container">
+        <h1>To do list</h1>
+        <input type="text" id="input-field"><button id="addToDo">+</button>
+        <div class="to-dos" id="toDoContainer">
+            <!-- qui e' vuoto perche ci appendo i child creati da JS -->
+        </div>
+    </div>
+
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
