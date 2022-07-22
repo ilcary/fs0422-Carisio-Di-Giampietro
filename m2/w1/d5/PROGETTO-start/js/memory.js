@@ -11,7 +11,12 @@ nameInput.addEventListener('change', (e) => {
 })
 console.log(classifica)
 
-
+// costruttore che mi servira per i risultati, creando nuove istanze ad ogni apertura del modale ed un display di record di vari utenti salvati nel local storage
+function Risultato(username, tempo, count) {
+    this.nome = username;
+    this.record = tempo;
+    this.click = count;
+}
 
 
 
@@ -105,33 +110,25 @@ function startGame() {
     while (lista.hasChildNodes()) {
         lista.removeChild(lista.firstChild);
     }
-
+    // ciclo le emoji per creare una board con un 2 div per ogni carta 
     for (var i = 0; i < 24; i++) {
         // var id = 'icon-' + i;
         var box = document.createElement('div');
         var element = document.createElement('div');
         element.className = 'icon';
+        element.addEventListener("click", displayIcon);
+        element.addEventListener("click", openModal);
         document.getElementById('griglia').appendChild(box).appendChild(element);
         element.innerHTML = arrayShuffle[i];
     }
-
-
     startTimer();
-
-    var icon = document.getElementsByClassName("icon");
-    var icons = [...icon];
-
-    for (var i = 0; i < icons.length; i++) {
-        icons[i].addEventListener("click", displayIcon);
-        icons[i].addEventListener("click", openModal);
-    }
 }
 
 
 
 function displayIcon() {
-    var icon = document.getElementsByClassName("icon");
-    var icons = [...icon];
+    var icons = document.querySelectorAll(".icon");
+    
 
     /*
     var icon = document.getElementsByClassName("icon");
@@ -246,19 +243,10 @@ function startTimer() {
 }
 
 
-
-
-
-
 var icone = document.querySelector("#griglia")
 icone.onclick = function () {
     count += 1;
     console.log(count);
 };
 
-function Risultato(username, tempo, count) {
-    this.nome = username;
-    this.record = tempo;
-    this.click = count;
-}
 
