@@ -185,7 +185,8 @@ function openModal() {
         modal.classList.add("active");
         let tempo = document.getElementById("tempoTrascorso").innerHTML
         tempo = timer.innerHTML;
-        resultDisplay.textContent = count + 'click'
+       
+        resultDisplay.textContent = tempo + ' e ' + count + ' click'
         let risultato = new Risultato(username, tempo, count)
         classifica.push(risultato);
         let strClassifica = JSON.stringify(classifica)
