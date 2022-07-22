@@ -27,7 +27,7 @@
 #griglia>div {
     margin: 20px 10px;
    width: 100px;
-   height: 100px;
+   height: 110px;
     background-color: #b80adbdc;
     border: 1px solid #3889c4;
     border-radius: 10px;
@@ -45,6 +45,12 @@
     width: 100%;
     height: 100%;
     cursor: pointer;
+    
+}
+#griglia div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .disabled {
@@ -157,3 +163,37 @@
         animation-timing-function: ease-in;
        }
     }
+
+
+
+/*////////////////////////////////////prove//////////////////////////////////////////*/
+
+
+.Buonasè .title {
+	display: flex;
+    width: 800px ;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+
+.Buonasè .title input {
+	margin-left: 0.5rem;
+	flex: 1 1 0%;
+	min-width: 0;
+}
+
+.Buonasè .title, 
+.Buonasè .title input {
+	color: #313154;
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+.containerTable {
+    display: block;
+    margin-top: 20px;
+}
+th, td {
+    border: 1px solid black;
+    padding: 5px;
+}

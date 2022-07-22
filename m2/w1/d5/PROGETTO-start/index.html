@@ -14,7 +14,11 @@
 
 <body>
 
-
+    <section class="Buonasè">
+        <h2 class="title">
+            Buonasè, <input type="text" id="name" placeholder=" es.Mario Bianchi" />
+        </h2>
+    </section>
 
     <div class="container icon-grid" id="griglia">
     </div>
@@ -26,11 +30,14 @@
     <div id="modal">
         <div class="content">
             <h2>Congratulazioni! Hai risolto il gioco in: </h2>
-            <p><span id="tempoTrascorso"> </span> </p>
-            <div id="containerTable"></div>
+            <p><span id="tempoTrascorso"> </span> e <span id="count"></span> </p>
+            
             <p><input type="button" class="button" onclick=playAgain() value="Altra partita"></p>
+            <div id="containerTable"></div>
+            
         </div>
     </div>
+    
 
     <script src="js/memory.js">
     </script>

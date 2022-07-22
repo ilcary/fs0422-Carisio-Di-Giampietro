@@ -1,3 +1,15 @@
+classifica = localStorage.getItem('classifica') ? JSON.parse(localStorage.getItem('classifica')) : [];
+const nameInput = document.querySelector('#name');
+
+
+const username = localStorage.getItem('username') || '';
+
+nameInput.value = username;
+
+nameInput.addEventListener('change', (e) => {
+    localStorage.setItem('username', e.target.value);
+})
+console.log(classifica)
 
 
 
@@ -10,7 +22,7 @@ let arrayAnimali = ['🐱', '🦉', '🐾', '🦁', '🦋', '🐛', '🐝', '�
 
 
 let arrayComparison = [];
-
+let count = 0;
 document.body.onload = startGame();
 
 // mi serviranno alcune variabili 1. interval 2. una agganciata alla classe find 
@@ -19,6 +31,34 @@ var interval;
 var iconsFind = document.getElementsByClassName("find");
 var modal = document.getElementById('modal');
 var timer = document.querySelector(".timer");
+let conTabella = document.querySelector("#containerTable")
+/* function tabella() {
+    
+    let table = document.createElement('table');
+    let thead = document.createElement('thead');
+    var tbody = document.createElement('tbody');
+
+    conTabella.appendChild(table);
+    table.appendChild(thead);
+    table.appendChild(tbody);
+
+    let trIntestazione = document.createElement('tr');
+    trIntestazione.setAttribute('id', 'intestazione')
+    let th = document.createElement('th');
+
+    thead.append(trIntestazione)
+
+    for (let i = 0; i < 3; i++) {
+        let th = document.createElement('th');
+        th.setAttribute('id', 'int' + i)
+        thead.append(th)
+    }
+
+    document.querySelector('#int0').innerHTML = 'NOME'
+    document.querySelector('#int1').innerHTML = 'TEMPO'
+    document.querySelector('#int2').innerHTML = 'CLICK'
+
+} */
 
 //una funzione che serve a mescolare in modo random gli elementi dell'array che viene passato 
 // (l'array contiene le icone degli animali)
@@ -54,6 +94,8 @@ function playAgain() {
 // chiama la funzione timer e associa a tutti gli elementi (div) di classe icon l'evento click e le due funzioni definit sotto
 
 function startGame() {
+    count = 0
+    console.log('reset click ' + count);
     clearInterval(interval);
     arrayConfronto = [];
 
@@ -135,35 +177,53 @@ function displayIcon() {
         }
     }
 }
-
+let resultDisplay = document.querySelector('#count')
 //una funzione che viene mostrata alla fine quando sono tutte le risposte esatte
 function openModal() {
     if (iconsFind.length == 24) {
         clearInterval(interval);
         modal.classList.add("active");
-        document.getElementById("tempoTrascorso").innerHTML = timer.innerHTML;
-        closeModal();
+        let tempo = document.getElementById("tempoTrascorso").innerHTML
+        tempo = timer.innerHTML;
+        resultDisplay.textContent = count + 'click'
+        let risultato = new Risultato(username, tempo, count)
+        classifica.push(risultato);
+        let strClassifica = JSON.stringify(classifica)
+        localStorage.setItem('classifica', strClassifica)
 
+        let headers = ['NOME', 'TEMPO', 'CLICK'];
 
-
-
-       /*  let table = document.createElement('table');
-        let thead = document.createElement('thead');
-        let tbody = document.createElement('tbody');
-        table.appendChild(thead);
-        table.appendChild(tbody);       
-        let conTabella = document.getElementById("containerTable")
+        let table = document.createElement('table');
+        let headerRow = document.createElement('tr');
+        headers.forEach(headerText => {
+            let header = document.createElement('th');
+            let textNode = document.createTextNode(headerText);
+            header.appendChild(textNode);
+            headerRow.appendChild(header);
+        });
+        table.appendChild(headerRow);
+        classifica.forEach(rec => {
+            let row = document.createElement('tr');
+            Object.values(rec).forEach(text => {
+                let cell = document.createElement('td');
+                let textNode = document.createTextNode(text);
+                cell.appendChild(textNode);
+                row.appendChild(cell);
+            })
+            table.appendChild(row);
+        });
         conTabella.appendChild(table);
- */
+
+
 
     }
 }
+
 // una funzione che nasconde la modale alla fine e riavvia il gioco
 function closeModal() {
-    closeicon.addEventListener("click", function (e) {
-        modal.classList.remove("active");
-        startGame();
-    });
+    modal.classList.remove("active");
+    startGame();
+
 }
 // una funzione che calcola il tempo e aggiorna il contenitore sotto
 function startTimer() {
@@ -183,3 +243,21 @@ function startTimer() {
         }
     }, 1000);
 }
+
+
+
+
+
+
+var icone = document.querySelector("#griglia")
+icone.onclick = function () {
+    count += 1;
+    console.log(count);
+};
+
+function Risultato(username, tempo, count) {
+    this.nome = username;
+    this.record = tempo;
+    this.click = count;
+}
+
