@@ -42,10 +42,10 @@ addToDoButton.addEventListener('click', function(){
 // for(let mod of modifiche){
 //     mod.addEventListener('click', () => {
 //         let formato = mod.getAttribute('data-formato');
-//         console.log(formato + 'diocane');
+//         console.log(formato + '');
         
 //             for(let box of toDoList){
-//                 console.log(box.getAttribute('checked') + ' dioboia');
+//                 console.log(box.getAttribute('checked') + ' ');
 //                 if(box.getAttribute('checked') == null){
 //                     box.parentNode.style = formato;
 //                 }
