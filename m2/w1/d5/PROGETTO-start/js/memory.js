@@ -110,9 +110,8 @@ function startGame() {
     while (lista.hasChildNodes()) {
         lista.removeChild(lista.firstChild);
     }
-    // ciclo le emoji per creare una board con un 2 div per ogni carta 
+    // ciclo le emoji per creare una board con un 2 div per ogni carta aggiungendo 
     for (var i = 0; i < 24; i++) {
-        // var id = 'icon-' + i;
         var box = document.createElement('div');
         var element = document.createElement('div');
         element.className = 'icon';
@@ -189,10 +188,12 @@ function openModal() {
         let strClassifica = JSON.stringify(classifica)
         localStorage.setItem('classifica', strClassifica)
 
-        let headers = ['NOME', 'TEMPO', 'CLICK'];
 
-        let table = document.createElement('table');
-        let headerRow = document.createElement('tr');
+        // creazione tabella dall array classifica salvato nel local storage
+        let headers = ['NOME', 'TEMPO', 'CLICK'];//definia l 'intestazione della tabella in base alle chiavi dell nostro array
+
+        let table = document.createElement('table');//creiamo la tabella
+        let headerRow = document.createElement('tr');//creiamo la hr
         headers.forEach(headerText => {
             let header = document.createElement('th');
             let textNode = document.createTextNode(headerText);
