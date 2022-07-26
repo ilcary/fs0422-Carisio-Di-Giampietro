@@ -1,0 +1,17 @@
+.icon{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-radius: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 70px;
+}
+
+.icon > div{
+    opacity: 0;
+}
+.icon.show > div{
+    display: inline-block;
+    opacity: 1;
+}

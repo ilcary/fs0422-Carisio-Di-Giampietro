@@ -1,0 +1,32 @@
+/* posso impostare delle variabili */
+
+:root{
+    --colore-primario : #0f0759;
+}
+
+.btn-danger {
+    --bs-btn-bg: #80dc35;
+}
+
+/*
+alcuni elementi si prestano maggiormente alla modifica definitiva
+*/
+
+.btn-primary{
+    background-color: var(--colore-primario);
+}
+
+.btn:hover {
+    color: #fff;
+    background-color: #5f0404;
+    border-color: var(--colore-primario);
+}
+
+
+/*
+container, che è una classe del grid, che deve restare intatta
+può essere facilmente sovrascritta con l'utilizzo di una classe aggiuntiva
+*/
+.container.container-diverso{
+    background-color: blue;
+}
