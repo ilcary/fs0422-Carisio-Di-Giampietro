@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "style.css",
+	"sources": [
+		"../scss/style.scss"
+	],
+	"sourcesContent": [
+		"h1{\r\n    color: red;\r\n}"
+	],
+	"names": [],
+	"mappings": ";AAAA,AAAA,EAAE,CAAA;EACE,KAAK,EAAE,GAAG;CACb"
+}
