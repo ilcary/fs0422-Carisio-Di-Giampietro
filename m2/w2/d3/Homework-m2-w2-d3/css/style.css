@@ -1,0 +1,75 @@
+/* line 5, scss/style.scss */
+* {
+  font-size: 1rem;
+  font-family: "Helvetica";
+  margin: 0;
+  padding: 0; }
+
+/* line 1, scss/_buttons.scss */
+.btn {
+  height: 50%;
+  margin: 0 1rem;
+  padding: 0.3rem;
+  background-color: #cecaff;
+  color: #191834;
+  border: none;
+  border-radius: 5px;
+  transition: 0.3s; }
+  /* line 10, scss/_buttons.scss */
+  .btn:hover {
+    background-color: #9f97ff; }
+
+/* line 16, scss/style.scss */
+#navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #191834;
+  padding: 1rem; }
+  /* line 22, scss/style.scss */
+  #navbar ul {
+    display: flex;
+    list-style: none; }
+    /* line 25, scss/style.scss */
+    #navbar ul a {
+      text-decoration: none;
+      margin-left: 2rem;
+      color: #cecaff;
+      transition: 1s; }
+      /* line 30, scss/style.scss */
+      #navbar ul a:hover {
+        text-decoration: underline; }
+
+/* line 37, scss/style.scss */
+section {
+  display: flex;
+  justify-content: center;
+  margin: 5rem 0; }
+
+/* line 43, scss/style.scss */
+img {
+  max-width: 80%;
+  outline: 5px solid #191834;
+  margin: 2rem 0;
+  border-radius: 10px;
+  transition: transform 0.3s; }
+  @media screen and (min-width: 768px) {
+    /* line 43, scss/style.scss */
+    img {
+      max-width: 40%; } }
+  @media screen and (min-width: 1500px) {
+    /* line 43, scss/style.scss */
+    img {
+      max-width: 30%; } }
+
+/* line 57, scss/style.scss */
+body {
+  background: linear-gradient(#ffe9ff 0%, #cecaff 70%); }
+
+/* line 61, scss/style.scss */
+.spin {
+  transform: rotate(90deg); }
+
+/* line 65, scss/style.scss */
+.spin360 {
+  transform: rotate(360deg); }

@@ -1,0 +1,13 @@
+.btn{
+    height: 50%;
+    margin: 0 1rem;
+    padding: 0.3rem;
+    background-color: $colore_celestino;
+    color: $colore_bluone;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    &:hover{
+        background-color: darken($colore_celestino, 10%);
+    }
+}

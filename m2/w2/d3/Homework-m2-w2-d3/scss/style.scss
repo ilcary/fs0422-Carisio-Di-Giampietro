@@ -1,0 +1,67 @@
+@mixin font($prop, $val) {
+    font-#{$prop} : $val;
+}
+
+*{
+    @include font ('size', 1rem);
+    @include font ('family', 'Helvetica');
+    margin: 0;
+    padding: 0;
+}
+
+@import 'variables';
+@import 'buttons';
+
+
+#navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $colore_bluone;
+    padding: 1rem;
+    ul{
+        display: flex;
+        list-style: none;
+        a{
+            text-decoration: none;
+            margin-left: 2rem;
+            color:$colore_celestino;
+            transition: 1s;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    margin: 5rem 0;
+}
+
+img{
+    max-width: 80%;
+    outline: 5px solid $colore_bluone;
+    margin: 2rem 0;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    @media screen and (min-width: 768px){
+        max-width: 40%;
+    }
+    @media screen and (min-width: 1500px){
+        max-width: 30%;
+    }   
+}
+
+body{
+    background: linear-gradient($colore_rosino 0%, $colore_celestino 70%);
+}
+
+.spin{
+    transform: rotate(90deg);
+}
+
+.spin360{
+    transform: rotate(360deg);
+}

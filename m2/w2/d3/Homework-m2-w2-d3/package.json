@@ -1,0 +1,11 @@
+{
+  "name": "homework-m2-w2-d3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass scss/style.scss css/style.css -watch"
+  },
+  "author": "",
+  "license": "ISC"
+}
