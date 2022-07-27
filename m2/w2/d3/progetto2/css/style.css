@@ -1,0 +1,32 @@
+@charset "UTF-8";
+/*importiamo dall header i scss nel file principale*/
+header ul {
+  background-color: bisque; }
+  header ul ul {
+    display: flex; }
+  header ul a {
+    text-decoration: none; }
+    header ul a:hover {
+      background-color: cadetblue; }
+
+/*definiamo una variabile (più simile ad una const perchè  non si riassegnano)*/
+/*mixin*/
+h1 {
+  background-color: aqua; }
+
+p {
+  background-color: aqua; }
+
+.blocco {
+  background-color: firebrick;
+  width: 200px;
+  height: 200px;
+  border-radius: 25%;
+  border: 1px solid black;
+  margin: 1rem 0; }
+  .blocco:hover {
+    background-color: #871a1a; }
+
+p {
+  font-size: 2rem;
+  font-family: "Arial"; }

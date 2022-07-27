@@ -1,0 +1,28 @@
+/*importiamo dall header i scss nel file principale*/
+@import 'header';
+@import 'variables';
+
+
+
+h1{
+    background-color: $colore_primario;
+}
+p{
+    background-color: $colore_primario;
+}
+
+
+
+
+.blocco{
+    background-color: firebrick;
+    @include quadrato(200px);
+    &:hover{
+        background-color: darken(firebrick, 10%);
+    }
+}
+
+p{
+    @include font('size',2rem);
+    @include font('family','Arial');
+}

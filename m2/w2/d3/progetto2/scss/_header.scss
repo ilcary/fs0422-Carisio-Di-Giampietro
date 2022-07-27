@@ -1,0 +1,16 @@
+header ul {
+    background-color: bisque;
+
+    ul {
+        display: flex;
+        
+    }
+
+    a {
+        text-decoration: none;
+        &:hover{
+            background-color: cadetblue;
+        }
+
+    }
+}

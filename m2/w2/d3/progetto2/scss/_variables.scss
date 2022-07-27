@@ -1,0 +1,16 @@
+/*definiamo una variabile (più simile ad una const perchè  non si riassegnano)*/
+$colore_primario : aqua;
+
+/*mixin*/
+
+@mixin quadrato($dimensione){
+    width: $dimensione;
+    height: $dimensione;
+    border-radius: 25%;
+    border: 1px solid black;
+    margin: 1rem 0;
+}
+
+@mixin font($prop,$val){
+    font-#{$prop} : $val
+}
