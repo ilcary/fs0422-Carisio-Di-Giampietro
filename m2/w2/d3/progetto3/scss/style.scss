@@ -1,5 +1,35 @@
 /*andiamo ad importare nel css l'scss di bootstrap*/
 @import 'variables';
-
+@import 'functions';
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 
+.bg-primary {
+    color: contrast($blue);
+}
+.bg-warning {
+    color: contrast($yellow);
+}
+
+.standard-section{
+    height: 200px;
+    border: 1px solid black;
+    @media screen and (max-width: 768px) {
+        background-color: red;
+    }
+}
+
+.special-section{
+    @extend .standard-section;
+    background-color: $purple;
+    @media screen and (max-width: 768px) {
+        background-color: rgb(237, 21, 125);
+    }
+}
+
+$misure: 40, 50, 80;
+@each $misura in $misure{
+    .quadrato-#{$misura}{
+        height: $misura +px;
+        width: $misura +px ;
+    }
+}

@@ -8369,3 +8369,34 @@ textarea.form-control-lg {
     display: inline-flex !important; }
   .d-print-none {
     display: none !important; } }
+
+.bg-primary {
+  color: #8897b7; }
+
+.bg-warning {
+  color: #876500; }
+
+.standard-section, .special-section {
+  height: 200px;
+  border: 1px solid black; }
+  @media screen and (max-width: 768px) {
+    .standard-section, .special-section {
+      background-color: red; } }
+
+.special-section {
+  background-color: #6f42c1; }
+  @media screen and (max-width: 768px) {
+    .special-section {
+      background-color: #ed157d; } }
+
+.quadrato-40 {
+  height: 40px;
+  width: 40px; }
+
+.quadrato-50 {
+  height: 50px;
+  width: 50px; }
+
+.quadrato-80 {
+  height: 80px;
+  width: 80px; }
