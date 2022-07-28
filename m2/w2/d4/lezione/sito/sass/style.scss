@@ -1,0 +1,155 @@
+@import 'functions';
+$blue : red;
+$bg_scuro: rgb(49, 49, 49);
+$testo_chiaro : contrast($bg_scuro);
+
+$bg_chiaro:rgb(216, 215, 215);
+$testo_scuro : contrast($bg_chiaro);
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../node_modules/bootstrap-icons/font/bootstrap-icons.scss';
+
+.clamp{
+    width: clamp(500px,100%,800px);
+    height: 100px;
+}
+
+.bg-scuro, .bg-chiaro{ 
+    height: 100px;
+}
+
+
+.bg-scuro{
+    background-color: $bg_scuro;
+    color: $testo_chiaro;
+}
+.bg-chiaro{
+    background-color: $bg_chiaro;
+    color: $testo_scuro;
+}
+
+/*
+extends
+*/
+
+.rettangolo{
+    height: 100px;
+    background-color: blue;
+    margin-bottom: 10px;
+}
+
+.quadrato{
+    @extend .rettangolo;
+    width: 100px;
+    background-color: yellow;
+}
+
+.altro{
+    @extend .quadrato;
+    background-color: white;
+}
+
+@mixin set-color($prop,$color){
+    @if(lightness($color) < 50){//se è un colore scuro
+        #{$prop}: lighten($color,15%);//imposta color come se stesso, ma scurito
+    }
+    @else{
+        #{$prop}: darken($color,15%);
+    }
+}
+
+.mixin-color{
+    @include set-color('color',red);
+}
+
+/*each*/
+
+.item{
+    background-color:grey;
+}
+$hunter-green: rgba(56, 102, 65, 1);
+$may-green: rgba(106, 153, 78, 1);
+$android-green: rgba(167, 201, 87, 1);
+$eggshell: rgba(242, 232, 207, 1);
+$bittersweet-shimmer: rgba(188, 71, 73, 1);
+
+$colori_chiari:$hunter-green, $may-green, $android-green, $eggshell, $bittersweet-shimmer;
+
+@each $colore in $colori_chiari{
+    .darkned-bg#{$colore}{
+        background: darken($colore,15%); ;
+    }
+
+}
+
+
+$misure: 40, 80, 120, 180;
+
+@each $misura in $misure{
+    .quadrato-#{$misura}{
+        width: $misura + px;
+        height: $misura + px;
+    }
+    .rettangolo-h-#{$misura}{
+        width: ($misura * 2) + px;
+        height: $misura + px;
+    }
+    .rettangolo-v-#{$misura}{
+        width: $misura + px;
+        height: ($misura * 2) + px;
+    }
+}
+
+// for
+//for(let i = 0; i < 3; i++)
+@for $i from 1 to 3{//il 3 non viene raggiunto
+    .m-#{$i}{
+        margin-left: 0; 
+        margin-right: 0; 
+        @media screen and (min-width:480px) and (max-width:768px){
+            margin-left: 15px * $i; 
+            margin-right: 15px * $i; 
+        }
+        @media screen and (min-width:769px) and (max-width:1280px){
+            margin-left: 20px * $i; 
+            margin-right: 20px * $i; 
+        }
+    }
+}
+
+//media queries
+
+@mixin content($misura){
+    width: $misura;
+}
+
+@mixin breakpoint($misura, $content){
+
+    @if($misura == desktop){
+        @media screen and (max-width:1440px){   
+            @include content($content);
+        }
+    }  
+    @else if($misura == laptop){
+        @media screen and (max-width:768px){   
+            @include content($content);
+        }
+    }  
+    @else{
+        @media screen and (max-width:480px){   
+           @include content($content);
+        }
+    }
+
+}
+
+.test{
+    width: 100%;
+    @include breakpoint('tablet',1600px);
+    @include breakpoint('laptop',1170px);
+    @include breakpoint('desktop',768px);
+}
+
+
+
+
