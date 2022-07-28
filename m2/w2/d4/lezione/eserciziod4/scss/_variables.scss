@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+$hunter-green: rgba(56, 102, 65, 1);
+$may-green: rgba(106, 153, 78, 1);
+$android-green: rgba(167, 201, 87, 1);
+$eggshell: rgba(242, 232, 207, 1);
+$bittersweet-shimmer: rgba(188, 71, 73, 1);
+
+$dark-egg: darken($eggshell, 20%);
+$testo-scuro: black;
+$testo-chiaro: lighten($testo-scuro, 20%);
+/* SCSS Gradient */
+$gradient-top: linear-gradient(0deg, #386641ff, #6a994eff, #a7c957ff, #f2e8cfff, #bc4749ff);
+$gradient-right: linear-gradient(90deg, #386641ff, #6a994eff, #a7c957ff, #f2e8cfff, #bc4749ff);
+$gradient-bottom: linear-gradient(180deg, #386641ff, #6a994eff, #a7c957ff);
+$gradient-left: linear-gradient(270deg, #386641ff, #6a994eff, #a7c957ff, #f2e8cfff, #bc4749ff);
+$gradient-top-right: linear-gradient(45deg, #386641ff, #6a994eff, #a7c957ff, #f2e8cfff, #bc4749ff);
+$gradient-bottom-right: linear-gradient(135deg, #386641ff, #6a994eff, #a7c957ff, #f2e8cfff, #bc4749ff);
+$gradient-top-left: linear-gradient(225deg, #386641ff, #6a994eff, #a7c957ff, #f2e8cfff, #bc4749ff);
+$gradient-bottom-left: linear-gradient(315deg, #386641ff, #6a994eff, #a7c957ff, #f2e8cfff, #bc4749ff);
+$gradient-radial: radial-gradient(#386641ff, #6a994eff, #a7c957ff, #f2e8cfff, #bc4749ff);
+
+@mixin font($prop, $val) {
+    font-#{$prop} : $val;
+}
+
+$colori_chiari:$hunter-green, $may-green, $android-green, $eggshell, $bittersweet-shimmer;
+
+@each $colore in $colori_chiari{
+    .darkned-bg#{$colore}{
+        background: darken($colore,15%);
+    }
+}

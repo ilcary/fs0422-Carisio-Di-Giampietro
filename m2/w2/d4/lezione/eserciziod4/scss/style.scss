@@ -1,0 +1,125 @@
+@import "variables";
+
+*, a {
+    @include font("family","Open Sans")
+}
+
+body {
+    background: $eggshell;
+    background-repeat: no-repeat;
+    background-position: cover;
+    height: 100vh;
+}
+
+#navbar{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    align-items: center;
+    background: $gradient-bottom;
+    width: 100%;
+    z-index: 10;
+    
+    ul{
+        display: flex;
+        list-style: none;
+        align-items: stretch;
+        height: 100%;
+        height: 3rem;
+        align-items: center;
+        li{
+            height: 100%;
+            a{
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                padding: 0 1rem;
+                color: $android-green;
+                margin: 0 1rem;
+                transition: 0.4s;
+                height: 100%;
+    
+                &:hover{
+                    background-color: $android-green;
+                    color: $may-green;
+                }
+            }
+        }
+        
+    }
+    @media screen and (max-width: 768px) {
+        border-bottom: 1px solid $bittersweet-shimmer;
+    }
+}
+
+.side {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: $android-green;
+    height: 100%;
+    width: 8rem;    
+    text-align: center;
+    
+    a {
+        display: block;
+        font-size: 20px;
+        text-decoration: none;
+        padding: 1.5rem 1rem;
+        color: $may-green;
+        margin-top: 1rem;
+        transition: 0.4s;
+        &:hover{
+            background-color: $may-green;
+            color: $android-green;
+        }
+    } 
+    a:first-of-type{
+        margin-top: 3rem;
+    }
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        height: 3rem;
+        border-top: 1px solid $bittersweet-shimmer;
+        
+        ul {
+            display: flex;
+            align-items: center;
+        }
+        a {
+            display: inline-block;
+            padding: 0 1rem;
+        }
+        a:first-of-type{
+            margin-top: 0;
+        }
+        
+    }
+} 
+
+
+main {
+    margin-left: 8rem;
+    padding: 1rem;
+    color: $testo-scuro;
+    h1 {
+        font-size: 2rem;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        margin-top: 3.2rem;
+    }
+    p {
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+    }
+
+    @media screen and (max-width: 768px) {
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+.dark-mode {
+    background-color: $dark-egg;
+}
+

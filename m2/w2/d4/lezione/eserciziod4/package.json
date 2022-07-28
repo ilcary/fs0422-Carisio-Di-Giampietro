@@ -1,0 +1,11 @@
+{
+  "name": "esercizioscss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass -r scss -o css -w"
+  },
+  "author": "",
+  "license": "ISC"
+}
