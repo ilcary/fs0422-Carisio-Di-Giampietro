@@ -1,10 +1,11 @@
 *,
 a {
-    @include font("family", "Didact Gothic")
+    @include font("family", "Didact Gothic");
+    
 }
 
 .topTitle {
-    @include font("family", "Mochiy Pop One")
+    @include font("family", "Mochiy Pop One");
 }
 
 

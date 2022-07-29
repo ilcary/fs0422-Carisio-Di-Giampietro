@@ -8407,8 +8407,8 @@ a {
 .brands {
   width: 40%; }
 
-#price .row {
-  max-width: 30%; }
+.row {
+  --bs-gutter-x: -1rem; }
 
 #baobab {
   background-image: url(../images/alberi_price/BAOBAB.jpg);

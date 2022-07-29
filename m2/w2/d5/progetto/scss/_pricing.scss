@@ -1,5 +1,8 @@
-
-
+#price{
+.row{
+    --bs-gutter-x: -1.5rem;
+}
+}
 #baobab{
     background-image: url(../images/alberi_price/BAOBAB.jpg);
     z-index: 10;
@@ -15,3 +18,4 @@
     z-index: 10;
     background-size:cover ;
 }
+
