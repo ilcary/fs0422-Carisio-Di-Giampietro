@@ -1,0 +1,52 @@
+*,
+a {
+    @include font("family", "Didact Gothic")
+}
+
+.topTitle {
+    @include font("family", "Mochiy Pop One")
+}
+
+
+
+#primoPiano {
+    background-image: url("../images/forest_e_planting/pexels-tyler-lastovich-572688.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    max-width: 100%;
+
+    &::before {
+        background: url("../images/overlay-pattern2.png") rgba(0, 0, 0, 0.363);
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+  
+    
+
+    div p {
+        position: relative;
+        z-index: 4;
+    }
+
+    .introPrimopiano {
+        background-color: rgba(63, 94, 17, 0.534);
+    }
+}
+
+
+
+#brandsContainer {
+    max-width: 100%;
+    margin: 0;
+}
+
+.brands {
+    width: 40%;
+}

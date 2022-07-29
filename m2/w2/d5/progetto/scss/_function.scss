@@ -1,0 +1,11 @@
+@function textContrast($bg-color){
+
+    @if(lightness($bg-color) < 50){
+        @return white;
+    }@else{
+        @return black;
+    }
+}
+@mixin font($prop, $val) {
+    font-#{$prop} : $val;
+}

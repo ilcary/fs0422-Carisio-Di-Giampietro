@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piantala</title>
+    <link rel="icon" type="image/x-icon" href="./images/logo/logo.png">
+    <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-light fixed-top">
+        <div class="container-fluid align-items-center">
+            <img src="./images/logo/logo.png" alt="" id="logoBrand" class="d-inline-block align-text-top">
+            <a class="navbar-brand m-2 fw-bold" id="topTitle" href="#">PIANTALA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav fs-4 ">
+                    <li class="nav-item ">
+                        <a class="nav-link text-success fw-semibold" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-success fw-semibold" href="#partnerShip">Partnership</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-success fw-semibold" href="#contatti">Contatti</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link text-success fw-semibold" href="#contatti">
+                            <i class="bi bi-twitter fs-3 px-1"></i>
+                            <i class="bi bi-instagram fs-3 px-1"></i>
+                            <i class="bi bi-linkedin fs-3 px-1"></i>
+                            <i class="bi bi-whatsapp fs-3 px-1"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="primoPiano">
+        <div class="container  flex-column justify-content-center text-center p-5">
+            <p class="fs-2 mt-5 p-2 fw-bold text-white">
+                <span class="topTitle"> FAI LA DIFFERENZA </span>
+            </p>
+            <P class="fs-3 p-2 fw-semibold fst-italic text-white  rounded">
+                <i class="bi bi-tree fs-2"></i> <span class="text-bg-success"> Gli alberi:</span> sono un bene per la
+                natura!
+            </P>
+            <p class="fs-4 p-2 fw-semibold fst-italic text-white introPrimopiano rounded">
+                <i class="bi bi-lightning-charge fs-2"></i> <span class="text-bg-warning">Non solo:</span> grazie ai
+                loro processi di respirazione e fotosintesi, gli alberi aiutano a combattere il
+                riscaldamento climatico assorbendo l'anidride carbonica e contribuiscono alla pulizia dell'aria,
+                incamerando inquinanti come ozono, ossidi di nitrogeno e biossidi di zolfo.
+            </p>
+        </div>
+    </section>
+
+    <section id="partnerShip">
+        <p class="fs-2 p-2 my-5 fw-bold text-black text-center ">
+            I NOSTRI BRAND
+        </p>
+        <div class="row" id="brandsContainer">
+            <div class="col-md-4 py-4 text-center bg-light">
+                <div class="thumbnail">
+                    <a href="./images/brands/Caterpillar-Logo.png">
+                        <img src="./images/brands/Caterpillar-Logo.png" alt="Caterpillar-Logo" class="brands mb-4"></a>
+                    <div class="caption text-center">
+                        <p>Caterpillar è il principale produttore mondiale di attrezzature per l'edilizia e il settore
+                            estrattivo, di motori diesel e a gas naturale</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 py-4 text-center bg-light">
+                <div class="thumbnail ">
+                    <a href="./images/brands/John-Deere-Logo.png">
+                        <img src="./images/brands/John-Deere-Logo.png" alt="John-Deere-Logo" class="brands mb-4"></a>
+                    <div class="caption">
+                        <p>La Deere & Company ha sede a East Moline, USA. È una delle principali aziende al mondo
+                            produttrice di macchine agricole assieme a CNH Industrial e AGCO. Fu fondata a Grand Detour
+                            nel 1837 da John Deere, fabbro pioniere.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 py-4 text-center bg-light">
+                <div class="thumbnail">
+                    <a href="./images/brands/Logo_JCB.png">
+                        <img src="./images/brands/Logo_JCB.png" alt="Logo_JCB" class="brands mb-4"></a>
+                    <div class="caption text-center">
+                        <p>JC Bamford Excavators Limited, conosciuta più comunemente come JCB, è una multinazionale
+                            britannica con sede a Rocester nello Staffordshire in Regno Unito. La JCB produce
+                            attrezzature per la costruzione edilizia, la demolizione e l'agricoltura. È inoltre il terzo
+                            più grande produttore di macchine agricole del mondo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="price my-5">
+        <p class="fs-2 p-2 my-5 fw-bold text-black text-center ">
+            I NOSTRI ALBERI
+        </p>
+        <div class="row row-cols-1 row-cols-md-3 mb-5 text-center">
+            <div class="col">
+              <div class="card mb-4 rounded-3 shadow-sm border-success">
+                <div class="card-header py-3">
+                  <h4 class="my-0 fw-normal">BAOBAB</h4>
+                </div>
+                <div class="card-body" id="baobab">
+                  <h1 class="card-title pricing-card-title"><span class="text-bg-warning px-2 prezzoAlbero rounded-2">$26</span></h1>
+                  <ul class="list-unstyled mt-3 mb-4  text-bg-light rounded-2">
+                    <li>una parte della somma sara devoluta agli abitanti del posto</li>
+                    <li>Avrai aggiornamenti foto e video della pianta</li>
+                    <li>Assistenza</li>
+                    <li>Una penna marchiata <span class="text-bg-success px-1 ">PIANTALA &reg;</span></li>
+                  </ul>
+                  <button type="button" class="w-100 btn btn-lg btn-outline-success btn-light">Pianta ora!</button>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card mb-4 rounded-3 shadow-sm border-success">
+                <div class="card-header py-3">
+                  <h4 class="my-0 fw-normal">SAUGAGE TREE (KIGELIA AFRICANA)</h4>
+                </div>
+                <div class="card-body"  id="sausagetree">
+                  <h1 class="card-title pricing-card-title"><span class="text-bg-warning px-2 prezzoAlbero rounded-2">$35</span></h1>
+                  <ul class="list-unstyled mt-3 mb-4 text-bg-light rounded-2">
+                    <li>una parte della somma sara devoluta agli abitanti del posto</li>
+                    <li>Avrai aggiornamenti foto e video della pianta</li>
+                    <li>Assistenza</li>
+                    <li>Decidi dove lo pianti!</li>
+                  </ul>
+                  <button type="button" class="w-100 btn btn-lg btn-light">Pianta ora!</button>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card mb-4 rounded-3 shadow-sm border-success">
+                <div class="card-header py-3 text-bg-light border-success">
+                  <h4 class="my-0 fw-normal">MARULA TREE (SCLEROCARYA BIRREA)</h4>
+                </div>
+                <div class="card-body" id="marulatree">
+                  <h1 class="card-title pricing-card-title "> <span class="text-bg-warning px-2 prezzoAlbero rounded-2">$49</span> </h1>
+                  <ul class="list-unstyled mt-3 mb-4 text-bg-light rounded-2">
+                    <li>una parte della somma sara devoluta agli abitanti del posto</li>
+                    <li>Avrai aggiornamenti foto e video della pianta</li>
+                    <li>Assistenza </li>
+                    <li>Riceverai un buono sconto del <span class="text-bg-primary px-1" > 20% </span> da regalare a chi vuoi!</li>
+                  </ul>
+                  <button type="button" class="w-100 btn btn-lg btn-light">Pianta ora!</button>
+                </div>
+              </div>
+            </div>
+          </div>
+    </section>
+
+    <section id="Carusello">
+        <h2 class="fs-2 p-5 fw-bold text-center "> <span class="text-bg-success px-2"> AIUTA LA NATURA ANCHE TU!</span></h2>
+        <div id="carouselCaptions" class="carousel slide pb-5 " data-bs-ride="carousel">
+            <div class="carousel-indicators pb-5 ">
+                <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner ">
+                <div class="carousel-item active">
+                    <img src="images/forest_e_planting/pexels-rodolfo-clix-1615784.jpg"
+                        class="d-block w-100 bgCarusello" alt="...">
+                    <div class="carousel-caption  ">
+                        <img class="userImg" src="./images/user_icon/woman.png" alt="">
+                        <h5 class="bg-success rounded userNick"><i class="bi bi-person-hearts"></i> Costanza Bianchi
+                        </h5>
+                        <p class="caroselloRecensione">L'idea è meravigliosa, i pacchetti sono accattivanti e gli
+                            aggiornamenti appassionanti. Devo aggiungere tra l'altro che l'assistenza clienti è pronta e
+                            cortese</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/forest_e_planting/pexels-rudolf-jakkel-418831.jpg"
+                        class="d-block w-100 bgCarusello" alt="...">
+                    <div class="carousel-caption ">
+                        <img class="userImg" src="./images/user_icon/man.png" alt="">
+                        <h5 class="bg-success rounded userNick"><i class="bi bi-person-hearts"></i> Cesidio Romani</h5>
+                        <p class="caroselloRecensione">Siamo felicissimi di aver creato una bellissima foresta per il
+                            nostro matrimonio! Non è solo un’idea, ma una grande convinzione quella di poter rendere più
+                            verde la terra che abitiamo! Grazie Treedom e grazie Carisio!</p>
+                    </div>
+                </div>
+                <div class="carousel-item ">
+                    <img src="images/forest_e_planting/pexels-jacob-colvin-1757363.jpg"
+                        class="d-block w-100 bgCarusello" alt="...">
+                    <div class="carousel-caption ">
+                        <img class="userImg" src="./images/user_icon/bear.png" alt="">
+                        <h5 class="bg-success userNick"><i class="bi bi-person-hearts rounded"></i> Juan Carrito</h5>
+                        <p class="caroselloRecensione">Ho approcciato a Piantala per fare dei regali ad amici e parenti
+                            e il regalo è sempre stato molto apprezzato.
+                            Pensare che con un solo albero si può fare la differenza è una bella sensazione!
+                            Una particolare nota di merito al servizio clienti.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon d-none d-md-block" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon d-none d-md-block" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+    </section>
+
+
+
+    <footer id="contatti">
+        <!-- Footer -->
+        <footer class="bg-dark text-center text-white">
+            <!-- Grid container -->
+            <div class="container p-4">
+                <!-- Section: Social media -->
+                <section class="mb-4 ">
+                    <!-- Facebook -->
+                    <a class="btn btn-outline-light btn-floating m-1" target="_blank"  href="https://www.facebook.com/epicodeitalia" role="button"><i
+                            class="bi bi-facebook fs-3"></i></a>
+
+                    <!-- Twitter -->
+                    <a class="btn btn-outline-light btn-floating m-1" target="_blank"  href="https://twitter.com/home?lang=it" role="button"><i
+                            class="bi bi-twitter fs-3"></i></a>
+
+                    <!-- Instagram -->
+                    <a class="btn btn-outline-light btn-floating m-1" target="_blank"  href="https://www.instagram.com/_ilcary_s.r.l._/ " role="button"><i
+                            class="bi bi-instagram fs-3"></i></a>
+
+                    <!-- Linkedin -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/school/epicodeitalia/mycompany/" target="_blank"  role="button"><i
+                            class="bi bi-linkedin fs-3"></i></a>
+
+                    <!-- Whatsapp -->
+                    <a class="btn btn-outline-light btn-floating m-1"  href="https://wa.me/3337007324?text=Ciao%20sono%20interessato%20alla%20tua%20azienda" target="_blank" role="button"><i
+                            class="bi bi-whatsapp fs-3"></i></a>
+                </section>
+                <!-- Section: Social media -->
+
+                <!-- Section: Form -->
+                <section class="">
+                    <form action="">
+                        <!--Grid row-->
+                        <div class="row d-flex justify-content-center">
+                            <!--Grid column-->
+                            <div class="col-auto">
+                                <p class="pt-2">
+                                    <strong>Iscriviti alla newsletter</strong>
+                                </p>
+                            </div>
+                            <!--Grid column-->
+
+                            <!--Grid column-->
+                            <div class="col-md-5 col-12">
+                                <!-- Email input -->
+                                <div class="form-outline form-white mb-4">
+                                    <input type="email" id="inMail" class="form-control" placeholder="mariorossi@gmail.com"/>
+                                </div>
+                            </div>
+                            <!--Grid column-->
+
+                            <!--Grid column-->
+                            <div class="col-auto">
+                                <!-- Submit button -->
+                                <button type="submit" class="btn btn-outline-light mb-4">
+                                    Iscriviti!
+                                </button>
+                            </div>
+                            <!--Grid column-->
+                        </div>
+                        <!--Grid row-->
+                    </form>
+                </section>
+                <!-- Section: Form -->
+
+                <!-- Section: Text -->
+                <section class="mb-4">
+                    <p class="text-center">
+                       <h2 class="fw-bold text-success">Natura</h2> 
+                        Voce comunissima, che abbraccia tutte le forme delle cose quanto le essenze e le cagioni. Natura
+                        principio del moto e della quiete, e anche ordine divino per il quale tutte le cose si muovono,
+                        nascono e muoiono [Latino: Natura].
+                        La tua natura è ciò che sei - l'insieme di cosa pensi, di quello che senti e di come ti
+                        comporti. Potrebbe essere nella tua natura la caratteristica di rimanere calmo ed equilibrato
+                        anche di fronte ad una sfida difficile. Anche le cose che non sono persone possono anche avere
+                        una propria natura: si può notare la natura frenetica di un dibattito politico, o si potrebbe
+                        mettere in discussione la natura delle amicizie di tuo fratello. Il termine può anche riferirsi
+                        al mondo fisico fatto di piante e animali: quello che credi che sia "la vita all'aria aperta".
+                        Ad esempio, potresti essere un amante della natura che adora le escursioni.
+                    </p>
+                </section>
+                <!-- Section: Text -->
+
+            </div>
+            <!-- Grid container -->
+
+            <!-- Copyright -->
+            <div class="text-center p-3" id="copyright">
+                © 2022 Copyright:
+                <a class="text-white" href="">www.Piantala.com</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+    </footer>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
