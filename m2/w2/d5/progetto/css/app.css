@@ -8407,8 +8407,10 @@ a {
 .brands {
   width: 40%; }
 
-.row {
-  --bs-gutter-x: -1rem; }
+#price {
+  max-width: 100%; }
+  #price .row {
+    --bs-gutter-x: -1.5rem; }
 
 #baobab {
   background-image: url(../images/alberi_price/BAOBAB.jpg);
