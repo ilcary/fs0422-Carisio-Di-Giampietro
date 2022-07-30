@@ -8407,26 +8407,29 @@ a {
 .brands {
   width: 40%; }
 
-#price {
-  max-width: 100%; }
-  #price .row {
-    --bs-gutter-x: -1.5rem; }
+/* #price{
+.row{
+    --bs-gutter-x: -1.5rem;
+}
+max-width: 100%;
+}
+#baobab{
+    background-image: url(../images/alberi_price/BAOBAB.jpg);
+    z-index: 10;
+    background-size:cover ;
+}
+#sausagetree{
+    background-image: url(../images/alberi_price/sausagetree.jpg);
+    z-index: 10;
+    background-size:cover ;
+}
+#marulatree{
+    background-image: url(../images/alberi_price/marulatree.jpg);
+    z-index: 10;
+    background-size:cover ;
+}
 
-#baobab {
-  background-image: url(../images/alberi_price/BAOBAB.jpg);
-  z-index: 10;
-  background-size: cover; }
-
-#sausagetree {
-  background-image: url(../images/alberi_price/sausagetree.jpg);
-  z-index: 10;
-  background-size: cover; }
-
-#marulatree {
-  background-image: url(../images/alberi_price/marulatree.jpg);
-  z-index: 10;
-  background-size: cover; }
-
+ */
 #Carusello {
   background-image: url("../images/forest_e_planting/pexels-akil-mazumder-1072824.jpg");
   background-repeat: no-repeat;
