@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+
+
+        class Pizza{
+
+            constructor(_gusto, _prezzo){
+                this.gusto = _gusto;
+                this.prezzo = _prezzo;
+                this.disponibile = true;
+                this.mostraPrezzo();
+            }
+            mostraPrezzo(){
+                console.log(this.prezzo + '€')//posso usare dei metodi che leggano le proprietà dell'oggetto
+            }
+            pizzaEsaurita(){
+                this.disponibile = false//posso anche creare dei metodi che modifichino ne proprietà dell'oggetto
+            }
+
+        }
+
+        let margherita = new Pizza('Margherita',5);
+        let mimosa = new Pizza('Mimosa',8);
+        
+        console.log(margherita, mimosa)
+
+        Pizza.prototype.test = 'prova';
+
+        console.log(margherita, mimosa)
+        console.log(margherita.test)
+
+
+        
+        /*
+        questo qui sotto è il sistema manuale per creare un oggetto
+        Richiede da parte mia la riscrittura dell'intera struttura ogni volta che voglio creare
+        un oggetto di questo tipo
+        */
+        let marg = {
+            gusto : 'Margherita',
+            prezzo : 5,
+            0:'ciao',
+            mostraPrezzo : () => console.log(this.prezzo + '€'),//la funzione freccia è anonima, quindi il this non vi si aggancia, e si aggancerà all'oggetto window
+            mostraPrezzo2 : function(){ console.log(this.prezzo + '€') }
+        }
+        
+        marg.mostraPrezzo()
+
+        //leggere valori
+        console.log(marg.gusto)
+        console.log(marg['gusto'])//da utilizzare qualora il nome della prop contenga sintassi non concesse
+
+        //scrivere valori
+        marg.prezzo = 4.5;
+        console.log(marg.prezzo)
+
+
+        </script>
+</body>
+</html>

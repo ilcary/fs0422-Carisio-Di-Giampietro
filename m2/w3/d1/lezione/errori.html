@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        let margherita =  {
+            gusto : 'Margherita',
+            prezzo : 5,
+            mostraPrezzo : function(){ console.log( margherita.prezzo + '€') }
+        }
+        let diavola =  {
+            gusto : 'Diavola',
+            prezzo : 1,
+            mostraPrezzo : function(){ console.log( diavola.prezzo + '€') }
+        }
+
+        margherita.mostraPrezzo();
+        diavola.mostraPrezzo();
+
+
+        function Pizza(gusto, prezzo){
+            this.gusto = gusto
+            this.prezzo = prezzo
+            this.mostraPrezzo = function(){ console.log( capricciosa.prezzo + '€') }//sbagliato, devo mettere un this, e non il nome di una variabile
+        }
+
+        let capricciosa = new Pizza('Capricciosa',7)
+        let stagioni = new Pizza('4 stagioni',5)
+
+        console.log(capricciosa)
+        capricciosa.mostraPrezzo()
+        stagioni.mostraPrezzo()
+
+    </script>
+</body>
+</html>

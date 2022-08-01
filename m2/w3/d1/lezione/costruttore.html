@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+
+        function Pizza(_gusto, _prezzo){
+            this.gusto = _gusto;
+            this.prezzo = _prezzo;
+            this.disponibile = true;
+            this.mostraPrezzo = () => {
+                console.log(this.prezzo + '€')//posso usare dei metodi che leggano le proprietà dell'oggetto
+            }
+            this.pizzaEsaurita = () => {
+                this.disponibile = false//posso anche creare dei metodi che modifichino ne proprietà dell'oggetto
+            }
+        }
+
+        let margherita = new Pizza('Margherita',5);
+        let mimosa = new Pizza('Mimosa',8);
+
+        margherita.pizzaEsaurita()
+
+        console.log(margherita, mimosa)
+
+        margherita.mostraPrezzo()
+        mimosa.mostraPrezzo()
+
+    </script>
+</body>
+</html>
