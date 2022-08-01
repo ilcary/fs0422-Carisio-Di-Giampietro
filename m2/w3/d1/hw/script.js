@@ -1,4 +1,6 @@
+listaUtenti = localStorage.getItem('listaUtenti') ? JSON.parse(localStorage.getItem('listaUtenti')) : [];
 
+console.log(listaUtenti);
 
 
 class Utenti {
@@ -34,6 +36,7 @@ class Utenti {
         this.nascita = nascita;
 
         this.createTableHTML()
+        
     }
 
 
@@ -49,9 +52,20 @@ class Utenti {
             td.innerText = utente;
             tr.appendChild(td)
         }
+        this.aggiornaListaUtenti()
     }
 
-
+    aggiornaListaUtenti() {
+        function Utente(nome, cognome, nascita) {
+            this.nome = nome;
+            this.cognome = cognome;
+            this.nascita = nascita;
+        }
+        let user = new Utente(this.nome, this.cognome, this.nascita);
+        listaUtenti.push(user);
+        let strlistaUtenti = JSON.stringify(listaUtenti)
+        localStorage.setItem('listaUtenti', strlistaUtenti)
+    }
 }
 
 let utente1 = new Utenti();
@@ -69,11 +83,6 @@ let utente1 = new Utenti();
 
 
 /* 
-        function Utente(nome,cognome,nascita) {
-        this.nome = nome;
-        this.cognome = cognome;
-        this.nascita = nascita;
-        }
+        
 
-        let user = new Utente(nome,cognome,nascita);
-        arrutenti */
+         */
