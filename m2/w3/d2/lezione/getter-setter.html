@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        class Veicolo{
+            constructor(marca, tipo, colore, maxVel, prezzo, ruote = 2){
+                this.marca = marca;
+                this.tipo = tipo;
+                this.colore = colore;
+                this.maxVel = maxVel;
+                this.ruote = ruote;
+                this.prezzo = prezzo;
+                this.vel = 0;
+            }
+            set accelera(n = 1){
+                if( (this.vel + n) <= this.maxVel){
+                    this.vel += n;
+                }
+            }
+            set frena(n = 1){
+                if(this.vel > 0){
+                    this.vel -= n
+                }
+            }
+
+            get prezzoAttuale(){//getter
+                return this.prezzo + '€';
+            }
+
+
+            setData(obj){
+
+                for(let prop in obj){
+                    this[prop] = obj[prop]
+                }
+
+                return this;
+            }
+        }
+
+        let skate =  new Veicolo('BillaBong', 'skateboard', 'giallo', 20, 30, 4);
+
+        skate.accelera = 5;
+        console.log(skate.vel)
+
+        console.log( skate.prezzoAttuale )
+
+
+
+
+    </script>
+
+</body>
+</html>

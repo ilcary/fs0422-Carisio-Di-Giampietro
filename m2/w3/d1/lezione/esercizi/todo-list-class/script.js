@@ -2,25 +2,31 @@ class Todo{
 
     constructor(target){
         
+        this.todoName = target;
         this.target = document.querySelector(target)
         this.input = '';
         this.button = '';
         this.list = '';
+        this.allTodos = localStorage.getItem(target) ? JSON.parse(localStorage.getItem(target)) : [];
 
         this.createBaseHTML()
+
+        if(this.allTodos.length > 0){
+            for(let td of this.allTodos){
+                this.addTodo(td)
+            }
+        }
 
     }
 
     createInput(){
-        let input = document.createElement('input');
-        input.classList.add('form-control');
+        let input = this.createElementWithClass('input','form-control');
         input.type = 'text';
         this.input = input;
     }
     
     createbutton(){
-        let button = document.createElement('button');
-        button.classList.add('btn','btn-primary');
+        let button = this.createElementWithClass('button','btn btn-primary');
         button.innerHTML = 'Save';
 
         button.addEventListener('click',() => this.addTodo() )
@@ -28,10 +34,19 @@ class Todo{
         this.button = button;
     }
 
-    addTodo(){
-        let todo = document.createElement('div');//<div></div>
-        todo.innerHTML = this.input.value;
-        todo.classList.add('alert','alert-success');
+    addTodo(td){
+        let todo = this.createElementWithClass('div','alert alert-success');
+        todo.innerHTML = td || this.input.value;
+        todo.addEventListener('click',() => {
+            todo.remove()
+            let index = this.allTodos.indexOf(this.input.value)  
+            td || this.allTodos.splice(index,1)
+            td || this.saveTodos()
+        })
+
+        td || this.allTodos.push(this.input.value)
+        td || this.saveTodos()
+
         this.list.append(todo);
         this.input.value = '';
     }
@@ -39,10 +54,8 @@ class Todo{
     createBaseHTML(){
         
         //creo i containers
-        let formContainer = document.createElement('div');
-        let listContainer = document.createElement('div');
-        formContainer.classList.add('container');
-        listContainer.classList.add('container');
+        let formContainer = this.createElementWithClass('div','container')
+        let listContainer = this.createElementWithClass('div','container')
         
         //creo input
         this.createInput()
@@ -51,8 +64,7 @@ class Todo{
         this.createbutton()
 
         //creo lista
-        let list = document.createElement('div');
-        list.classList.add('row')
+        let list = this.createElementWithClass('div','row');
         this.list = list;
 
         //inserisco gli elementi nei rispettivi container
@@ -62,6 +74,15 @@ class Todo{
 
     }
 
+    saveTodos(){
+        localStorage.setItem(this.todoName,JSON.stringify(this.allTodos))
+    }
+
+    createElementWithClass(tag,className){
+        let element = document.createElement(tag);
+        element.className = className
+        return element;
+    }
 
 }
 
