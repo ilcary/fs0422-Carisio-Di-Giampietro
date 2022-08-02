@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        class person {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+            checkAge(... x) {
+                let persone = []
+                persone.push(... x)
+                console.log(persone)
+                console.log(x.age)
+
+                //usiamo il metodo sort sull'array di obj
+                persone.sort((a, b) => {
+                    return a.age - b.age;
+                });
+
+                let giovane = persone[0]
+                console.log(giovane);
+
+                let vecchio= persone[persone.length - 1]
+                console.log(vecchio);
+
+                //usiamo il forEach per displayare le persone sulla console
+                persone.forEach((e) => {
+                    console.log(`${e.name} ${e.age}`);
+                });
+
+                let display = document.createElement("div");
+                display.textContent = `${giovane.name} è la persona più giovane e ${vecchio.name} è la persona più vecchia`
+                document.querySelector('body').appendChild(display);
+
+                console.log(`${giovane.name} è la persona più giovane`)
+                console.log(`${vecchio.name} è la persona più vecchia`)
+
+            }
+        }
+
+        p1 = new person('Florin', 26);
+        p2 = new person('Claudio', 22);
+        p3 = new person('Carisio', 11);
+        p4 = new person('Francesca', 8);
+
+        p1.checkAge(p2, p3, p4);
+
+
+
+
+    </script>
+</body>
+
+</html>
