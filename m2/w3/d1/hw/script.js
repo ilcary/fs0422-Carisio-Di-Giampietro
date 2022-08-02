@@ -2,6 +2,12 @@ listaUtenti = localStorage.getItem('listaUtenti') ? JSON.parse(localStorage.getI
 
 console.log(listaUtenti);
 
+function Utente(nome, cognome, nascita) {
+            this.nome = nome;
+            this.cognome = cognome;
+            this.nascita = nascita;
+        }
+
 
 class Utenti {
 
@@ -56,11 +62,7 @@ class Utenti {
     }
 
     aggiornaListaUtenti() {
-        function Utente(nome, cognome, nascita) {
-            this.nome = nome;
-            this.cognome = cognome;
-            this.nascita = nascita;
-        }
+        
         let user = new Utente(this.nome, this.cognome, this.nascita);
         listaUtenti.push(user);
         let strlistaUtenti = JSON.stringify(listaUtenti)
@@ -69,7 +71,6 @@ class Utenti {
 }
 
 let utente1 = new Utenti();
-
 
 
 
