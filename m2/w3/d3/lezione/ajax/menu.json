@@ -1,0 +1,34 @@
+[
+    {
+        "gusto":"Marghrita",
+        "tipo":"Napoletana",
+        "prezzo":5,
+        "disponibilità": true,
+        "formati":["Mezzo metro", "Normale", "Mini"]
+
+    },
+    {
+        "gusto":"Cacio e Pepe",
+        "tipo":"Romsns",
+        "prezzo":8,
+        "disponibilità": true,
+        "formati":["Mezzo metro", "Normale", "Mini"]
+
+    },
+    {
+        "gusto":"Diavola",
+        "tipo":"Napoletana",
+        "prezzo":6,
+        "disponibilità": true,
+        "formati":["Normale", "Teglia"]
+
+    },
+    {
+        "gusto":"Hawayana",
+        "tipo":"Napoletana",
+        "prezzo":100,
+        "disponibilità": false,
+        "formati":["Mezzo metro", "Mini"]
+
+    }
+]
