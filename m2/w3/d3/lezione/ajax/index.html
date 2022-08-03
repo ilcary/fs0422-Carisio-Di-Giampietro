@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="menu"></div>
+
+    <script>
+        let target = document.querySelector('#menu')
+
+        fetch('menu.json')
+        .then(res => res.json())
+        .then(menu => {
+            
+            for(let pizza of menu){
+
+                if(pizza.disponibile){
+                    let div = document.createElement('div')
+                    div.innerHTML = pizza.gusto + ' Prezzo: ' + pizza.prezzo 
+                    target.append(div)
+                }
+                
+            }
+            
+        })
+    </script>
+</body>
+</html>
