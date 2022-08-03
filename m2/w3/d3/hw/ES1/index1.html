@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework M2 W3 D3 ES1</title>
+</head>
+
+<body>
+
+    <table id="tabellaCorso">
+        <thead>
+
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Cognome</th>
+            </tr>
+
+        </thead>
+        <tbody id="tbody"></tbody>
+    </table>
+
+    <script>
+
+        let tbody = document.querySelector('#tbody')
+
+        let dati = localStorage.getItem('utenti') ? JSON.parse(localStorage.getItem('utenti')) : [];//se nel locale storage esiste 'utenti', è true, altrimenti è false. Se true allora avrò il JSON.parse di localStorage.getItem('utenti'), altrimenti un array vuoto
+
+        fetch('./utenti-corso.json')//return una PROMISE
+            .then(promise => promise.json())//then per gestire le promise (utilizza il metodo json)
+            .then(datiElaborati => {//restituisce dati elaborati
+
+                listaCompleta(datiElaborati)
+            })
+
+
+        function listaCompleta(jsonFile) {//dato l'array di oggetti, permette di visualizzare a schermo dentro alla tabella che stiamo per creare
+            for (let utente of jsonFile) {
+
+                let tr = document.createElement('tr')
+                tbody.append(tr)
+
+                let tdId = document.createElement('td')
+                tdId.innerHTML = utente.id
+                tr.append(tdId)
+
+                let tdnome = document.createElement('td')
+                tdnome.innerHTML = utente.nome
+                tr.append(tdnome)
+
+                let tdcognome = document.createElement('td')
+                tdcognome.innerHTML = utente.cognome
+                tr.append(tdcognome)
+
+                if (dati.length <= 15) {
+                    dati.push(utente)
+                    localStorage.setItem('utenti', JSON.stringify(dati));
+                }
+
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

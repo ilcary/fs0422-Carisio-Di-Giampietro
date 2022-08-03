@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="display"></div>
+
+    <script>
+
+        const COUNTER_KEY = 'counter';
+
+        function countDown(i) {
+            //callback = callback || function(){};
+            timer = setInterval(function () {
+
+                minutes = parseInt(i / 60, 10);
+                /* The parseInt method parses a value as a string and returns the first integer. A radix parameter specifies the number system to use 2 = binary, 8 = octal, 10 = decimal, 16 = hexadecimal. */
+                seconds = parseInt(i % 60, 10);
+
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                document.querySelector('#display').innerHTML = "tempo rimasto " + "0:" + minutes + ":" + seconds;
+
+                if ((i--) > 0) {//se i-1 è maggiore di 0 
+                    window.sessionStorage.setItem(COUNTER_KEY, i);
+                } else {
+                    window.sessionStorage.removeItem(COUNTER_KEY);
+                    clearInterval(timer);
+                    
+                }
+            }, 1000);
+        }
+
+        // on window.onload innanzi tutto controlla se il valore sotto la chiave 'counter_key' esiste, se ci sta fai partire il timer da li, altrimenti parti da un valore di 0
+        window.onload = function () {
+            let countDownTime = window.sessionStorage.getItem(COUNTER_KEY) || 60;
+            countDown(countDownTime);
+        };
+
+    </script>
+
+</body>
+
+</html>
