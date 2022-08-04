@@ -1,41 +1,39 @@
 const apiUtenti = 'http://localhost:3000/utenti';
 
+let button = document.querySelector('#update button');
 
-let params = new URLSearchParams(location.search);//preparo l'oggetto che mi permetterà di lavorare con i query params
 
-if(!params.has('id')){//allontano l'utente se l'id non è tra i query params
+let params = new URLSearchParams(location.search);//preparo l'oggetto che mi permettera di lavorare con i quary params
+if (!params.has('id')) {//allontano utenti che provano ad entrare se l'id non è tra i parametri
     location.href = 'index.html'
 }
+let userId = params.get('Id');
 
-let userId = params.get('id')//ottengo l'id dell'utente
-
-fetch(apiUtenti+'/'+userId)//uso l'id per fare una chiamata api ed ottenere la risorsa singola
-.then(res => res.json())
-.then(utente => {
-    //mi aggancio ai campi che devo riempire
-    let nome = document.querySelector('#nome')
-    let cognome = document.querySelector('#cognome')
-    let eta = document.querySelector('#eta')
-
-    //uso la risposta per riempire i campi
-    nome.value = utente.nome
-    cognome.value = utente.cognome
-    eta.value = utente.eta
-})
+fetch(apiUtenti + '/' + userId)//ottengo la risorsa singola
+    .then(res => res.json())
+    .then(utente => {
+        //mi aggancio ai campi che devo leggere
+        let nome = document.querySelector('#nome')
+        let cognome = document.querySelector('#cognome')
+        let eta = document.querySelector('#eta')
 
 
+        //mi aggancio ai campi che devo riempire
+        nome.value = utente.nome
+        cognome.value = utente.cognome
+        eta.value = utente.eta
 
-let button = document.querySelector('#update button');
-//preparo la modifica dell'utente
-button.addEventListener('click',function(e){
+
+    })
+
+
+button.addEventListener('click', function (e) {
     e.preventDefault();
-
     //mi aggancio ai campi che devo leggere
     let nome = document.querySelector('#nome')
     let cognome = document.querySelector('#cognome')
     let eta = document.querySelector('#eta')
-
-    //preparo l'oggetto modificato
+    //mi preparo l'oggetto
     let user = {
         nome: nome.value,
         cognome: cognome.value,
@@ -45,23 +43,23 @@ button.addEventListener('click',function(e){
     let options = {
         method: 'PUT',
         body: JSON.stringify(user),
-        headers:{
-            "content-type":"application/json"
+        headers: {
+            "content-type": "application/json"
         }
     }
-    
-    fetch(apiUtenti+'/'+userId,options)
-    .then(res => res.json())
-    .then(res => {
-        Swal.fire({
-            position: 'top-end',
-            icon: 'success',
-            title: 'Utente aggiornato',
-            text:`L'utente ${res.nome} ${res.cognome} con id ${res.id} è stato aggiornato`,
-            showConfirmButton: false,
-            timer: 5000
-        }).then(() =>{
-            location.href = 'index.html'
+
+    fetch(apiUtenti, options)
+        .then(res => res.json())
+        .then(res => {
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Nuovo utente creato',
+                text: `L'utente ${res.nome} ${res.cognome} con id ${res.id} è stato creato`,
+                showConfirmButton: false,
+                timer: 5000
+            }).then(res => {
+                location.href = 'index.html'
+            })
         })
-    })
 })

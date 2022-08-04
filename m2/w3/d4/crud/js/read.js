@@ -22,14 +22,19 @@ if(tabellaUtenti){
             
             //creo una td per i bottoni delle azioni
             let tdAzioni = document.createElement('td');
-            let btnModifica = document.createElement('button');
+            let btnModifica = document.createElement('a');
             let btnElimina = document.createElement('button');
             
             //scrivo nei bottoni e do loro delle classi
             btnModifica.classList.add('btn','btn-warning');
             btnModifica.innerHTML = 'Modifica'
+            btnModifica.href = 'modifica.html?id='+utente.id
+
             btnElimina.classList.add('btn','btn-danger','text-dark');
             btnElimina.innerHTML = 'Elimina'
+            btnElimina.addEventListener('click',() => {
+                eliminaUtente(utente.id, tr)
+            })
             
             tdAzioni.append(btnModifica, btnElimina)
             
@@ -40,4 +45,6 @@ if(tabellaUtenti){
         
     })
 }
+
+
 
