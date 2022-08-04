@@ -1,0 +1,16 @@
+{
+  "utenti": [
+    {
+      "nome": "Aperiam maiores et h",
+      "cognome": "In accusantium tempo",
+      "eta": "79",
+      "id": 1
+    },
+    {
+      "nome": "Walter",
+      "cognome": "White",
+      "eta": "55",
+      "id": 2
+    }
+  ]
+}
