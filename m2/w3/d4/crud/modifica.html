@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Modifica utente</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 </head>
 <body>
-    
+    <h1>Modifica utente</h1>
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
         <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
           <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
@@ -21,18 +21,27 @@
         </ul>
       </header>
 
-      <table id="tabella-utenti" class="table">
-        <tr>
-            <th>Nome</th>
-            <th>Cognome</th>
-            <th>eta</th>
-            <th>azioni</th>
-        </tr>
-      </table>
-    
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <form id="update">
 
-    <script src="js/delete.js"></script>
-    <script src="js/read.js"></script>
+        <div class="row">
+
+          <div class="col-5">
+            <input type="text" class="form-control" id="nome" placeholder="nome">
+          </div>
+          <div class="col-5">
+            <input type="text" class="form-control" id="cognome" placeholder="cognome">
+          </div>
+          <div class="col-2">
+            <input type="number" class="form-control" id="eta" placeholder="età">
+          </div>
+
+          <button class="btn btn-primary">Salva</button>
+
+        </div>
+
+      </form>
+ 
+      <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <script src="js/update.js"></script>
 </body>
 </html>
