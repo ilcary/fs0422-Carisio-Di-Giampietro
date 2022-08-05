@@ -22,9 +22,9 @@ class Carta {
         let card = document.querySelector('#cardTemplate .card').cloneNode(true) //here we make the sauce, a card template and with the first method whe write the data collected from the fetch
         console.log(this.username)
         this.takeClassAndWrite(card, '.card .card-title', `Nickname:  ${this.username}`)
-        this.takeClassAndWrite(card, '.card ul > li', `firstName:  ${this.firstName}`)
-        this.takeClassAndWrite(card, '.card li:nth-child(2)', `lastName:  ${this.lastName}`)
-        this.takeClassAndWrite(card, '.card li:nth-child(3)', `gender:  ${this.gender}`)
+        this.takeClassAndWrite(card, '.card ul > li', `FirstName:  ${this.firstName}`)
+        this.takeClassAndWrite(card, '.card li:nth-child(2)', `LastName:  ${this.lastName}`)
+        this.takeClassAndWrite(card, '.card li:nth-child(3)', `Gender:  ${this.gender}`)
         this.takeClassAndWrite(card, '.card li:nth-child(4)', `@email:  ${this.email}`)
         display.append(card)
     }
