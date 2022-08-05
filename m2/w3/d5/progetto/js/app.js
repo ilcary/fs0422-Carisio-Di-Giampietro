@@ -2,12 +2,14 @@ const api_url = 'json/users.json'
 const display = document.querySelector('#display')
 
 class Carta {
-    constructor(__username, __firstName, __lastName, __gender, __email) {
+    constructor(__username, __bio, __firstName, __lastName, __gender, __email, __profileURL) {
         this.username = __username;
+        this.bio = __bio;
         this.firstName = __firstName;
         this.lastName = __lastName;
         this.gender = __gender;
         this.email = __email;
+        this.profileURL = __profileURL;
 
         this.cardHTML()
     }
@@ -22,10 +24,12 @@ class Carta {
         let card = document.querySelector('#cardTemplate .card').cloneNode(true) //here we make the sauce, a card template and with the first method whe write the data collected from the fetch
         console.log(this.username)
         this.takeClassAndWrite(card, '.card .card-title', `Nickname:  ${this.username}`)
+        this.takeClassAndWrite(card, '.card-text', `About me:  ${this.bio}`)
         this.takeClassAndWrite(card, '.card ul > li', `FirstName:  ${this.firstName}`)
         this.takeClassAndWrite(card, '.card li:nth-child(2)', `LastName:  ${this.lastName}`)
         this.takeClassAndWrite(card, '.card li:nth-child(3)', `Gender:  ${this.gender}`)
         this.takeClassAndWrite(card, '.card li:nth-child(4)', `@email:  ${this.email}`)
+        card.querySelector('.card-img-top').src = this.profileURL
         display.append(card)
     }
 }
@@ -35,7 +39,7 @@ fetch(api_url)//make the call
     .then(utenti => {//now i've the data i can do what i want
         console.log(utenti);
         for (let utente of utenti) {
-            let card = new Carta(utente.username, utente.firstName, utente.lastName, utente.gender, utente.email)
+            let card = new Carta(utente.username, utente.bio, utente.firstName, utente.lastName, utente.gender, utente.email, utente.profileURL)
         }
     })
 

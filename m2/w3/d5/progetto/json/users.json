@@ -1,6 +1,7 @@
 [
   {
     "username": "john",
+    "bio":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis reprehenderit, voluptas suscipit consectetur laborum quae corporis doloribus perferendis iste asperiores quibusdam",
     "firstName": "John",
     "lastName": "Doe",
     "gender": "Male",
@@ -9,6 +10,7 @@
   },
   {
     "username": "jane",
+    "bio":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis reprehenderit, voluptas suscipit consectetur laborum quae corporis doloribus perferendis iste asperiores quibusdam",
     "firstName": "Jane",
     "lastName": "Doe",
     "gender": "Female",
@@ -17,9 +19,10 @@
   },
   {
     "username": "Sium",
+    "bio":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis reprehenderit, voluptas suscipit consectetur laborum quae corporis doloribus perferendis iste asperiores quibusdam",
     "firstName": "jonathan",
     "lastName": "Dionton",
-    "gender": "male",
+    "gender": "Male",
     "profileURL": "img/male.png",
     "email": "Sium.dion@example.com"
   }
