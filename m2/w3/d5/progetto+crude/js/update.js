@@ -32,8 +32,10 @@ class Utente {
     checkgender(){
         if (document.querySelector('#gender').value == 'Male') {
             this.profileURL= "img/male.png"
-        }else{
+        }else if(document.querySelector('#gender').value == 'Female'){
             this.profileURL= "img/female.png" 
+        }else{
+            this.profileURL= "img/helicopter.png"
         }
     }
 }

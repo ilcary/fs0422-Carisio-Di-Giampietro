@@ -47,15 +47,13 @@ class Carta {
               .then((willDelete) => {
                 if (willDelete) {
                     deleteUser(this.id)
-                    swal("Poof! Your ex has been deleted know go get yourself a beer!", {
+                    swal("Poof! Your ex has been deleted now go get yourself a beer!", {
                     icon: "success",
                   }).then(() => location.href = 'index.html')
                 } else {
                     swal("Okok take your time bro forgetting an ex isn't easy at all");
                 }
-              });
-            
-               
+              });              
         })
         display.append(card)
     }
@@ -67,11 +65,8 @@ fetch(api_url)//make the call
         console.log(utenti);
         for (let utente of utenti) {
             let card = new Carta(utente.username, utente.bio, utente.firstname, utente.lastname, utente.gender, utente.email, utente.profileURL,utente.id)
-
         }
     })
-
-
 
 //SPAGHETTI MODE TO CREATE A CARD================
 /* let userNameBox = card.querySelector('.card .card-title')//gli scrivo il nome utente

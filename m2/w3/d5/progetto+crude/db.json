@@ -15,9 +15,9 @@
       "bio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis reprehenderit, voluptas suscipit consectetur laborum quae corporis doloribus perferendis iste asperiores quibusdam",
       "firstname": "Giovanni",
       "lastname": "Malossi",
-      "gender": "Male",
+      "gender": "Other",
       "email": "maloss22giov@example.com",
-      "profileURL": "img/male.png",
+      "profileURL": "img/helicopter.png",
       "id": 2
     },
     {
@@ -26,8 +26,8 @@
       "firstname": "Carisio",
       "lastname": "Di Giampietro",
       "gender": "Male",
-      "profileURL": "img/male.png",
       "email": "ilcary.digiam@example.com",
+      "profileURL": "img/male.png",
       "id": 3
     }
   ]
