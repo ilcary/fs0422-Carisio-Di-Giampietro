@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <title>Guest Book</title>
+</head>
+
+<body>
+
+    <div class="">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                <svg class="bi me-2" width="40" height="32">
+                    <use xlink:href="#bootstrap"></use>
+                </svg>
+                <span class="fs-4">Guest book</span>
+            </a>
+
+            <ul class="nav nav-pills m-1">
+                <li class="nav-item"><button type="button" id="leave-msg" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">Create a new message</button></li>
+            </ul>
+        </header>
+    </div>
+
+<!-- carta da duplicare e riempire con i dati presi dalla fetch -->
+    <div class="d-none">
+        <div class="row" id="cardTemplate">
+            <div class="col-lg-3 mx-auto">
+                <blockquote class="blockquote blockquote-custom bg-white p-5 shadow rounded">
+                    <div class="blockquote-custom-icon bg-info shadow-sm"><i class="fa fa-quote-left text-white"></i>
+                    </div>
+                    <p class="mb-0 mt-2 font-italic"></p>
+                    <footer class="blockquote-footer pt-4 mt-4 border-top">Message of:
+                        <cite title="Source Title"></cite>
+                    </footer>
+                </blockquote>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- container dove appendere le carte -->
+    <div id="displaycard"></div>
+
+    <!-- modale per creare un nuovo messaggio con un form -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form class="needs-validation container mt-5" id="formMess">
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <label for="firstName" class="form-label">First name</label>
+                                <input type="text" data-inpt="name" class="form-control" id="firstName" placeholder=""
+                                    value="" required="">
+                                <div class="invalid-feedback">
+                                    Valid first name is required.
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <label for="lastName" class="form-label">Last name</label>
+                                <input type="text" data-inpt="surname" class="form-control" id="lastName" placeholder=""
+                                    value="" required="">
+                                <div class="invalid-feedback">
+                                    Valid last name is required.
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="username" class="form-label">Message</label>
+                                <div class="input-group has-validation">
+                                    <input type="text" data-inpt="message" class="form-control" id="message"
+                                        placeholder="Your message" required="">
+                                    <div class="invalid-feedback">
+                                        Your username is required.
+                                    </div>
+                                </div>
+                            </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" id="sendit" class="btn btn-primary">Leave a message!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+
+</body>
+
+</html>

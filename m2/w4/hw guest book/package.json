@@ -1,0 +1,14 @@
+{
+  "name": "hw-guest-book",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "backend": "json-server -w db.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-json-db": "^2.1.0"
+  }
+}
