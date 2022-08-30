@@ -7,9 +7,9 @@ var Color;
 console.log(Color.Red);
 var Months;
 (function (Months) {
-    Months[Months["Gennaio"] = 0] = "Gennaio";
-    Months[Months["Febbraio"] = 1] = "Febbraio";
-    Months[Months["Marzo"] = 2] = "Marzo";
+    Months[Months["Gennaio"] = 2] = "Gennaio";
+    Months[Months["Febbraio"] = 3] = "Febbraio";
+    Months[Months["Marzo"] = 4] = "Marzo";
 })(Months || (Months = {}));
 console.log(Months.Gennaio);
 console.log(Months.Febbraio);

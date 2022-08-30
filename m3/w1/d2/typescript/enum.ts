@@ -7,10 +7,10 @@ enum Color {
 console.log(Color.Red)
 
 enum Months {
-    Gennaio = 0,
+    Gennaio = 2,
     Febbraio,
     Marzo
 }
 
-console.log( Months.Gennaio)
-console.log( Months.Febbraio)
+console.log( Months.Gennaio )
+console.log( Months.Febbraio )
