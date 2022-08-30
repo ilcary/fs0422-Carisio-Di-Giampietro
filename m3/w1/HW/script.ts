@@ -1,8 +1,8 @@
 let form = document.querySelector('#form-container')
-let g1 = document.querySelector('#g1') as HTMLInputElement
-let g2 = document.querySelector('#g2') as HTMLInputElement
-let button = document.querySelector('#btn')
-let reset = document.querySelector('#rst')
+let g1:HTMLInputElement | null = document.querySelector('#g1')
+let g2:HTMLInputElement | null = document.querySelector('#g2')
+let button:HTMLElement | null = document.querySelector('#btn')
+let reset:HTMLElement | null  = document.querySelector('#rst')
 
 
 
@@ -12,8 +12,8 @@ button?.addEventListener('click', (e) => {
     let resultContent = document.createElement('p');
     let randomDisplay = document.getElementById('randomSpan') as HTMLElement
 
-    let g1I: number = Number(g1.value);
-    let g2I: number = Number(g2.value);
+    let g1I: number = Number(g1?.value);
+    let g2I: number = Number(g2?.value);
     let random: number = Math.floor(Math.random() * (100 - 1) + 1)
     // let random: number = 12
 
@@ -69,7 +69,9 @@ reset?.addEventListener("click", (e) => {
         resultDisplay.removeChild(resultDisplay.firstChild);
     }
 
+    if(g1 && g2){
     g1.value = ''
     g2.value = ''
+*}
 })
 
