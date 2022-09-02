@@ -36,7 +36,7 @@ class firstUser implements ISmartphone {
         this.carica += unaRicarica;
     }
     chiamata(minutiDurata: number): void {
-        let credito = (this.carica - (minutiDurata * this.costoPerMinuto)).toFixed(2)
+        let credito = (this.carica - (minutiDurata * this.costoPerMinuto)).toFixed(2)// with the method toFixed we leave only the decimal we want by a parameter, it return a string so:
         this.carica = +credito // to convert the string fixed we can use the parseInt or parseFloat functions, or simply use the unary + operator
         this.numeroChiamate++
     }
@@ -81,7 +81,7 @@ class secondUser implements ISmartphone {
         this.carica += unaRicarica;
     }
     chiamata(minutiDurata: number): void {
-        let credito = (this.carica - (minutiDurata * this.costoPerMinuto)).toFixed(2)
+        let credito = (this.carica - (minutiDurata * this.costoPerMinuto)).toFixed(2)// with the method toFixed we leave only the decimal we want by a parameter, it return a string so:
         this.carica = +credito // to convert the string fixed we can use the parseInt or parseFloat functions, or simply use the unary + operator
         this.numeroChiamate++
     }

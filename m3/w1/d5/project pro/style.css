@@ -1,0 +1,137 @@
+body{
+    background-image: url(./images/bg.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+#iphonecover {
+    background-image: url('./images/iphone-home-screen.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 800px;
+    width: 400px;
+    display: block;
+    margin: 2rem auto;
+    
+}
+#displayCall{
+    position: relative;
+    top: 210px;
+    left: 98px;
+    width: 200px;
+    height: 50px;
+    font-size: 1.5rem;
+    border: none;
+    background-color: rgb(250, 250, 250);
+    
+}
+#displayCall:hover{
+    background-color: rgb(240, 240, 240);
+}
+
+.dot {
+    position: relative;
+    top: 482px;
+    left: 176px;
+    height: 50px;
+    width: 50px;
+    background-color: rgba(255, 0, 0, 0);
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .dot:hover{
+    background-color: rgba(91, 202, 79, 0.288);
+    cursor: pointer;
+  }
+
+#home{
+    position: relative;
+    left: 150px;
+    top: 549px;
+    background-color: rgb(0, 0, 0);
+    width: 100px;
+    height: 6px;
+    border-radius: 10px;
+    cursor: grab;
+}
+#home:hover{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    background-color: rgba(177, 177, 177, 0.315)
+}
+
+
+
+#call {
+    position: relative;
+    left: 90px;
+    top: 600px;
+    width: 49px;
+   /*  background-color: aqua; */
+
+}
+
+#home.appvodafone{
+    top: 510px
+}
+
+.icon:hover {
+   scale: 1.1;
+}
+
+#vodafone {
+    position: relative;
+    left: 210px;
+    top: 600px;
+    width: 45px;
+    /* background-color: aqua; */
+}
+
+#ricarica {
+    position: relative;
+    top: 423px;
+    left: 205px;
+    height: 40px;
+    width: 110px;
+    border-radius:8px ;
+    background-color: rgba(255, 0, 0, 0);
+  }
+  #ricarica:hover{
+    cursor: pointer;
+    background-color: rgba(177, 177, 177, 0.315)
+  }
+
+  #registroChiamatebtn{
+    position: relative;
+    top: 333px;
+    left: 85px;
+    height: 90px;
+    width: 110px;
+    border-radius:8px ;
+    background-color: rgba(187, 43, 43, 0);
+  }
+  #registroChiamatebtn:hover{
+    cursor: pointer;
+    background-color: rgba(177, 177, 177, 0.315)
+  }
+
+  #credito{
+    position: relative;
+    top: 263px;
+    left: 230px;
+    cursor: default;
+  }
+
+  .d-none{
+    display: none;
+}
+.icarica{
+    position: relative;
+    top: 291px;
+    left: 208px;
+    height: 30px;
+    width: 100px;
+    border: none;
+    background-color: antiquewhite;
+    border-radius: 5px;
+}
