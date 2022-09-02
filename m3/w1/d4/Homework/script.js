@@ -49,6 +49,7 @@ let allcapi = [];
         }
     });
 })();
+console.log(allcapi);
 //funzione fetch che permette di visualizzare in console le caratteristiche dei singoli capi
 /* fetch(API_CAPI)
     .then(res => res.json())
