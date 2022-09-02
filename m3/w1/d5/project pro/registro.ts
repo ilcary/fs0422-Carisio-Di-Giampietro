@@ -1,5 +1,5 @@
 
-
+/* 
 //classe per creare una carta in html tramite dei parametri
 class Card{
     durataChiamata:number;
@@ -12,15 +12,15 @@ class Card{
     }
 
     takeClassAndWrite(card:Node, classe:string, write:string) {
-        let carta = document.querySelector()
-        let element:HTMLElement|null = card.querySelector(classe);
+       
+        let element:HTMLElement|null = document.querySelector(classe);
         element!.textContent = write
         return element;
     }
 
     //creazione dell'html tramite il duplicato in d-none
     createcard() {
-        let carta = document.querySelector('#cardTemplate')?.cloneNode(true);
+        let carta:any = document.querySelector('#cardTemplate')?.cloneNode(true);
         this.takeClassAndWrite(carta, 'p', `${this.durataChiamata}` )
         this.takeClassAndWrite(carta, 'cite', ` ${this.durataChiamata} minuti, dal costo di ${this.costoChiamata} `)
        let diplay:HTMLElement|null =  document.querySelector('#displaycard')
@@ -28,10 +28,11 @@ class Card{
     }
 }
 
-/* //al caricamento della pagina lancio una funzione che mi carica tutti i messaggi
+
+//al caricamento della pagina lancio una funzione che mi carica tutti i messaggi
 window.onload = () => {
 
-    fetch(apiMessaggi)
+    fetch(API_CHIAMATE)
     .then(res=>res.json())
     .then(mess=>{
         for(let m of mess){
