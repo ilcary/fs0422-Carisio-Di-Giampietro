@@ -1,0 +1,13 @@
+
+<h3>Liked photos = {{likesNum}}</h3>
+
+<div *ngFor="let photo of photos" class="card d-inline-block m-3" style="width: 18rem;">
+  <img [src]="photo.url" class="card-img-top" alt="...">
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title">{{photo.title}}</h5>
+    <div class="buttons">
+      <button (click)="deletePhoto(photo.id)" class="btn me-2">🗑️</button>
+      <button (click)="checkLike(photo)" class="btn">❤</button>
+    </div>
+  </div>
+</div>
