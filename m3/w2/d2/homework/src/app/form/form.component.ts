@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PostModule } from '../post/post';
 import {POST_API} from '../pages/home/home.component'
 
 
@@ -20,7 +21,7 @@ export class FormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  newPost:Post = new Post();
+  newPost:PostModule = new PostModule('','','');
 
   addNewPost():void{
     let postCopy = Object.assign({}, this.newPost)
@@ -36,7 +37,7 @@ export class FormComponent implements OnInit {
     fetch(POST_API, option)
     .then(res => res.json())
     .then(() => {
-      this.newPost = new Post('' as number,'','')
+      this.newPost = new PostModule('','','')
     })
   }
 }
