@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UtentiComponent implements OnInit {
 
+
+
   //ricordarsi di tipizzare
   utenti:any = [
     {

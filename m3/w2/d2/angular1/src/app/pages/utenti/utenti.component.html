@@ -1,13 +1,14 @@
 <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <form>
+        <input type="text">
+      </form>
+    </div>
+  </div>
 <div class="row">
   <div class="col-6">
-    <div *ngFor="let utente of utenti" class="card" style="width: 18rem;">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">{{utente.name}}</h5>
-        <p class="card-text">{{utente.email}}</p>
-        <a [routerLink]="['/utenti',utente.id]" class="btn btn-primary">Go somewhere</a>
-      </div>
+    <app-utenti-card [utenti]="utenti"></app-utenti-card>
     </div>
   </div>
   <div class="col-6">
@@ -15,4 +16,4 @@
   </div>
 
 </div>
-</div>
+
