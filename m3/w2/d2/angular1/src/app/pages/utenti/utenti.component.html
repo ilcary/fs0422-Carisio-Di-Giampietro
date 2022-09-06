@@ -1,0 +1,18 @@
+<div class="container">
+<div class="row">
+  <div class="col-6">
+    <div *ngFor="let utente of utenti" class="card" style="width: 18rem;">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{utente.name}}</h5>
+        <p class="card-text">{{utente.email}}</p>
+        <a [routerLink]="['/utenti',utente.id]" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-6">
+    <router-outlet></router-outlet>
+  </div>
+
+</div>
+</div>
