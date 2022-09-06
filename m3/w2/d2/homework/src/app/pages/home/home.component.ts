@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-export const POST_API:string = 'http://localhost:3000/Posts'
+export const POST_API: string = 'http://localhost:3000/Posts';
 
 @Component({
   selector: 'app-home',
@@ -14,7 +14,6 @@ export class HomeComponent implements OnInit {
     this.getAllPosts();
   }
 
-
   posts: {
     userId: number;
     id: number;
@@ -24,7 +23,7 @@ export class HomeComponent implements OnInit {
     like: number;
   }[] = [];
 
-   activePosts: {
+  activePosts: {
     userId: number;
     id: number;
     title: string;
@@ -34,54 +33,51 @@ export class HomeComponent implements OnInit {
   }[] = [];
 
   getAllPosts() {
-
-      fetch(POST_API)
-      .then(response => response.json())
-      .then(response => {
-        (this.activePosts = response.filter((p: { active: boolean; }) => p.active === true))})
-      .catch(err => {
-        throw new Error('Error fetching photos: ' + err.message);
+    fetch(POST_API)
+      .then((response) => response.json())
+      .then((response) => {
+        this.activePosts = response.filter(
+          (p: { active: boolean }) => p.active === true
+        );
       })
+      .catch((err) => {
+        throw new Error('Error fetching photos: ' + err.message);
+      });
   }
 
-  mettiLike(id: number){
-    let pst:{
-      userId: number;
-      id: number;
-      title: string;
-      body: string;
-      active: boolean;
-      like: number;
-    }|undefined = this.posts.find(p => p.id === id);
+  mettiLike(id: number) {
+    let pst:
+      | {
+          userId: number;
+          id: number;
+          title: string;
+          body: string;
+          active: boolean;
+          like: number;
+        }
+      | undefined = this.posts.find((p) => p.id === id);
     console.log(pst);
     console.log(id);
+    if (pst) {
+      console.log(pst.like);
+      pst!.like++;
+      console.log(pst.like);
 
-    console.log(pst!.like);
-    pst!.like++
-    console.log(pst!.like);
+      let options = {
+        method: 'PATCH',
+        body: JSON.stringify({
+          like: pst!.like,
+        }),
+        headers: {
+          'content-type': 'application/json',
+        },
+      };
 
-
-    let options = {
-      method:"PATCH",
-      body: JSON.stringify({
-        like: pst!.like,
-      }),
-      headers:{
-        "content-type":"application/json"
-      }
-
+      fetch(POST_API + '/' + pst!.id, options)
+        .then((res) => res.json())
+        .then((res) => {
+          console.log(res.like);
+        });
     }
-
-      fetch(POST_API+'/'+pst!.id,options)
-      .then(res=> res.json())
-      .then((res)=>{
-
-        console.log(res.like);
-
-      })
-
-    }
-
   }
-
-
+}
