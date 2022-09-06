@@ -1,0 +1,9 @@
+<div class="container">
+  <h1 class="text-center my-3">Make a new Post</h1>
+  <form>
+    <input type="number" class="form-control mb-2" [(ngModel)]="newPost.userId" name="userId" placeholder="Id utente">
+    <input type="text" class="form-control mb-2" [(ngModel)]="newPost.title" name="body" placeholder="Titolo Post">
+    <input type="text" class="form-control mb-2" [(ngModel)]="newPost.body" name="body" placeholder="Contenuto Post">
+    <button (click)="addNewPost()" class="btn btn-primary">Posta</button>
+  </form>
+</div>

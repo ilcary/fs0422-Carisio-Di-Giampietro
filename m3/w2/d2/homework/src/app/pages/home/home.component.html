@@ -1,0 +1,14 @@
+
+<app-form></app-form>
+
+<div *ngFor="let post of activePosts" class="card" style="width: 18rem;">
+  <div class="card-header">
+    {{post.userId}}
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{post.title}}</li>
+    <li class="list-group-item">{{post.body}}</li>
+    <li class="list-group-item">like: {{post.like}}</li>
+    <li (click)="mettiLike(post.id)" class="list-group-item">❤</li>
+  </ul>
+</div>
