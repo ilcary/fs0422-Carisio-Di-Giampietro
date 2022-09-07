@@ -1,6 +1,6 @@
 <div *ngFor="let post of allPosts" class="card m-5">
   <h5 class="card-header">{{post.title}}</h5>
-  <div class="card-body" >
+  <div class="card-body" [ngClass]="{'giallo' : post.type === 'news','nero' : post.type === 'politic','blu' : post.type === 'education'}" >
     <h3 class="card-title">{{post.userId}}</h3>
     <h5 class="card-title">{{post.type}}</h5>
     <p class="card-text">{{post.body}}</p>
