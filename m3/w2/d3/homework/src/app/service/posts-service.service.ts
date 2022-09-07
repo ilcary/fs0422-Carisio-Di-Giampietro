@@ -179,11 +179,18 @@ export class PostsServiceService {
       return this.allPosts
   }
 
-  getAllActiveUsers(): Post[] {
+  disablePost(id: undefined| number): void{
+    let index:Post|undefined = this.allPosts.find(post => post.id === id);
+    if(index)
+      index.active=!index.active
+
+  }
+
+  getAllActivePost(): Post[] {
     return this.allPosts.filter((u) => u.active);
   }
 
-  getAllInactiveUsers(): Post[] {
+  getAllInactivePost(): Post[] {
     return this.allPosts.filter((u) => !u.active);
   }
 

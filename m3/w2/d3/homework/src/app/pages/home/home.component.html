@@ -5,5 +5,6 @@
     <h5 class="card-title">{{post.type}}</h5>
     <p class="card-text">{{post.body}}</p>
     <a [routerLink]="['modifica/',post.id]" class="btn btn-warning">Update</a>
+  <button (click)="disable(post.id)" class="btn btn-success" >DISATTIVA POST</button>
   </div>
 </div>

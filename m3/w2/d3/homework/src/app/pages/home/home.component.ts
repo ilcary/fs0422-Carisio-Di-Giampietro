@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
 
   constructor(private postService: PostsServiceService) { }
 
-  allPosts: Post[]=  this.postService.getPosts();
+  allPosts: Post[]=  this.postService.getAllActivePost();
 
   ngOnInit(): void {
     this.postService.getPosts()
@@ -21,6 +21,11 @@ export class HomeComponent implements OnInit {
 
   updatePost(id:string| number| undefined){
 
+  }
+
+
+  disable(id: undefined| number){
+    this.postService.disablePost(id)
   }
 
 }
