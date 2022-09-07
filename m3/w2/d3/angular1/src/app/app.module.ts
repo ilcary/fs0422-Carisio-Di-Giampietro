@@ -6,12 +6,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TableComponent } from './table/table.component';
 import { FormComponent } from './form/form.component';
+import { ProvaDestroyComponent } from './prova-destroy/prova-destroy.component';
+import { AccordionBodyComponent } from './accordion-body/accordion-body.component';
+import { AccordionSectionComponent } from './accordion-section/accordion-section.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TableComponent,
-    FormComponent
+    FormComponent,
+    ProvaDestroyComponent,
+    AccordionBodyComponent,
+    AccordionSectionComponent
   ],
   imports: [
     BrowserModule,

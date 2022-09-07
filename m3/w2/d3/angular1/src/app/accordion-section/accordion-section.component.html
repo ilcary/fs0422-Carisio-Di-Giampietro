@@ -1,0 +1,12 @@
+<div class="accordion-item">
+  <h2 class="accordion-header" [id]="itemId">
+    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+      <ng-content select="[titolo]"></ng-content>
+    </button>
+  </h2>
+  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+    <div class="accordion-body">
+      <ng-content select="[corpo]"></ng-content>
+    </div>
+  </div>
+</div>

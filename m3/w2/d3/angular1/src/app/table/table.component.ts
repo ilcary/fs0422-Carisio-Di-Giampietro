@@ -1,23 +1,22 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { User } from '../user';
+import { User } from '../Models/user';
 
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
-  styleUrls: ['./table.component.css'],
+  styleUrls: ['./table.component.scss']
 })
 export class TableComponent implements OnInit {
 
+  @Input() allItems!:User[];
+
+  props:string[] = Object.keys(new User('',''));
 
 
-@Input() allItems!: User[]
- props:string[] = (Object.keys(new User('','')))  //mi restituisce i nomi delle proprietà e dei metodi
+  constructor() { }
 
-constructor() {}
-
-
-ngOnInit(): void {
-  this.props.push('Azioni')
-}
+  ngOnInit(): void {
+    this.props.push('Azioni')
+  }
 
 }

@@ -1,0 +1,13 @@
+
+<h1>Modifica utente</h1>
+<form>
+  <input type="text" [(ngModel)]="user.name" class="form-control"
+  placeholder="nome" name="nome">
+
+  <input type="text" [(ngModel)]="user.lastname" class="form-control"
+  placeholder="cognome" name="cognome">
+
+  <input id="active" [(ngModel)]="user.active" type="checkbox" name="active">
+  <label for="active">Attivo</label>
+  <button (click)="save()" class="btn btn-primary">Salva</button>
+</form>

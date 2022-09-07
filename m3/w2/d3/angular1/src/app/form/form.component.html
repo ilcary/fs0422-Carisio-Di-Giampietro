@@ -1,7 +1,11 @@
-
-  <div class="col-6">
-    <input placeholder="Nome" [(ngModel)]="newUser.name" class="form-control" name="name" type="text">
-    <input placeholder="Cognome" [(ngModel)]="newUser.lastname" class="form-control" name="lastname" type="text">
-    <button (click)=" sendDataToParent()" class="btn btn-primary">invia</button>
-  </div>
-
+<form>
+  <input
+  placeholder="Nome" name="name"
+  [(ngModel)]="newUser.name"
+  class="form-control" type="text">
+  <input
+  placeholder="Cognome" name="lastname"
+  [(ngModel)]="newUser.lastname"
+  class="form-control" type="text">
+  <button (click)="sendDataToParent()" class="btn btn-primary">Invia</button>
+</form>

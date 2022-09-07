@@ -1,20 +1,18 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { User } from '../user';
+import { User } from '../Models/user';
 
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
-  styleUrls: ['./form.component.css'],
+  styleUrls: ['./form.component.scss']
 })
 export class FormComponent {
 
- @Output() onNewUserCreated = new EventEmitter<User>()
+  @Output() onNewUserCreated = new EventEmitter<User>();
 
-  constructor() {}
+  newUser:User = new User('','');
 
-  newUser: User = new User('', '');
-
-  sendDataToParent() {
-    this.onNewUserCreated.emit(this.newUser)//invio di dati ai genitori
+  sendDataToParent(){
+    this.onNewUserCreated.emit(this.newUser);//invio dati al genitore
   }
 }
