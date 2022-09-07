@@ -1,0 +1,13 @@
+<table class="table">
+  <tr>
+    <th>#</th>
+    <th *ngFor="let prop of props" >{{prop}}</th>
+    <th>cognome</th>
+  </tr>
+  <tr *ngFor="let user of allItems; let i=index" >
+    <td>{{i+1}}</td>
+    <td>{{user.name}}</td>
+    <td>{{user.lastname}}</td>
+    <td><button class="btn btn-danger text-black">elimina</button></td>
+  </tr>
+</table>

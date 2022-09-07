@@ -4,19 +4,16 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-utenti-dettaglio',
   templateUrl: './utenti-dettaglio.component.html',
-  styleUrls: ['./utenti-dettaglio.component.css'],
+  styleUrls: ['./utenti-dettaglio.component.css']
 })
 export class UtentiDettaglioComponent implements OnInit {
 
+  constructor(private route:ActivatedRoute) { }
 
-
-  constructor(private route:ActivatedRoute){ }// ci fornisce la rotta
-
-  userId!:string //
+  userId!:string;
 
   ngOnInit(): void {
-    this.userId = this.route.snapshot.params['id']//parametri passati nell'url
-
+    this.userId = this.route.snapshot.params['id']
   }
 
 }

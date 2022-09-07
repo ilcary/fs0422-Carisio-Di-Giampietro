@@ -2,18 +2,28 @@
   <div class="row">
     <div class="col-12">
       <form>
-        <input type="text">
+        <input
+        class="form-control"
+        [(ngModel)]="newUser.name"
+        name="name"
+        type="text" placeholder="nome">
+        <input
+        class="form-control"
+        [(ngModel)]="newUser.email"
+        name="email"
+        type="email" placeholder="email">
+        <button (click)="addUser($event)" class="btn btn-primary">Inserisci</button>
       </form>
+      {{newUser | json}}
     </div>
   </div>
 <div class="row">
   <div class="col-6">
     <app-utenti-card [utenti]="utenti"></app-utenti-card>
-    </div>
   </div>
   <div class="col-6">
     <router-outlet></router-outlet>
   </div>
 
 </div>
-
+</div>

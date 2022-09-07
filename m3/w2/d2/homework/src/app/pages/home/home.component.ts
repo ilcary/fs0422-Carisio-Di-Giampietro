@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PostModule } from '../../post/post';
 
 export const POST_API: string = 'http://localhost:3000/Posts';
 
@@ -46,16 +47,7 @@ export class HomeComponent implements OnInit {
   }
 
   mettiLike(id: number) {
-    let pst:
-      | {
-          userId: number;
-          id: number;
-          title: string;
-          body: string;
-          active: boolean;
-          like: number;
-        }
-      | undefined = this.posts.find((p) => p.id === id);
+    let pst:PostModule | undefined = this.posts.find((p) => p.id === id);
     console.log(pst);
     console.log(id);
     if (pst) {

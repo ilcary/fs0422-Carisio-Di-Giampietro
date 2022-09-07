@@ -11,6 +11,7 @@ import { ContattiComponent } from './pages/contatti/contatti.component';
 import { UtentiComponent } from './pages/utenti/utenti.component';
 import { UtentiDettaglioComponent } from './pages/utenti-dettaglio/utenti-dettaglio.component';
 import { UtentiCardComponent } from './pages/utenti-card/utenti-card.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { UtentiCardComponent } from './pages/utenti-card/utenti-card.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

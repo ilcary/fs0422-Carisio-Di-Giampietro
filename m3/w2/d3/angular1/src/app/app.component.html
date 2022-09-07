@@ -1,0 +1,8 @@
+<div class="container">
+<app-form (onNewUserCreated)="addUser($event)"></app-form>
+  <div class="col-6">
+    <app-table [allItems]="allUsers" ></app-table>
+  </div>
+</div>
+
+<!-- per passare dati dal parent a child usiamo una proprietà e un metodo e un evento insieme viceversa -->
