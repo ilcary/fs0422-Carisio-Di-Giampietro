@@ -1,0 +1,12 @@
+<form class="col-6 container mt-5" >
+  <input type="number" class="form-control" name="userId" [(ngModel)]="post.userId" placeholder="userId">
+  <input type="text" class="form-control" name="title" [(ngModel)]="post.title" placeholder="title">
+  <input type="text" class="form-control" name="body" [(ngModel)]="post.body" placeholder="body">
+  <label for="type">type</label>
+  <select type="text" id="type" class="select" name="type" [(ngModel)]="post.type" placeholder="type">
+    <option value="news">news</option>
+    <option value="politic">politic</option>
+    <option value="education">education</option>
+  </select>
+  <button (click)="save()" class="btn btn-success" >AGGIORNA POST!</button>
+</form>

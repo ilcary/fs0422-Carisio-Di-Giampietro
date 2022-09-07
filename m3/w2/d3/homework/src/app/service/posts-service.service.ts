@@ -1,0 +1,194 @@
+import { Injectable } from '@angular/core';
+import { Post } from '../post';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class PostsServiceService {
+
+
+  constructor() {}
+
+  allPosts: Post[]= [
+    {
+      userId: 1,
+      active: true,
+      type: "news",
+      id: 1,
+      title: "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      body: "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+    },
+    {
+      userId: 1,
+      active: true,
+      type: "news",
+      id: 2,
+      title: "qui est esse",
+      body: "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+    },
+    {
+      userId: 1,
+      active: true,
+      type: "news",
+      id: 3,
+      title: "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+      body: "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
+    },
+    {
+      userId: 1,
+      active: true,
+      type: "education",
+      id: 4,
+      title: "eum et est occaecati",
+      body: "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
+    },
+    {
+      userId: 1,
+      active: true,
+      type: "education",
+      id: 6,
+      title: "dolorem eum magni eos aperiam quia",
+      body: "ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae"
+    },
+    {
+      userId: 1,
+      active: true,
+      type: "education",
+      id: 7,
+      title: "magnam facilis autem",
+      body: "dolore placeat quibusdam ea quo vitae\nmagni quis enim qui quis quo nemo aut saepe\nquidem repellat excepturi ut quia\nsunt ut sequi eos ea sed quas"
+    },
+    {
+      userId: 1,
+      active: true,
+      type: "education",
+      id: 8,
+      title: "dolorem dolore est ipsam",
+      body: "dignissimos aperiam dolorem qui eum\nfacilis quibusdam animi sint suscipit qui sint possimus cum\nquaerat magni maiores excepturi\nipsam ut commodi dolor voluptatum modi aut vitae"
+    },
+    {
+      userId: 1,
+      active: true,
+      type: "politic",
+      id: 9,
+      title: "nesciunt iure omnis dolorem tempora et accusantium",
+      body: "consectetur animi nesciunt iure dolore\nenim quia ad\nveniam autem ut quam aut nobis\net est aut quod aut provident voluptas autem voluptas"
+    },
+    {
+      userId: 1,
+      active: true,
+      type: "politic",
+      id: 10,
+      title: "optio molestias id quia eum",
+      body: "quo et expedita modi cum officia vel magni\ndoloribus qui repudiandae\nvero nisi sit\nquos veniam quod sed accusamus veritatis error"
+    },
+    {
+      userId: 2,
+      active: true,
+      type: "politic",
+      id: 11,
+      title: "et ea vero quia laudantium autem",
+      body: "delectus reiciendis molestiae occaecati non minima eveniet qui voluptatibus\naccusamus in eum beatae sit\nvel qui neque voluptates ut commodi qui incidunt\nut animi commodi"
+    },
+    {
+      userId: 2,
+      active: true,
+      type: "politic",
+      id: 12,
+      title: "in quibusdam tempore odit est dolorem",
+      body: "itaque id aut magnam\npraesentium quia et ea odit et ea voluptas et\nsapiente quia nihil amet occaecati quia id voluptatem\nincidunt ea est distinctio odio"
+    },
+    {
+      body: "Placeat blanditiis ",
+      title: "Harum et qui laborio",
+      active: true,
+      userId: 50,
+      type: "politic",
+      id: 13
+    },
+    {
+      body: "Et in minima sapient",
+      title: "Sit dolore qui deser",
+      active: true,
+      userId: 61,
+      type: "education",
+      id: 14
+    },
+    {
+      body: "Ullam fugiat impedit",
+      title: "Quis laborum Eum al",
+      active: true,
+      userId: 82,
+      type: "politic",
+      id: 15
+    },
+    {
+      body: "Odit in tenetur eius",
+      title: "Reprehenderit verit",
+      active: true,
+      userId: 96,
+      type: "education",
+      id: 16
+    },
+    {
+      body: "Autem quaerat vero u",
+      title: "Enim velit rem ab oc",
+      active: true,
+      userId: 64,
+      type: "politic",
+      id: 17
+    },
+    {
+      body: "Minima odio proident",
+      title: "Irure omnis similiqu",
+      active: true,
+      userId: 3,
+      type: "politic",
+      id: 18
+    },
+    {
+      body: "Lorem est minima do",
+      title: "Aliquid ut culpa in",
+      active: true,
+      userId: 23,
+      type: "news",
+      id: 19
+    },
+    {
+      body: "Et officia dolorem i",
+      title: "Soluta aut perferend",
+      active: true,
+      userId: 48,
+      type: "news",
+      id: 20
+    }
+  ]
+
+  getUserById(id: number|string):Post{
+    return this.allPosts.find(post => post.id == id)|| new Post('','','','')
+  }
+
+  addNewPost(post: Post): void {
+    let postCopy = Object.assign({}, post);
+    this.allPosts.push(postCopy);
+  }
+
+  updatePost() {}
+
+  getPosts(): Post[] {
+      return this.allPosts
+  }
+
+  getAllActiveUsers(): Post[] {
+    return this.allPosts.filter((u) => u.active);
+  }
+
+  getAllInactiveUsers(): Post[] {
+    return this.allPosts.filter((u) => !u.active);
+  }
+
+  deletePost(id: string | number): void {
+    let index = this.allPosts.findIndex(post => post.id === id);
+      this.allPosts.splice(index,1)
+  }
+}
