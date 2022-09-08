@@ -1,0 +1,10 @@
+<div *ngFor="let post of allPosts" class="card">
+  <img src="https://picsum.photos/200/100" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{post.title}}</h5>
+    <p class="card-text">{{post.content}}</p>
+    <small class="card-text">{{post.date}}</small>
+    <a [routerLink]="['edit',post.id]" class="btn btn-warning">Modifica</a>
+    <button (click)="deletePost(post)">Elimina</button>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<form class="col-6 container mt-5">
+  <input type="text" [(ngModel)]="newTodo.user" class="form-control"name="user" placeholder="name" >
+  <select  class="form-select" aria-label="Default select example">
+   <option *ngFor="let us of allUsers" value="">{{us.name}}</option>
+  </select>
+  <input type="text" [(ngModel)]="newTodo.title" class="form-control"name="title" placeholder="title" >
+  <textarea type="text" [(ngModel)]="newTodo.content" class="form-control"name="content" placeholder="content">
+  </textarea>
+  <button class="btn btn-success" (click)="save()" >{{'Create new todo!' | upperTitle}}</button>
+</form>

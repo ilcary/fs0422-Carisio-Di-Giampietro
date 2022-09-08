@@ -1,0 +1,19 @@
+<a class="btn btn-info mx-5" [routerLink]="['newuser']">Create New user!</a>
+
+<router-outlet></router-outlet>
+
+
+<div class="container">
+<div *ngFor="let user of allUsers" class="card mt-5" style="width: 18rem;">
+  <div class="card-header">
+    Utente n°{{user.id}}
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Name: {{user.name}}</li>
+    <li class="list-group-item">Lastname: {{user.lastname}}</li>
+    <li class="list-group-item">Date of birth: {{user.btd}}</li>
+  </ul>
+  <a class="btn btn-warning"[routerLink]="['edituser',user.id]" >Update User</a>
+  <button class="btn btn-danger" (click)="deleteUser(user)">Delete User</button>
+</div>
+</div>

@@ -1,0 +1,6 @@
+<form class="col-6 container mt-5">
+  <input type="text" [(ngModel)]="currentUser.name" class="form-control"name="name" >
+  <input type="text" [(ngModel)]="currentUser.lastname" class="form-control"name="lastname" >
+  <input type="date" [(ngModel)]="currentUser.btd" class="form-control"name="btd" >
+  <button class="btn btn-success" (click)="save()" >Update</button>
+</form>

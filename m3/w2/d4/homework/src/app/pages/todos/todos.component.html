@@ -1,0 +1,20 @@
+<a class="btn btn-info mx-5" [routerLink]="['newtodo']">Create New Todo!</a>
+
+<router-outlet></router-outlet>
+
+<div class="container">
+  <div *ngFor="let todo of allTodos" class="card mt-5" style="width: 18rem;">
+    <div class="card-header">
+      Todo n°{{todo.id}}
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Name: {{todo.user}}</li>
+      <li class="list-group-item">Title: {{todo.title}}</li>
+    </ul>
+    <a class="btn btn-warning"[routerLink]="['edituser',todo.id]" >Update Todo</a>
+    <a class="btn btn-info"[routerLink]="['moretodo',todo.id]" >More</a>
+    <button class="btn btn-success" (click)="deleteUser(todo)">Done it!</button>
+  </div>
+  </div>
+
+
