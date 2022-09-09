@@ -20,13 +20,13 @@ export class SvrTodoService {
     });
   }
 
-/*   getTodoById(id:number| undefined):Promise<Todo> {
+  getTodoById(id:number| undefined):Promise<Todo> {
     return new Promise((resolve, reject) => {
       setTimeout(() =>{
         resolve(fetch(this.todo_API+'/'+id).then((res) => res.json()))
       },2000)
     })
-  } */
+  }
 
   addTodo(todo:Todo):Promise<Todo> {
     return new Promise((resolve, reject) => {

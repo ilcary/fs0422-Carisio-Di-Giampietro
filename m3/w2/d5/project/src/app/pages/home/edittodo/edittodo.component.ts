@@ -6,28 +6,37 @@ import { SvrTodoService } from 'src/app/services/svr-todo.service';
 @Component({
   selector: 'app-edittodo',
   templateUrl: './edittodo.component.html',
-  styleUrls: ['./edittodo.component.scss']
+  styleUrls: ['./edittodo.component.scss'],
 })
 export class EdittodoComponent implements OnInit {
+  constructor(
+    private todoSrv: SvrTodoService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
 
-  constructor(private todoSrv : SvrTodoService, private route : ActivatedRoute, private router : Router) { }
-
-  currentTodo!:Todo;
-  todoId!:number
-  allTodos:Todo[] = []
+  currentTodo: Todo = new Todo('', '');
+  todoId!: number;
+  done:boolean = false;
 
   ngOnInit(): void {
-    this.todoId = Number(this.route.snapshot.paramMap.get('id'))
-    this.todoSrv.getAllTodos().then(result => {
-      let itemtodo = result.find((todo:Todo) => todo.id === this.todoId);
-      if(itemtodo)
-      this.currentTodo =itemtodo
-    })
+    console.log(this.done);
+    this.route.params.subscribe((params: any) => {
+      console.log(params);
+      this.todoId = params.id;
+      this.todoSrv.getTodoById(this.todoId).then((result) => {
+        console.log(result);
+        this.currentTodo = result;
+        this.done = true
+        console.log(this.done);
+
+      });
+    });
   }
 
-
-save(todo: Todo): void {
-  this.todoSrv.editTodo(todo,todo.id)
-  console.log('aggiornato');
-}
+  save(todo: Todo): void {
+    this.todoSrv.editTodo(todo, todo.id);
+    console.log('aggiornato');
+    this.router.navigate(['/'])
+  }
 }

@@ -1,5 +1,9 @@
+<div [ngClass]="{'d-none': done == true}" id="img">
 
-<form *ngIf="currentTodo.title !== ''" class="login-form" >
+  <img  src="../../../assets/img/waitSource.webp"  >
+</div>
+
+<form [ngClass]="{'d-none': done == false}" class="login-form" >
   <h1>Edit Todo!</h1>
   <div class="form-input-material">
     <label for="titile">Todo name</label>

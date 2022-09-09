@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { EdittodoComponent } from './pages/home/edittodo/edittodo.component';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { TodoListComponent } from './pages/home/todo-list/todo-list.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HeaderComponent,
     HomeComponent,
     NewtodoComponent,
-    EdittodoComponent
+    EdittodoComponent,
+    TodoListComponent
   ],
   imports: [
     BrowserModule,

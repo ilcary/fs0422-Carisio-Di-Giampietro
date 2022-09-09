@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Todo } from 'src/app/models/todo';
 import { SvrTodoService } from 'src/app/services/svr-todo.service';
 
@@ -9,7 +10,7 @@ import { SvrTodoService } from 'src/app/services/svr-todo.service';
 })
 export class NewtodoComponent implements OnInit {
 
-  constructor(private todoSrv : SvrTodoService) { }
+  constructor(private todoSrv : SvrTodoService, private router: Router) { }
 
   newTodo:Todo= new Todo('','');
 
@@ -22,6 +23,7 @@ export class NewtodoComponent implements OnInit {
 
   save(): void {
     this.todoSrv.addTodo(this.newTodo)
+    this.router.navigate(['/'])
   }
 
 }

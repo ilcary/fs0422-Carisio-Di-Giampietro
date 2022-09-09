@@ -1,14 +1,14 @@
 {
   "todo": [
     {
-      "title": "comprare uva",
-      "content": "andare a lidl a comprare 34kg di uvaspina per domani pomeriggio",
+      "title": "comprare torta",
+      "content": "andare a lidl a comprare 34kg di torta alla vrema per domani pomeriggio",
       "completed": false,
       "id": 1
     },
     {
       "title": "Cetrioli sotto'olio",
-      "content": "andare al Tigre amico e prenderne 3kg",
+      "content": "andare al Tigre amico e prenderne 5kg",
       "completed": false,
       "id": 2
     },
@@ -17,6 +17,12 @@
       "content": "va all'oasi e prensi il prosciutto",
       "completed": false,
       "id": 3
+    },
+    {
+      "title": "Comprare lattuga",
+      "content": "andare all'iper a prendere 2kg di lattuga d.o.p.",
+      "completed": false,
+      "id": 4
     }
   ]
 }
