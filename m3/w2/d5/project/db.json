@@ -1,0 +1,22 @@
+{
+  "todo": [
+    {
+      "title": "comprare uva",
+      "content": "andare a lidl a comprare 34kg di uvaspina per domani pomeriggio",
+      "completed": false,
+      "id": 1
+    },
+    {
+      "title": "Cetrioli sotto'olio",
+      "content": "andare al Tigre amico e prenderne 3kg",
+      "completed": false,
+      "id": 2
+    },
+    {
+      "title": "salame",
+      "content": "va all'oasi e prensi il prosciutto",
+      "completed": false,
+      "id": 3
+    }
+  ]
+}

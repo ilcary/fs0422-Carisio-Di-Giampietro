@@ -1,0 +1,11 @@
+{
+  "users":[],
+  "posts":[
+    {
+      "id":1,
+      "title":"Prova titolo",
+      "content":"contenuto"
+    }
+  ],
+  "todos":[]
+}

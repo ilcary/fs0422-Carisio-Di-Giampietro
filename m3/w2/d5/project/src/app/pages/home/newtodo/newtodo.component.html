@@ -1,0 +1,16 @@
+
+<form class="login-form" >
+  <h1>New Todo!</h1>
+  <div class="form-input-material">
+    <label for="titile">Todo name</label>
+    <input type="text" name="titile" id="titile" [(ngModel)]="newTodo.title" placeholder="what u have to do? " class="form-control-material" required />
+
+  </div>
+  <div class="form-input-material">
+    <label for="content">Write more accuratly</label>
+    <textarea type="text" name="content" id="content" [(ngModel)]="newTodo.content" placeholder="Where? When? What?"  class="form-control-material" ></textarea>
+   <!--  <input type="text" name="content" id="content" [(ngModel)]="newTodo.content" placeholder="Where? When? What?"  class="form-control-material" required /> -->
+
+  </div>
+  <button type="submit" (click)="save()" class="btn btn-primary btn-ghost">Okeyy lessgo!</button>
+</form>
