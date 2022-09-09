@@ -21,6 +21,7 @@ body {
 
 #tiprego{
   display: inline;
+  margin-right: 15px
 }
 
 .navMenu a {
@@ -60,16 +61,16 @@ body {
 }
 
 .navMenu a:nth-child(2):hover ~ .dot {
-  -webkit-transform: translateX(110px);
-  transform: translateX(110px);
+  -webkit-transform: translateX(130px);
+  transform: translateX(130px);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 1;
 }
 
 .navMenu a:nth-child(3):hover ~ .dot {
-  -webkit-transform: translateX(200px);
-  transform: translateX(200px);
+  -webkit-transform: translateX(240px);
+  transform: translateX(240px);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 1;
