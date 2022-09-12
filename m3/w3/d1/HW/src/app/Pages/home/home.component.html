@@ -1,0 +1,15 @@
+<h3 class="text-center mt-2">Liked photos = {{likesNum}}</h3>
+
+
+<div *ngFor="let post of posts" class="card d-inline-block m-3" style="width: 18rem;">
+  <img [src]="post.url" class="card-img-top">
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title">{{post.title}}</h5>
+    <div class="buttons">
+      <button *ngIf="post.like == true" (click)="like(post)" class="btn">❤</button>
+      <button *ngIf="post.like == false" (click)="like(post)" class="btn">🤍</button>
+      <button (click)="deletePost(post)" class="btn me-2">🗑️</button>
+    </div>
+  </div>
+</div>
+
