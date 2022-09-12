@@ -1,0 +1,28 @@
+<form>
+
+  <input type="text" placeholder="title"
+  class="form-control" [(ngModel)]="post.title"
+  name="title">
+  <textarea class="form-control" [(ngModel)]="post.content"
+  name="content"></textarea>
+  <button *ngIf="formAction == 'create'" (click)="save()" class="btn btn-primary">Aggiungi post</button>
+  <button *ngIf="formAction == 'edit'" (click)="editPost()" class="btn btn-secondary">Modifica</button>
+
+</form>
+
+<div class="alert alert-info" *ngIf="posts.length == 0">Loading...</div>
+<table class="table" *ngIf="posts.length > 0">
+  <tr>
+    <th>titolo</th>
+    <th>content</th>
+    <th>azioni</th>
+  </tr>
+  <tr *ngFor="let post of posts">
+    <td>{{post.title}}</td>
+    <td>{{post.content}}</td>
+    <td>
+      <button (click)="selectPost(post)" class="btn btn-warning">Modifica</button>
+      <button (click)="deletePost(post)" class="btn btn-danger text-dark">Elimina</button>
+    </td>
+  </tr>
+</table>

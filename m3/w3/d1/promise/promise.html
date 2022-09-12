@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    
+    <script>
+
+        let users = []
+
+    
+        function add(){
+
+            return new Promise((resolve) => {
+                resolve({
+                    nome:'mario'
+                })
+            })
+
+        }
+        console.log(add())
+
+        add().then(user => console.log(user))//così posso leggere il dato restituito dalla promise
+
+        /*
+        Posso anche passare ddati tra un then e l'altro
+        usando return per passare dati al then successivo
+        */
+        add().then(() => {
+            return 'prova'
+        }).then(res => {//res=prova
+            console.log(res)
+        })
+
+        /*
+        non posso modificare con il timing giusto
+        una variabile sincrona 
+        all'interno di una elaborazione asincrona
+        */
+        add().then(user => {
+
+            users.push(user)
+            document.body.innerHTML = JSON.stringify(users)
+
+        })
+        
+        
+
+    </script>
+</body>
+</html>

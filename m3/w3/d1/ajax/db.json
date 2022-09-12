@@ -1,0 +1,34 @@
+{
+  "posts": [
+    {
+      "title": "ciao",
+      "content": "Repudiandae enim imp",
+      "data": "2022-09-12T10:36:58.091Z",
+      "id": 1
+    },
+    {
+      "title": "prova",
+      "content": "Doloribus earum proiasdsdadsaasdsad",
+      "data": "2022-09-12T10:39:08.788Z",
+      "id": 2
+    },
+    {
+      "title": "Velit sit culpa re",
+      "content": "Debitis nulla harum ",
+      "data": "2022-09-12T10:39:15.332Z",
+      "id": 3
+    },
+    {
+      "title": "Quidem lorem veritat",
+      "content": "Suscipit qui dolorib",
+      "data": "2022-09-12T10:39:19.632Z",
+      "id": 4
+    },
+    {
+      "title": "Quae consectetur fac",
+      "content": "Est reprehenderit s",
+      "data": "2022-09-12T10:39:22.637Z",
+      "id": 5
+    }
+  ]
+}
