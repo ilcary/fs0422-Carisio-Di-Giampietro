@@ -20,7 +20,7 @@ export class NewHeroReactiveComponent implements OnInit {
       {
         name:new FormControl(null, Validators.required),
         alterEgo:new FormControl(null, Validators.required),
-        power:new FormArray([]),
+        power:new FormArray([new FormControl(null)]),
         enemy:new FormControl(null, [Validators.required, Validators.maxLength(10)]),
         planet:new FormControl(null, [Validators.required, Validators.minLength(5)]),
         weakness:new FormArray([]),

@@ -3,36 +3,36 @@
     <form class="row" (ngSubmit)="submit()" [formGroup]="form">
 
       <div class="form-group">
-        <label for="name">name</label>
+        <label for="name">Name</label>
         <input id="name" required placeholder="name"  formControlName="name" type="text" class="form-control">
       </div>
 
       <div class="form-group">
-        <label for="alterEgo">alterEgo</label>
+        <label for="alterEgo">Alter Ego</label>
         <input id="alterEgo" required placeholder="alterEgo"  formControlName="alterEgo" type="text"
           class="form-control">
       </div>
 
       <div class="form-group" formArrayName="power">
-        <label for="power">power</label>
+        <label for="power">Power</label>
         <a (click)="addPower()" class="btn btn-success m-2">+</a>
         <input id="power" placeholder="power"  type="text" *ngFor="let powa of getPower()let i = index " [formControlName]="i" class="form-control">
       </div>
 
 
       <div class="form-group">
-        <label for="enemy">enemy</label>
+        <label for="enemy">Enemy</label>
         <input id="enemy" required placeholder="enemy"  formControlName="enemy" type="text" class="form-control">
       </div>
 
       <div class="form-group">
-        <label for="planet">planet</label>
+        <label for="planet">Planet</label>
         <input id="planet" required placeholder="planet"  formControlName="planet" type="text"
           class="form-control">
       </div>
 
       <div class="form-group" formArrayName="weakness">
-        <label for="weakness">weakness</label>
+        <label for="weakness">Weakness</label>
         <a (click)="addWeakness()" class="btn btn-success  m-2">+</a>
         <input id="weakness" placeholder="weakness"  type="text" *ngFor="let weak of getWeakness(); let i = index " [formControlName]="i"
           class="form-control">
@@ -52,12 +52,12 @@
     </div>
     <ul class="list-group list-group-flush">
       <li class="list-group-item">ALTER EGO: {{hero.alterEgo}}</li>
-      <label class="text-warning text-bold" for="powa" [innerText]="hero.power.length == 1? 'POWER':'POWERS'" ></label>
-      <li id="powa" class="list-group-item border-warning" *ngFor="let powa of hero.power" >{{powa}}</li>
-      <li class="list-group-item">{{hero.enemy}}</li>
-      <li class="list-group-item">{{hero.planet}}</li>
-      <label class="text-danger text-bold" for="powa" [innerText]="hero.weakness!.length == 1? 'WEAKNES':'WEAKNESSES'" ></label>
-      <li class="list-group-item border-danger " *ngFor="let weaky of hero.weakness">{{weaky}}</li>
+      <label class="text-warning text-bold text-center" for="powa" [innerText]="hero.power.length == 1? 'POWER':'POWERS'" ></label>
+      <li id="powa" class="list-group-item bg-warning" *ngFor="let powa of hero.power" >{{powa}}</li>
+      <li class="list-group-item">ENEMY: {{hero.enemy}}</li>
+      <li class="list-group-item">PLANET: {{hero.planet}}</li>
+      <label class="text-danger text-bold text-center" for="powa" [innerText]="hero.weakness!.length == 1? 'WEAKNES':'WEAKNESSES'" ></label>
+      <li class="list-group-item bg-danger" *ngFor="let weaky of hero.weakness">{{weaky}}</li>
     </ul>
   </div>
 </div>
