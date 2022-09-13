@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+    <form class="row" (ngSubmit)="submit(form)" #form="ngForm">
+      <div class="form-group">
+        <label for="name">name</label>
+        <input id="name" placeholder="name" [(ngModel)]="userForm.name"
+        name="name" type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="lastname">lastname</label>
+        <input id="lastname" placeholder="lastname" [(ngModel)]="userForm.lastname"
+        name="lastname" type="text" class="form-control">
+      </div>
+      <div ngModelGroup="userAddress">
+          <div class="form-group">
+            <label for="street">street</label>
+            <input id="street" placeholder="street" [(ngModel)]="userForm.street"
+            name="street" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="city">city</label>
+            <input id="city" placeholder="city" [(ngModel)]="userForm.city"
+            name="city" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="zipcode">zipcode</label>
+            <input id="zipcode" placeholder="zipcode" [(ngModel)]="userForm.zipcode"
+            name="zipcode" type="text" class="form-control">
+          </div>
+      </div>
+
+      <button class="btn btn-primary">Invia</button>
+    </form>
+  </div>
+</div>

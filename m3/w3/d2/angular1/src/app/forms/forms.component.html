@@ -1,0 +1,18 @@
+<h1>Utilizzo base di ngModel</h1>
+
+<form>
+  <h2>Inserisci utente</h2>
+  <input type="text" [(ngModel)]="userData.name" name="name"
+  placeholder="name" class="form-control">
+  <input type="text" [(ngModel)]="userData.lastname" name="lastname"
+  placeholder="lastname" class="form-control">
+  <button class="btn btn-primary">Salva</button>
+</form>
+{{userData | json}}
+
+<form>
+  <h2>invia un messaggio</h2>
+  <input class="form-control" type="email" [(ngModel)]="email" name="email">
+  <textarea class="form-control" name="message" [(ngModel)]="message" cols="30" rows="10"></textarea>
+  <button class="btn btn-primary">Salva</button>
+</form>

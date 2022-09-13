@@ -1,0 +1,76 @@
+<div class="container">
+  <div class="row">
+    <form class="row" (ngSubmit)="submit(form)" #form="ngForm">
+
+      <div class="form-group">
+        <label for="name">name</label>
+        <input id="name" required placeholder="name" ngModel
+        name="name" type="text" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="alterEgo">alterEgo</label>
+        <input id="alterEgo" required placeholder="alterEgo" ngModel
+        name="alterEgo" type="text" class="form-control">
+      </div>
+
+          <div class="form-group">
+            <label for="power">power</label>
+            <select  id="power" required ngModel
+            name="power" type="text" class="form-control">
+            <option value="" disabled selected hidden>select power</option>
+          <option  value="1">1 megatron</option>
+          <option value="2">2 megatron</option>
+          <option value="3">3 megatron</option>
+          <option value="4">4 megatron</option>
+          <option value="5">5 megatron</option>
+          <option value="6">6 megatron</option>
+          <option value="7">7 megatron</option>
+          <option value="8">8 megatron</option>
+          <option value="9">9 megatron</option>
+          <option value="10">10 megatron</option>
+          </select>
+          </div>
+
+          <div class="form-group">
+            <label for="enemy">enemy</label>
+            <input id="enemy" required placeholder="enemy" ngModel
+            name="enemy" type="text" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label for="planet">planet</label>
+            <input id="planet" required placeholder="planet" ngModel
+            name="planet" type="text" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label for="weakness">weakness</label>
+            <input id="weakness" placeholder="weakness" ngModel
+            name="weakness" type="text" class="form-control">
+          </div>
+
+          <button [disabled]="form.invalid" class="btn btn-primary m-2">Invia</button>
+
+    </form>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="card lesgo m-1" *ngFor="let hero of allHeroes" >
+    <div class="card-header bg-primary text-white">
+      {{hero.name}}
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{hero.alterEgo}}</li>
+      <li class="list-group-item">{{hero.power}}</li>
+      <li class="list-group-item">{{hero.enemy}}</li>
+      <li class="list-group-item">{{hero.planet}}</li>
+      <li class="list-group-item">{{hero.weakness}}</li>
+    </ul>
+  </div>
+</div>
+
+
+

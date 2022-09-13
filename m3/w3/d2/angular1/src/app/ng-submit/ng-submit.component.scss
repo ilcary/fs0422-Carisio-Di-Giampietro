@@ -1,0 +1,13 @@
+.errorText{
+  color: red
+}
+
+
+form .ng-touched.ng-invalid{
+  border: 1px solid red
+}
+
+form .ng-touched.ng-valid{
+  border: 1px solid green;
+  outline: 3px solid rgba(0, 128, 0, 0.352)
+}
