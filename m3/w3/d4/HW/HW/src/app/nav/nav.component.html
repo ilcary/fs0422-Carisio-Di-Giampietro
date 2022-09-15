@@ -1,0 +1,22 @@
+<header class="p-3 text-bg-dark">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+
+      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+        <li><a [routerLink]="['/']" class="nav-link px-2 text-white">Home</a></li>
+        <li><a [routerLink]="['/posts']" class="nav-link px-2 text-white">Posts</a></li>
+        <li><a [routerLink]="['/']" class="nav-link px-2 text-white">Users</a></li>
+      </ul>
+
+      <div *ngIf="!checkLog()" class="text-end">
+        <a [routerLink]="['/login']" type="button" class="btn btn-outline-light me-2">Login</a>
+        <a [routerLink]="['/register']" type="button" class="btn btn-warning">Sign-up</a>
+      </div>
+
+      <div *ngIf="checkLog()">
+        <span>Benvenuto {{user.name}}</span>
+        <a (click)="logOut()" [routerLink]="['/register']" type="button" class="btn btn-danger ms-4">Logout</a>
+      </div>
+    </div>
+  </div>
+</header>

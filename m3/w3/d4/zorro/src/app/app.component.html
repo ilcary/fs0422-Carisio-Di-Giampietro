@@ -1,0 +1,35 @@
+<nz-layout nzHeight="100vh">
+  <nz-sider nzCollapsible nzWidth="200px">
+    <ul nz-menu nzTheme="dark" nzMode="inline">
+      <li nz-menu-item>
+        <span nz-icon nzType="pie-chart"></span>
+        <span>Option 1</span>
+      </li>
+      <li nz-menu-item>
+        <span nz-icon nzType="desktop"></span>
+        <span>Option 2</span>
+      </li>
+      <li nz-submenu nzTitle="User" nzIcon="user">
+        <ul>
+          <li nz-menu-item>Tom</li>
+          <li nz-menu-item>Bill</li>
+          <li nz-menu-item>Alex</li>
+        </ul>
+      </li>
+      <li nz-submenu nzTitle="Team" nzIcon="team">
+        <ul>
+          <li nz-menu-item>Team 1</li>
+          <li nz-menu-item>Team 2</li>
+        </ul>
+      </li>
+      <li nz-menu-item>
+        <span nz-icon nzType="file"></span>
+        <span>File</span>
+      </li>
+    </ul>
+  </nz-sider>
+  <nz-content>
+      <nz-header>Header</nz-header>
+      <nz-footer>Footer</nz-footer>
+  </nz-content>
+</nz-layout>

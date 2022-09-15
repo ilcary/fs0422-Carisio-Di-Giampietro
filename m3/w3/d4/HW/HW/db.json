@@ -1,0 +1,20 @@
+{
+  "users": [
+    {
+      "email": "davide.dds.dalsanto@gmail.com",
+      "password": "$2a$10$petnxZ1v0h2/a6M9yn6XvetuKVdE6KIv3yO9O2cd5hI44NUUAFYaK",
+      "name": "DDS",
+      "id": 1
+    }
+  ],
+  "post": [
+    {
+      "title": "Ciao test primo post",
+      "content": "Ciao voglio vedere se riusciamo a far comparire il token con linterceptor"
+    },
+    {
+      "title": "Ciao test secondo post",
+      "content": "Per favore ti prego ho bisogno che funzioni"
+    }
+  ]
+}

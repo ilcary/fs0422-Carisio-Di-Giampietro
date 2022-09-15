@@ -1,0 +1,9 @@
+<input type="text" [(ngModel)]="dati.name">
+
+<button mat-button (click)="openDialog()">Open dialog</button>
+
+<hr>
+
+<cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
+  <div *cdkVirtualFor="let item of items" class="example-item">{{item}}</div>
+</cdk-virtual-scroll-viewport>

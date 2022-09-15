@@ -1,0 +1,25 @@
+<div class="container">
+
+  <main class="form-signin m-auto my-5">
+    <form [formGroup]="form" (submit)="submit()">
+      <h1 class="h3 mb-3 fw-normal">Please register</h1>
+
+      <div class="form-floating mb-2">
+        <input formControlName="name" type="text" class="form-control" id="floatingInput1" placeholder="Your name">
+        <label for="floatingInput1">Your name</label>
+      </div>
+      <div class="form-floating mb-2">
+        <input formControlName="email" type="email" class="form-control" id="floatingInput2" placeholder="name@example.com">
+        <label for="floatingInput2">Email address</label>
+      </div>
+      <div class="form-floating mb-2">
+        <input formControlName="password" type="password" class="form-control" id="floatingPassword1" placeholder="Password">
+        <label for="floatingPassword1">Password</label>
+      </div>
+
+      <button class="w-100 btn btn-lg btn-primary" type="submit">Submit</button>
+
+    </form>
+  </main>
+
+</div>
