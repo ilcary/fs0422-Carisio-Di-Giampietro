@@ -2,7 +2,7 @@ export interface AuthResponse {
 
     accessToken: string,
     user: {
-      name?:string,
+      name:string,
       email: string,
       id: number
 

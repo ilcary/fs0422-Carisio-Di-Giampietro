@@ -21,7 +21,14 @@ export class AppComponent implements OnInit {
 
   checkForNavName():void{
     this.logged = this.auth.isUserLogged();
-    if (this.logged) this.loggedUserName = this.auth.getLoggedUser().name;
+    console.log(this.logged);
+    console.log(this.auth.getLoggedUser());
+
+
+    if (this.logged){
+      this.loggedUserName = this.auth.getLoggedUser()?.name
+    }
+
   }
 
   logOut() {

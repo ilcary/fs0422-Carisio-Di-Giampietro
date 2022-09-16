@@ -28,7 +28,7 @@ export class AuthService {
     return localStorage.getItem('access') != null
   }
 
-  getLoggedUser():AuthResponse{
+  getLoggedUser():User{
     let db = localStorage.getItem('access')
     return db ? JSON.parse(db).user : null
   }

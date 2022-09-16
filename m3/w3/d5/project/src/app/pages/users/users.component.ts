@@ -13,10 +13,11 @@ export class UsersComponent implements OnInit {
   constructor(private userSrv: UserService, private auth:AuthService) {}
 
   allUsers!: User[];
-  actualUserId: string = String(this.auth.getLoggedUser().user.id)
+  actualUserId: number = Number(this.auth.getLoggedUser()?.id)
 
 
   ngOnInit(): void {
+
     this.userSrv.getAllUsers().subscribe({
       next: (res) => {
         this.allUsers = res;
