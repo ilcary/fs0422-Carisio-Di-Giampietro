@@ -33,9 +33,10 @@ export class SignupComponent {
     this.auth.register(this.form.value)
     .subscribe(res => {
       console.log(res);
+      this.auth.saveAccessData(res)
       alert(`User ${res.user.name} registered successfully`)
       this.form.reset();
-      this.router.navigate(['/login']);
+      this.router.navigate(['/']);
     })
   }
 }

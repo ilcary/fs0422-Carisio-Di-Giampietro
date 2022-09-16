@@ -23,8 +23,6 @@ export class AppComponent implements OnInit {
     this.logged = this.auth.isUserLogged();
     console.log(this.logged);
     console.log(this.auth.getLoggedUser());
-
-
     if (this.logged){
       this.loggedUserName = this.auth.getLoggedUser()?.name
     }

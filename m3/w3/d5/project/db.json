@@ -5,6 +5,18 @@
       "password": "$2a$10$wByhdBgNgCD0ZNrXz1RgGeoeiUdyY7a7mlx.yBbUF1/vaEG54jzue",
       "name": "ilCary",
       "id": 1
+    },
+    {
+      "email": "dds@gmail.com",
+      "password": "$2a$10$6yFNf6iou6NA0I.zExD/Qe3eGTOPtfsvCbkT9CRZfQRqWfX7GjIum",
+      "name": "SirDDS",
+      "id": 2
+    },
+    {
+      "email": "popi@gmail.com",
+      "password": "$2a$10$ELcN6KtrmvU/ahKaQMs2Z.iXzjEE5pXoyaLAR2eOy4q9ThDeKgV2u",
+      "name": "popi-popi",
+      "id": 3
     }
   ],
   "posts": []
