@@ -1,0 +1,10 @@
+.abled a{
+  color: green;
+}
+
+.disabled a{
+  color: rgba(255, 0, 0, 0.322);
+&:hover{
+  cursor:not-allowed !important
+}
+}

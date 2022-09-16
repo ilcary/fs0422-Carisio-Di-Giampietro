@@ -12,8 +12,8 @@
     <tr *ngFor="let data of allUsers">
       <td>{{ data.name }}</td>
       <td>{{ data.email }}</td>
-      <td [nzDisabled]="data.id==actualUserId" >
-        <a>Edit</a>
+      <td [ngClass]="data.id==actualUserId? 'abled':'disabled' " >
+        <a [routerLink]="['/users/editUser/'+data.id]" >Edit</a>
         <nz-divider nzType="vertical"></nz-divider>
         <a>Delete</a>
       </td>

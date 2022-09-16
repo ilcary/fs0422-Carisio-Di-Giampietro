@@ -20,6 +20,7 @@ export class UserService {
   }
 
   getUserById(id:number):User|null {
+   this.getAllUsers().subscribe(users => this.allUsers=users)
     let foundUser = this.allUsers.find((user:User) => Number(user.id) === id);
     return foundUser ||null
   }
@@ -33,8 +34,7 @@ export class UserService {
     return this.http.delete<User>(this.apiUrl + '/' + post.id)
   }
 
-  editUser(user:User):void{
-    let index = this.allUsers.findIndex(user => user.id == user.id)
-    this.allUsers.splice(index,1, user)
+  editUser(user:User,id:number):Observable<User>{
+    return this.http.patch<User>(this.apiUrl+'/'+id,user)
   }
 }
