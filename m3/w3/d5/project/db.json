@@ -1,0 +1,11 @@
+{
+  "users": [
+    {
+      "email": "carisio@gmail.com",
+      "password": "$2a$10$wByhdBgNgCD0ZNrXz1RgGeoeiUdyY7a7mlx.yBbUF1/vaEG54jzue",
+      "name": "ilCary",
+      "id": 1
+    }
+  ],
+  "posts": []
+}
