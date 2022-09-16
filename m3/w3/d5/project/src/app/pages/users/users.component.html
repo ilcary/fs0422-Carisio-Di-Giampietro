@@ -1,29 +1,22 @@
-<!-- <nz-switch [(ngModel)]="loading"></nz-switch>
-    <nz-card style="width: 300px;margin-top: 16px" [nzLoading]="loading">
-      <nz-card-meta
-        [nzAvatar]="avatarTemplate"
-        nzTitle="Card title"
-        nzDescription="This is the description"
-      ></nz-card-meta>
-    </nz-card>
-    <nz-card style="width: 300px;margin-top: 16px" [nzActions]="[actionSetting, actionEdit, actionEllipsis]">
-      <nz-skeleton [nzActive]="true" [nzLoading]="loading" [nzAvatar]="{ size: 'large' }">
-        <nz-card-meta
-          [nzAvatar]="avatarTemplate"
-          nzTitle="Card title"
-          nzDescription="This is the description"
-        ></nz-card-meta>
-      </nz-skeleton>
-    </nz-card>
-    <ng-template #avatarTemplate>
-      <nz-avatar nzSrc="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"></nz-avatar>
-    </ng-template>
-    <ng-template #actionSetting>
-      <span nz-icon nzType="setting"></span>
-    </ng-template>
-    <ng-template #actionEdit>
-      <span nz-icon nzType="edit"></span>
-    </ng-template>
-    <ng-template #actionEllipsis>
-      <span nz-icon nzType="ellipsis"></span>
-    </ng-template> -->
+<h2>ALL USERS:</h2>
+
+<nz-table #basicTable >
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of allUsers">
+      <td>{{ data.name }}</td>
+      <td>{{ data.email }}</td>
+      <td [nzDisabled]="data.id==actualUserId" >
+        <a>Edit</a>
+        <nz-divider nzType="vertical"></nz-divider>
+        <a>Delete</a>
+      </td>
+    </tr>
+  </tbody>
+</nz-table>

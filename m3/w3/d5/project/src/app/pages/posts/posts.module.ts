@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { PostsRoutingModule } from './posts-routing.module';
 import { PostsComponent } from './posts.component';
+import { NzCardModule } from 'ng-zorro-antd/card';
+import { IconsProviderModule } from 'src/app/icons-provider.module';
 
 
 @NgModule({
@@ -11,7 +13,9 @@ import { PostsComponent } from './posts.component';
   ],
   imports: [
     CommonModule,
-    PostsRoutingModule
+    PostsRoutingModule,
+    NzCardModule,
+    IconsProviderModule
   ]
 })
 export class PostsModule { }

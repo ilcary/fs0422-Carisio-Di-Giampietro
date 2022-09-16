@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { User } from '../models/user';
 
 @Injectable({
@@ -6,17 +8,19 @@ import { User } from '../models/user';
 })
 export class UserService {
 
-  constructor() { }
+  apiUrl:string = 'http://localhost:3000/users'
+
+  constructor(private http: HttpClient) { }
 
   allUsers:User[] = []
 
 
-  getAllUsers():User[] {
-    return this.allUsers
+  getAllUsers():Observable<User[]> {
+    return this.http.get<User[]>(this.apiUrl)
   }
 
   getUserById(id:number):User|null {
-    let foundUser = this.allUsers.find((user:User) => user.id === id);
+    let foundUser = this.allUsers.find((user:User) => Number(user.id) === id);
     return foundUser ||null
   }
 
@@ -25,8 +29,8 @@ export class UserService {
     this.allUsers.push(user);
   }
 
-  deleteUser(id: number):void{
-    this.allUsers = this.allUsers.filter((u:User)=> u.id !== id)
+  deleteUser(post:User):Observable<User>{
+    return this.http.delete<User>(this.apiUrl + '/' + post.id)
   }
 
   editUser(user:User):void{

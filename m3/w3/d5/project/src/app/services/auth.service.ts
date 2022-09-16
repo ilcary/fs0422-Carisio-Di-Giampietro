@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { AuthResponse } from '../models/auth-response';
 import { ILogin } from '../models/ilogin';
 import { IRegister } from '../models/iregister';
+import { User } from '../models/user';
 
 
 
@@ -27,7 +28,7 @@ export class AuthService {
     return localStorage.getItem('access') != null
   }
 
-  getLoggedUser():ILogin{
+  getLoggedUser():AuthResponse{
     let db = localStorage.getItem('access')
     return db ? JSON.parse(db).user : null
   }

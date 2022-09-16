@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NzCardModule } from 'ng-zorro-antd/card';
+import { NzTableModule } from 'ng-zorro-antd/table';
 import { UsersRoutingModule } from './users-routing.module';
 import { UsersComponent } from './users.component';
+import { IconsProviderModule } from 'src/app/icons-provider.module';
+import { FormsModule } from '@angular/forms';
+import { NzDividerModule } from 'ng-zorro-antd/divider';
 
 
 @NgModule({
@@ -12,7 +15,10 @@ import { UsersComponent } from './users.component';
   imports: [
     CommonModule,
     UsersRoutingModule,
-    NzCardModule
+    NzTableModule,
+    IconsProviderModule,
+    FormsModule,
+    NzDividerModule
   ]
 })
 export class UsersModule { }

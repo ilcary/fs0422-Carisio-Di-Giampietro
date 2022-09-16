@@ -1,1 +1,21 @@
-<p>posts works!</p>
+<h2>ALL POSTS:</h2>
+
+<nz-card style="width:300px;" [nzCover]="coverTemplate" [nzActions]="[actionSetting, actionEdit, actionEllipsis]">
+  <nz-card-meta
+    nzTitle="Card title"
+    nzDescription="This is the description"
+  ></nz-card-meta>
+</nz-card>
+<ng-template #coverTemplate>
+  <img alt="example" src="https://picsum.photos/200/100" />
+</ng-template>
+<ng-template #actionSetting>
+  <span nz-icon nzType="setting"></span>
+</ng-template>
+<ng-template #actionEdit>
+  <span nz-icon nzType="edit"></span>
+</ng-template>
+<ng-template #actionEllipsis>
+  <span nz-icon nzType="delete"></span>
+</ng-template>
+
