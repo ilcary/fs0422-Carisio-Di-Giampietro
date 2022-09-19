@@ -30,8 +30,8 @@ export class UserService {
     this.allUsers.push(user);
   }
 
-  deleteUser(post:User):Observable<User>{
-    return this.http.delete<User>(this.apiUrl + '/' + post.id)
+  deleteUser(user:User):Observable<User>{
+    return this.http.delete<User>(this.apiUrl + '/' + user.id)
   }
 
   editUser(user:User,id:number):Observable<User>{
