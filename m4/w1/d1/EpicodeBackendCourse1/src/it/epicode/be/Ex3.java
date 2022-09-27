@@ -1,7 +1,5 @@
 package it.epicode.be;
 
-import java.lang.Math;
-
 public class Ex3 {
 
 	public static void main(String[] args) {
