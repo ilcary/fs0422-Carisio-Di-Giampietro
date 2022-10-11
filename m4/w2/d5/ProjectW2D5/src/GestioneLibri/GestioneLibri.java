@@ -55,11 +55,11 @@ public class GestioneLibri {
 		
 		sep();
 		
-		print("This are all the book of the 2020: " + bookByYear("2020").toString());
+		print("These are all the book of the 2020: " + bookByYear("2020").toString());
 		
 		sep();
 		
-		print("This are all the book of Stephen King: " + bookByAuthor("Stephen King").toString());
+		print("These are all the book of Stephen King: " + bookByAuthor("Stephen King").toString());
 		
 		sep();
 		
