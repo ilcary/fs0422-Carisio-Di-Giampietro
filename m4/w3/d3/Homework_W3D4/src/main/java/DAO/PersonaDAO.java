@@ -26,7 +26,7 @@ public class PersonaDAO {
 	
 	public static void save(String name, String lastname, String email, String birthday, Gender gender) {
 		
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("Homework_W3D2");
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("Homework_W3D3_");
         EntityManager em = emf.createEntityManager();
         EntityTransaction t = em.getTransaction();
         
@@ -45,7 +45,7 @@ public class PersonaDAO {
 	}
 	
 	public static Person getById(int id) {
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("Homework_W3D2");
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("Homework_W3D3_");
         EntityManager em = emf.createEntityManager();
         
         Person p= em.find(Person.class, id);
@@ -57,7 +57,7 @@ public class PersonaDAO {
 	}
 	
 	public static void delete(Person p) {
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("Homework_W3D2");
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("Homework_W3D3_");
         EntityManager em = emf.createEntityManager();
         EntityTransaction t = em.getTransaction();
         
@@ -75,7 +75,7 @@ public class PersonaDAO {
 	
 	public static void refresh(Person p) {
 		
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("Homework_W3D2");
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("Homework_W3D3_");
 		EntityManager em = emf.createEntityManager();
 		
 		em.refresh(p);

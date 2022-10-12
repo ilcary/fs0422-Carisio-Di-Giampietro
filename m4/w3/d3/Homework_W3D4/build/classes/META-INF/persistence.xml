@@ -3,13 +3,12 @@
 	<persistence-unit name="Homework_W3D2">
 	<properties>
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
-            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/Homework_W3D2" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/postgres" />
             <property name="javax.persistence.jdbc.user" value="postgres" />
             <property name="javax.persistence.jdbc.password" value="Morena69" />         
             <property name="hibernate.default_schema" value="public" />
             <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
             <property name="hibernate.id.new_generator_mappings" value="false"></property>
-            <property name="hibernate.hbm2ddl.auto" value="update"/>
         </properties> 
 	
 	</persistence-unit>

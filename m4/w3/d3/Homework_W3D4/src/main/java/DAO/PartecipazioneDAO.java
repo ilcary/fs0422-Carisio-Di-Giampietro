@@ -1,8 +1,5 @@
 package DAO;
 
-import java.util.Collections;
-import java.util.Set;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -10,32 +7,26 @@ import javax.persistence.Persistence;
 
 import models.Evento;
 import models.Gender;
-import models.Location;
 import models.Partecipazione;
 import models.Person;
-import models.TipoEvento;
+import models.StatoPartecipazione;
 
-//- save
-//- getById
-//- delete
-//- refresh
-
-public class PersonaDAO {
-	
+public class PartecipazioneDAO {
 
 	
-	public static void save(String name, String lastname, String email, String birthday, Gender gender) {
+
+	public static void save(Person person, Evento evento, StatoPartecipazione stato_partecipazione) {
 		
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("Homework_W3D2");
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("Homework_W3D3_");
         EntityManager em = emf.createEntityManager();
         EntityTransaction t = em.getTransaction();
         
      
-        Person person = new Person(name, lastname, email, birthday, gender);
+        Partecipazione p = new Partecipazione(person, evento,stato_partecipazione );
         
         t.begin();
         
-        em.persist(person);
+        em.persist(p);
         
         t.commit();
         
@@ -44,11 +35,11 @@ public class PersonaDAO {
 		
 	}
 	
-	public static Person getById(int id) {
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("Homework_W3D2");
+	public static Partecipazione getById(int id) {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("Homework_W3D3_");
         EntityManager em = emf.createEntityManager();
         
-        Person p= em.find(Person.class, id);
+        Partecipazione p= em.find(Partecipazione.class, id);
         
         em.close();
         emf.close();
@@ -56,8 +47,8 @@ public class PersonaDAO {
 		return p;
 	}
 	
-	public static void delete(Person p) {
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("Homework_W3D2");
+	public static void delete(Partecipazione p) {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("Homework_W3D3_");
         EntityManager em = emf.createEntityManager();
         EntityTransaction t = em.getTransaction();
         
@@ -73,9 +64,9 @@ public class PersonaDAO {
 		
 	}
 	
-	public static void refresh(Person p) {
+	public static void refresh(Partecipazione p) {
 		
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("Homework_W3D2");
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("Homework_W3D3_");
 		EntityManager em = emf.createEntityManager();
 		
 		em.refresh(p);
@@ -84,5 +75,6 @@ public class PersonaDAO {
         emf.close();
 		
 	}
-
+	
+	
 }

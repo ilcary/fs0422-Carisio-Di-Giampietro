@@ -3,7 +3,7 @@
 	<persistence-unit name="Homework_W3D2">
 	<properties>
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
-            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/homework_w3d2" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/Homework_W3D2" />
             <property name="javax.persistence.jdbc.user" value="postgres" />
             <property name="javax.persistence.jdbc.password" value="Morena69" />         
             <property name="hibernate.default_schema" value="public" />

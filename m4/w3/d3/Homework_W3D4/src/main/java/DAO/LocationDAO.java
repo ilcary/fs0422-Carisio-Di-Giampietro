@@ -1,37 +1,26 @@
 package DAO;
 
-import java.util.Collections;
-import java.util.Set;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
-import models.Evento;
 import models.Gender;
 import models.Location;
-import models.Partecipazione;
 import models.Person;
-import models.TipoEvento;
 
-//- save
-//- getById
-//- delete
-//- refresh
-
-public class PersonaDAO {
-	
+public class LocationDAO {
 
 	
-	public static void save(String name, String lastname, String email, String birthday, Gender gender) {
+	
+	public static void save(String nome, String citta) {
 		
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("Homework_W3D2");
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("Homework_W3D3_");
         EntityManager em = emf.createEntityManager();
         EntityTransaction t = em.getTransaction();
         
      
-        Person person = new Person(name, lastname, email, birthday, gender);
+        Location person = new Location(nome, citta);
         
         t.begin();
         
@@ -44,26 +33,26 @@ public class PersonaDAO {
 		
 	}
 	
-	public static Person getById(int id) {
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("Homework_W3D2");
+	public static Location getById(int id) {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("Homework_W3D3_");
         EntityManager em = emf.createEntityManager();
         
-        Person p= em.find(Person.class, id);
+        Location l= em.find(Location.class, id);
         
         em.close();
         emf.close();
         
-		return p;
+		return l;
 	}
 	
-	public static void delete(Person p) {
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("Homework_W3D2");
+	public static void delete(Location l) {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("Homework_W3D3_");
         EntityManager em = emf.createEntityManager();
         EntityTransaction t = em.getTransaction();
         
         t.begin();
         
-        em.remove(p);
+        em.remove(l);
         
         t.commit();
         
@@ -73,16 +62,17 @@ public class PersonaDAO {
 		
 	}
 	
-	public static void refresh(Person p) {
+	public static void refresh(Location l) {
 		
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("Homework_W3D2");
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("Homework_W3D3_");
 		EntityManager em = emf.createEntityManager();
 		
-		em.refresh(p);
+		em.refresh(l);
 		
         em.close();
         emf.close();
 		
 	}
-
+	
+	
 }
