@@ -1,0 +1,24 @@
+Esercizio #1
+Si faccia riferimento all’applicazione per la gestione degli eventi.
+Estendere il modello degli oggetti persistenti aggiungendo le seguenti entità mappate con annotazioni JPA, scegliendo una strategia di mapping dell’ereditarietà tra quelle supportate da JPA.
+
+PartitaDiCalcio extends Evento
+Squadra di casa (string)
+Squadra ospite (string)
+SquadraVincente (string) [null se pareggio]
+numero Gol Squadra Di Casa
+numero Gol Squadra Ospite
+
+GaraDiAtletica extends Evento
+SetAtleti (persone)
+Vincitore (persona)
+
+Concerto extends Evento
+genere [CLASSICO, ROCK, POP]
+inStreaming [true, false]
+
+Per tutte le entità aggiungere costruttori e getters/setters necessari
+
+Implementare i seguenti metodi nella classe EventoDAO usando JPQL:
+– getConcertiInStreaming(true/false)
+– getConcertiPerGenere(List)
