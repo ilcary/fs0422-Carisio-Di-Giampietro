@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	<!-- load application.properties -->
+	<context:property-placeholder location="classpath:application.properties"></context:property-placeholder>
+            
+	<!-- Costruzione beans -->
+	<bean id="p1" class="com.carisiodigiampietro.lezione1.Lezione1.beans.Person" scope="prototype" > </bean>  
+	
+	<bean id="p2" class="com.carisiodigiampietro.lezione1.Lezione1.beans.Person" >
+		<constructor-arg index="0" type="java.lang.String" value="${p2.name}" ></constructor-arg>
+		<constructor-arg index="1" type="int" value="${p2.age}"></constructor-arg>
+	 </bean>  
+	 
+	<bean id="p3" class="com.carisiodigiampietro.lezione1.Lezione1.beans.Person" >
+		<property  name="name" value="Ted"></property>
+			<property  name="age" value="16"></property>
+	 </bean> 
+	 
+	 <bean id="p4name" class="java.lang.String" > 
+	 		<constructor-arg value="Daise"></constructor-arg>
+	 </bean>
+	 
+	 <bean id="p4" class="com.carisiodigiampietro.lezione1.Lezione1.beans.Person" >
+			<property  name="name" ref="p4name"></property>
+			<property  name="age" value="16"></property>
+	 </bean> 
+	 
+	 <bean id="a5" class="com.carisiodigiampietro.lezione1.Lezione1.beans.Address">
+	 	<constructor-arg value="${a5.road}"></constructor-arg>
+	 	<property name="city" ref="c5"></property>
+	 </bean>
+	 
+	  <bean id="p5" class="com.carisiodigiampietro.lezione1.Lezione1.beans.Person" >
+	 	 <constructor-arg index="0" type="java.lang.String" value="${p5.name}" ></constructor-arg>
+		<constructor-arg index="1" type="int" value="${p5.age}"></constructor-arg>
+		<constructor-arg index="2" ref="a5"></constructor-arg>
+	 </bean> 
+	 
+	 <bean id="c5" class="com.carisiodigiampietro.lezione1.Lezione1.beans.City">
+	 	<constructor-arg value="${c5.name}"></constructor-arg>
+	 	<constructor-arg value="${c5.country}"></constructor-arg>
+	 </bean>
+	
+	
+</beans>
