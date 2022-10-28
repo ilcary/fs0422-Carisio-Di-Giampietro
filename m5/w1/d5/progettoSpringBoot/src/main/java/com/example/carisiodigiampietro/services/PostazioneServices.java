@@ -33,6 +33,10 @@ public class PostazioneServices {
 //		return repo.findByTipoAndCitta(t, c);
 //	}
 	
+	public List<Postazione> findByCittaAndTipo(String c, Tipo t){
+		return repo.findByCittaAndTipo(c, t);
+	}
+	
 	public List<Postazione> findByEdificio(Edificio e) {
 		return repo.findByEdificio(e);
 	}
