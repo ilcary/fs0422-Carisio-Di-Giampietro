@@ -1,0 +1,670 @@
+{
+	"info": {
+		"_postman_id": "d6ec7d43-e31c-4f25-96a4-2711c98f08bf",
+		"name": "Epicode - Esercizio 3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ansa",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "covid",
+			"item": [
+				{
+					"name": "Dati totali",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Dati per regione",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reqres.in",
+			"item": [
+				{
+					"name": "GET",
+					"item": [
+						{
+							"name": "get all users",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonData = pm.response.json()",
+											"",
+											"pm.test(\"It should return status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"})",
+											"",
+											"pm.test(\"It should return data\", function () {",
+											"    pm.expect(jsonData.data).to.not.empty",
+											"})",
+											"",
+											"let stagging = eval(pm.variables.get('stagging'))",
+											"",
+											"stagging ? pm.test : pm.test.skip  ('It should get all users',()=>{",
+											"    pm.expect(jsonData.total).to.eql(12)",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/users?per_page=20",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"users"
+									],
+									"query": [
+										{
+											"key": "per_page",
+											"value": "20"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get single user",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"It should return status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"})",
+											"",
+											"pm.test(\"It should return data\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.data).to.not.empty",
+											"});",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/users/{{id}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"{{id}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "POST",
+					"item": [
+						{
+							"name": "register",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"It should return status code is 201\", function () {",
+											"    pm.response.to.have.status(201);",
+											"});",
+											"",
+											"pm.test(\"It should return a token\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.token).to.exist",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"sydney@fife\",\r\n    \"password\": \"pistol\"\r\n}"
+								},
+								"url": {
+									"raw": "{{url}}/api/register",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add user",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"It should contain the right user name and job\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.name).to.eql(pm.variables.get('name'))",
+											"    pm.expect(jsonData.job).to.eql(pm.variables.get('job'))",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"let users = pm.variables.get('users')===undefined ? [",
+											"    {name:'Ahmed', job:'Software Engineer'},",
+											"    {name:'Mohammed', job:'Test Automation Engineer'},",
+											"    {name:'Jane', job:'QC Engineer'},",
+											"    {name:'Meriam', job:'Scrum Master'}] : pm.variables.get('users')",
+											"",
+											"console.log('preparing to send the request')",
+											"let user = users.shift()",
+											"pm.variables.set('users',users)",
+											"",
+											"for (field in user) {",
+											"    console.log(`${field}: ${user[field]}`)",
+											"    pm.variables.set(field, user[field])",
+											"}",
+											"",
+											"if (users.length > 0)  postman.setNextRequest('add user')",
+											"else postman.setNextRequest(null)"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"{{name}}\",\n    \"job\": \"{{job}}\"\n}"
+								},
+								"url": {
+									"raw": "{{url}}/api/users",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "UPDATE",
+					"item": [
+						{
+							"name": "update user",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200)",
+											"})",
+											"",
+											"pm.test(\"It should update the right name\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.name).to.eql(pm.variables.get('newname'))",
+											"    pm.expect(jsonData.job).to.eql(pm.variables.get('newjob'))",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"{{newname}}\",\r\n    \"job\": \"{{newjob}}\"\r\n}"
+								},
+								"url": {
+									"raw": "{{url}}/api/users/{{id}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"{{id}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "UPDATE one user",
+					"item": [
+						{
+							"name": "get last name",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"It should get status code 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"})",
+											"",
+											"pm.test(\"It should change the username to lastname\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    var lastname = jsonData.data.last_name",
+											"    pm.expect(lastname).to.not.empty",
+											"    console.log('The last name is: ' + lastname)",
+											"    pm.variables.set('new_username', lastname)",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/users/{{id}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"{{id}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update the user",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"It should return code 200\", function () {",
+											"    pm.response.to.have.status(200)",
+											"})",
+											"",
+											"pm.test(\"It should replace the name with lastname form the previous GET request\", function () {",
+											"    var jsonData = pm.response.json()",
+											"    pm.expect(jsonData.name).to.eql",
+											"    (pm.variables.get('new_username'))",
+											"    ",
+											"    pm.expect(jsonData.job).to.eql(pm.variables.get('newjob'))",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"{{new_username}}\",\r\n    \"job\": \"{{newjob}}\"\r\n}"
+								},
+								"url": {
+									"raw": "{{url}}/api/users/{{id}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"{{id}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Create user from user",
+					"item": [
+						{
+							"name": "get all users",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"/*",
+											"* 1. get all users",
+											"* 2. generate random index from 1 to exclusive 3",
+											"* 3. get the user at this index",
+											"* 4. get first and last name of this user",
+											"* 5. assign first name and last name to name and job respectively inside another object 'user to add'",
+											"* 6. send this object as a body to POST request",
+											"* 7. assert the returned response name and job is equal to first and last name from the first object of user",
+											"*/",
+											"",
+											"pm.test(\"It should get status code 200\", function () {",
+											"    pm.response.to.have.status(200)",
+											"})",
+											"",
+											"//Generate random int",
+											"let randomIndex = eval(pm.variables.get('randomBetween'))(1,3)",
+											"",
+											"//Generate URL for random single user",
+											"let singleUserRequestURL = pm.variables.get('url') + '/api/users/' + randomIndex",
+											"",
+											"//send request to get single user",
+											"let user",
+											"pm.sendRequest(singleUserRequestURL,(err,response)=>{",
+											"    user = response.json()",
+											"    console.log(err ? err : user.data)",
+											"    pm.test('It should not have empty user', ()=> {",
+											"        pm.expect(user).to.be.not.empty",
+											"    })",
+											"    //create user body to add",
+											"    const userToAdd = {",
+											"        name: user.first_name,",
+											"        job: user.last_name",
+											"    }",
+											"    ",
+											"    //add user",
+											"    const postUser = {",
+											"        url:  pm.variables.get('url') + '/api/users',",
+											"        method: 'POST',",
+											"        body: {",
+											"            mode: 'raw',",
+											"            raw: JSON.stringify(userToAdd)",
+											"        }",
+											"    }",
+											"    //send the user to create request",
+											"    pm.sendRequest(postUser,(err, res)=>{",
+											"        let justCreatedUser = res.json()",
+											"        console.log(err ?  'error creating user: ' + err : justCreatedUser)",
+											"        ",
+											"        //added?",
+											"        pm.test('It should return status code 201',()=>{",
+											"            pm.expect(res).to.have.status(201)",
+											"        })",
+											"        ",
+											"        pm.test('It should create the user',()=>{",
+											"            pm.expect(justCreatedUser.name).to.eql(user.first_name)",
+											"            pm.expect(justCreatedUser.job).to.eql(user.last_name)",
+											"        })",
+											"    })",
+											"} )",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/users",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "update user from user",
+					"item": [
+						{
+							"name": "find all users",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"postman.setNextRequest('update the first user')",
+											"",
+											"pm.test(\"It should return status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"It should return 12 users altogether\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.total).to.eql(12);",
+											"});",
+											"",
+											"pm.test(\"It should select a random user\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    let users = jsonData.data",
+											"    let randomIndex = eval(pm.variables.get('randomBetween'))(0,users.length +1)",
+											"    ",
+											"    let selectedUser = users[randomIndex]",
+											"    pm.expect(selectedUser).to.not.empty",
+											"    pm.variables.set('username', selectedUser.first_name)",
+											"    pm.variables.set('userjob', selectedUser.last_name)",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/users?per_page=20",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"users"
+									],
+									"query": [
+										{
+											"key": "per_page",
+											"value": "20"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update the first user",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"It should return status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											"",
+											"pm.test(\"It should update the first user\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.name).to.eql(pm.variables.get('username'))",
+											"    ",
+											"    pm.expect(jsonData.job).to.eql(pm.variables.get('userjob'))",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"{{username}}\",\r\n    \"job\": \"{{userjob}}\"\r\n}"
+								},
+								"url": {
+									"raw": "{{url}}/api/users/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"1"
+									]
+								},
+								"description": "update the first user from the randomly selected user from the previous request"
+							},
+							"response": []
+						}
+					],
+					"description": "update a random user from existing user data"
+				}
+			]
+		}
+	]
+}
